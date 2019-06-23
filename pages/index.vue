@@ -1,68 +1,53 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        tracker-nuxt
-      </h1>
-      <h2 class="subtitle">
-        rebuild
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div>
+  <div>
+    <carrousel :banners="banners" /> 
+    <columns /> 
+    <position />
+    <billboard :ranks="ranks" /> 
+    <recommend :recommends="recommends" />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import axios from "axios"
+
+import Carrousel from "~/components/common/transition/Carrousel.vue"
+import Columns from "~/components/common/navigation/Columns.vue"
+import Position from "~/components/common/article/Parallel.vue"
+import Billboard from "~/components/home/Billboard.vue"
+import Recommend from "~/components/home/Recommend.vue"
 
 export default {
   components: {
-    Logo
+    Carrousel,
+    Columns,
+    Position,
+    Billboard,
+    Recommend
+  },
+  serverCacheKey() {
+    // cache ...
+  },
+  // https://nuxtjs.org/guide/async-data#returning-a-promise
+  asyncData() {
+    return axios.get('http://localhost:3000/api/index.json')
+                .then(res => ({
+                  banners: res.data.banners,
+                  ranks: res.data.ranks,
+                  recommends: res.data.recommends
+                }))
+  },
+  mounted() {
+    // 启动加载进度条：如果要在mounted方法中启动它，请确保使用this.$nextTick来调用它，因为$loading可能无法立即使用。
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style scoped>
+  
 </style>

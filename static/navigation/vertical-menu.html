@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3带头像的垂直彩色菜单DEMO演示</title>
+  
+  
+  
+    <style>
+    	* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
+}
+body .container {
+  width: 300px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 6px 6px 24px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin:30px auto;
+}
+body .container .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0px 20px;
+  transition: all 0.3s;
+  color: white;
+}
+body .container .box.box1 {
+  background-color: #7986CB;
+}
+body .container .box.box2 {
+  background-color: #FF8A65;
+}
+body .container .box.box3 {
+  background-color: #F06292;
+}
+body .container .box.box4 {
+  background-color: #4DB6AC;
+}
+body .container .box .name {
+  width: 80px;
+}
+body .container .box .name h4, body .container .box .name h5 {
+  font-weight: 300;
+}
+body .container .box .name h5 {
+  font-size: 0em;
+  line-height: 1.5;
+}
+body .container .box p {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+body .container .box:before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-left: -50%;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .container .box.box1:before, body .container .box.box3:before {
+  background-image: url("https://a1alimo.com/wp-content/uploads/2017/05/011-girl.png");
+}
+body .container .box.box2:before, body .container .box.box4:before {
+  background-image: url("https://image.flaticon.com/icons/png/128/163/163807.png");
+}
+body .container .box:hover:before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 0%;
+  transition: all 0.4s;
+}
+body .container .box:hover {
+  height: 120px;
+  transition: all 0.3s;
+}
+body .container .box:hover .name h5 {
+  font-size: 0.7em;
+  transition: all 0.6s;
+}
+d
+    </style>
+
+  
+</head>
+
+<body>
+
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+  <div class="container">
+	<div class="box box1">
+			<div class="name">
+				<h4>Tap here</h4>
+				<h5>Hello</h5>
+			</div>
+			<p>66.6%</p>
+		</div>		
+	<div class="box box2">
+			<div class="name">
+				<h4>Tap here</h4>
+				<h5>Hi</h5>
+			</div>
+			<p>62.3%</p>
+		</div>	
+	<div class="box box3">
+			<div class="name">
+				<h4>Tap here</h4>
+				<h5>Bye</h5>
+			</div>
+			<p>60.6%</p>
+		</div>	
+	<div class="box box4">
+			<div class="name">
+				<h4>Tap here</h4>
+				<h5>Bye!</h5>
+			</div>
+			<p>62.6%</p>
+		</div>	
+</div>
+  
+</body>
+</html>

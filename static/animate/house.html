@@ -1,0 +1,3020 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3响应式房子布局方案DEMO演示</title>
+    <style>
+        [data-rooms="6"] {
+  --wings-width: 425px;
+  --front-width: 150px;
+}
+[data-rooms="6"] .house-wings {
+  width: 425px;
+  left: calc(50% - 212.5px);
+}
+[data-rooms="6"] .house-front {
+  width: 150px;
+  left: calc(50% - 75px);
+}
+
+[data-rooms="5"] {
+  --wings-width: 355px;
+  --front-width: 150px;
+}
+[data-rooms="5"] .house-wings {
+  width: 355px;
+  left: calc(50% - 177.5px);
+}
+[data-rooms="5"] .house-front {
+  width: 150px;
+  left: calc(50% - 75px);
+}
+
+[data-rooms="4"] {
+  --wings-width: 300px;
+  --front-width: 125px;
+}
+[data-rooms="4"] .house-wings {
+  width: 300px;
+  left: calc(50% - 150px);
+}
+[data-rooms="4"] .house-front {
+  width: 125px;
+  left: calc(50% - 62.5px);
+}
+
+[data-rooms="3"] {
+  --wings-width: 240px;
+  --front-width: 150px;
+}
+[data-rooms="3"] .house-wings {
+  width: 240px;
+  left: calc(50% - 120px);
+}
+[data-rooms="3"] .house-front {
+  width: 150px;
+  left: calc(50% - 75px);
+}
+
+.house {
+  height: 225px;
+  width: 520px;
+}
+
+.house-label {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: calc(20px + 1ch);
+  font-size: 25px;
+  color: #224889;
+  margin: 30px 0 5px;
+  font-family: Arial Rounded MT Bold, Helvetica Neue, Helvetica, sans serif;
+}
+.house-label:before, .house-label:after {
+  position: absolute;
+  text-align: right;
+  left: 0;
+  top: 0;
+  padding: 0 .5ch;
+  will-change: transform;
+}
+.house-label:before {
+  content: attr(data-prev-rooms);
+}
+.house-label:after {
+  content: attr(data-rooms);
+}
+.house-label[data-rooms="6"][data-rooms-delta^="-"]:before {
+  -webkit-animation: prev-label-up-6 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: prev-label-up-6 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="6"][data-rooms-delta^="-"]:after {
+  -webkit-animation: label-up-6 1000ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: label-up-6 1000ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="6"]:not([data-rooms-delta^="-"]):before {
+  -webkit-animation: prev-label-down-6 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: prev-label-down-6 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="6"]:not([data-rooms-delta^="-"]):after {
+  -webkit-animation: label-down-6 1000ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: label-down-6 1000ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+@-webkit-keyframes prev-label-up-6 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-100%) scale(1.5);
+            transform: translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes prev-label-up-6 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-100%) scale(1.5);
+            transform: translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes prev-label-down-6 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(100%) scale(1.5);
+            transform: translateY(100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes prev-label-down-6 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(100%) scale(1.5);
+            transform: translateY(100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes label-up-6 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes label-up-6 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes label-down-6 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes label-down-6 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.house-label[data-rooms="5"][data-rooms-delta^="-"]:before {
+  -webkit-animation: prev-label-up-5 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: prev-label-up-5 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="5"][data-rooms-delta^="-"]:after {
+  -webkit-animation: label-up-5 1000ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: label-up-5 1000ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="5"]:not([data-rooms-delta^="-"]):before {
+  -webkit-animation: prev-label-down-5 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: prev-label-down-5 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="5"]:not([data-rooms-delta^="-"]):after {
+  -webkit-animation: label-down-5 1000ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: label-down-5 1000ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+@-webkit-keyframes prev-label-up-5 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-100%) scale(1.5);
+            transform: translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes prev-label-up-5 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-100%) scale(1.5);
+            transform: translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes prev-label-down-5 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(100%) scale(1.5);
+            transform: translateY(100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes prev-label-down-5 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(100%) scale(1.5);
+            transform: translateY(100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes label-up-5 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes label-up-5 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes label-down-5 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes label-down-5 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.house-label[data-rooms="4"][data-rooms-delta^="-"]:before {
+  -webkit-animation: prev-label-up-4 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: prev-label-up-4 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="4"][data-rooms-delta^="-"]:after {
+  -webkit-animation: label-up-4 1000ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: label-up-4 1000ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="4"]:not([data-rooms-delta^="-"]):before {
+  -webkit-animation: prev-label-down-4 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: prev-label-down-4 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="4"]:not([data-rooms-delta^="-"]):after {
+  -webkit-animation: label-down-4 1000ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: label-down-4 1000ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+@-webkit-keyframes prev-label-up-4 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-100%) scale(1.5);
+            transform: translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes prev-label-up-4 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-100%) scale(1.5);
+            transform: translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes prev-label-down-4 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(100%) scale(1.5);
+            transform: translateY(100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes prev-label-down-4 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(100%) scale(1.5);
+            transform: translateY(100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes label-up-4 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes label-up-4 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes label-down-4 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes label-down-4 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.house-label[data-rooms="3"][data-rooms-delta^="-"]:before {
+  -webkit-animation: prev-label-up-3 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: prev-label-up-3 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="3"][data-rooms-delta^="-"]:after {
+  -webkit-animation: label-up-3 1000ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: label-up-3 1000ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="3"]:not([data-rooms-delta^="-"]):before {
+  -webkit-animation: prev-label-down-3 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: prev-label-down-3 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house-label[data-rooms="3"]:not([data-rooms-delta^="-"]):after {
+  -webkit-animation: label-down-3 1000ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: label-down-3 1000ms 70ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+@-webkit-keyframes prev-label-up-3 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-100%) scale(1.5);
+            transform: translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes prev-label-up-3 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-100%) scale(1.5);
+            transform: translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes prev-label-down-3 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(100%) scale(1.5);
+            transform: translateY(100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes prev-label-down-3 {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(100%) scale(1.5);
+            transform: translateY(100%) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes label-up-3 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes label-up-3 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes label-down-3 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes label-down-3 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0) scale(1.5);
+            transform: translateY(0) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.house-wings {
+  position: absolute;
+  bottom: 0;
+  height: 125px;
+}
+.house-wings:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 5px solid #224889;
+  box-shadow: inset 0 15px #E1EAFF;
+}
+.house-wings:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #224889;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+.house-wings > .house-roof {
+  height: 65px;
+  width: calc(100% + 40px);
+  left: -20px;
+  border-bottom: 5px solid #224889;
+  position: absolute;
+  bottom: 100%;
+}
+.house-wings > .house-roof:before, .house-wings > .house-roof:after {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-color: #A6CFFF;
+  border: 5px solid #224889;
+  border-bottom: none;
+}
+.house-wings > .house-roof:before {
+  left: 0;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  border-right: none;
+}
+.house-wings > .house-roof:after {
+  right: 0;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
+  border-left: none;
+}
+.house-wings .house-ledge {
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  height: 15px;
+  border: 5px solid #224889;
+  background-color: #79AAFF;
+}
+
+.house-facade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 15px 0 rgba(123, 163, 255, 0.2);
+}
+.house-facade:before, .house-facade:after {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-color: #fff;
+  top: 0;
+  border-top: 5px solid #224889;
+  box-shadow: inset 0 calc(var(--front-width) / 6) #E1EAFF;
+}
+.house-facade:before {
+  left: 0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: skewY(-40deg);
+          transform: skewY(-40deg);
+  border-left: 5px solid #224889;
+}
+.house-facade:after {
+  right: 0;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transform: skewY(40deg);
+          transform: skewY(40deg);
+  border-right: 5px solid #224889;
+}
+
+@-webkit-keyframes wing-roof-6-move {
+  from {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  25% {
+    -webkit-transform: translateY(-10px) rotate(-5deg);
+            transform: translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  75% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: translateY(-5px) rotate(2deg);
+            transform: translateY(-5px) rotate(2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes wing-roof-6-move {
+  from {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  25% {
+    -webkit-transform: translateY(-10px) rotate(-5deg);
+            transform: translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  75% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: translateY(-5px) rotate(2deg);
+            transform: translateY(-5px) rotate(2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes wing-roof-5-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-20px) rotate(10deg);
+            transform: translateY(-20px) rotate(10deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-10px) rotate(-2deg);
+            transform: translateY(-10px) rotate(-2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes wing-roof-5-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-20px) rotate(10deg);
+            transform: translateY(-20px) rotate(10deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-10px) rotate(-2deg);
+            transform: translateY(-10px) rotate(-2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes wing-roof-4-move {
+  from {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  25% {
+    -webkit-transform: translateY(-15px) rotate(-10deg);
+            transform: translateY(-15px) rotate(-10deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  75% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: translateY(-10px) rotate(2deg);
+            transform: translateY(-10px) rotate(2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes wing-roof-4-move {
+  from {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  25% {
+    -webkit-transform: translateY(-15px) rotate(-10deg);
+            transform: translateY(-15px) rotate(-10deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  75% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: translateY(-10px) rotate(2deg);
+            transform: translateY(-10px) rotate(2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes wing-roof-3-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-20px) rotate(10deg);
+            transform: translateY(-20px) rotate(10deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-10px) rotate(-2deg);
+            transform: translateY(-10px) rotate(-2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes wing-roof-3-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-20px) rotate(10deg);
+            transform: translateY(-20px) rotate(10deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-10px) rotate(-2deg);
+            transform: translateY(-10px) rotate(-2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes front-roof-6-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-5px) rotate(5deg);
+            transform: translateY(-5px) rotate(5deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-2px) rotate(-1deg);
+            transform: translateY(-2px) rotate(-1deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes front-roof-6-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-5px) rotate(5deg);
+            transform: translateY(-5px) rotate(5deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-2px) rotate(-1deg);
+            transform: translateY(-2px) rotate(-1deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes front-roof-5-move {
+  from {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  25% {
+    -webkit-transform: translateY(-10px) rotate(-5deg);
+            transform: translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  75% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: translateY(-5px) rotate(1deg);
+            transform: translateY(-5px) rotate(1deg);
+  }
+  to {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes front-roof-5-move {
+  from {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  25% {
+    -webkit-transform: translateY(-10px) rotate(-5deg);
+            transform: translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  75% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: translateY(-5px) rotate(1deg);
+            transform: translateY(-5px) rotate(1deg);
+  }
+  to {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes front-roof-4-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-5px) rotate(10deg);
+            transform: translateY(-5px) rotate(10deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-2px) rotate(-2deg);
+            transform: translateY(-2px) rotate(-2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes front-roof-4-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-5px) rotate(10deg);
+            transform: translateY(-5px) rotate(10deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-2px) rotate(-2deg);
+            transform: translateY(-2px) rotate(-2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes front-roof-3-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-10px) rotate(-5deg);
+            transform: translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-5px) rotate(2deg);
+            transform: translateY(-5px) rotate(2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes front-roof-3-move {
+  from {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  25% {
+    -webkit-transform: translateY(-10px) rotate(-5deg);
+            transform: translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  75% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: translateY(-5px) rotate(2deg);
+            transform: translateY(-5px) rotate(2deg);
+  }
+  to {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes house-6-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.98, 1.02);
+            transform: scale(0.98, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes house-6-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.98, 1.02);
+            transform: scale(0.98, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes house-5-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.2);
+            transform: scale(0.9, 1.2);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes house-5-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.2);
+            transform: scale(0.9, 1.2);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes house-4-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.2);
+            transform: scale(0.9, 1.2);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes house-4-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.2);
+            transform: scale(0.9, 1.2);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes house-3-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.2);
+            transform: scale(0.9, 1.2);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes house-3-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.2);
+            transform: scale(0.9, 1.2);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes facade-6-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.98, 1.02);
+            transform: scale(0.98, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes facade-6-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.98, 1.02);
+            transform: scale(0.98, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes facade-5-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.05);
+            transform: scale(0.9, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.02);
+            transform: scale(0.95, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes facade-5-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.05);
+            transform: scale(0.9, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.02);
+            transform: scale(0.95, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes facade-4-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.05);
+            transform: scale(0.9, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.02);
+            transform: scale(0.95, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes facade-4-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.05);
+            transform: scale(0.9, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.02);
+            transform: scale(0.95, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes facade-3-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.05);
+            transform: scale(0.9, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.02);
+            transform: scale(0.95, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes facade-3-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.05);
+            transform: scale(0.9, 1.05);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: scale(0.95, 1.02);
+            transform: scale(0.95, 1.02);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes chimney-6-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: rotate(10deg) translateY(-15px);
+            transform: rotate(10deg) translateY(-15px);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: rotate(-5deg) translateY(-5px);
+            transform: rotate(-5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes chimney-6-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: rotate(10deg) translateY(-15px);
+            transform: rotate(10deg) translateY(-15px);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: rotate(-5deg) translateY(-5px);
+            transform: rotate(-5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes chimney-5-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg) translateY(-15px);
+            transform: rotate(-10deg) translateY(-15px);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: rotate(5deg) translateY(-5px);
+            transform: rotate(5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes chimney-5-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg) translateY(-15px);
+            transform: rotate(-10deg) translateY(-15px);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: rotate(5deg) translateY(-5px);
+            transform: rotate(5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes chimney-4-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: rotate(10deg) translateY(-15px);
+            transform: rotate(10deg) translateY(-15px);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: rotate(-5deg) translateY(-5px);
+            transform: rotate(-5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes chimney-4-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: rotate(10deg) translateY(-15px);
+            transform: rotate(10deg) translateY(-15px);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: rotate(-5deg) translateY(-5px);
+            transform: rotate(-5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes chimney-3-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg) translateY(-15px);
+            transform: rotate(-10deg) translateY(-15px);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: rotate(5deg) translateY(-5px);
+            transform: rotate(5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes chimney-3-move {
+  from {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg) translateY(-15px);
+            transform: rotate(-10deg) translateY(-15px);
+  }
+  50% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  51% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+  }
+  75% {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: rotate(5deg) translateY(-5px);
+            transform: rotate(5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+[data-rooms="6"] .house-wings > .house-roof {
+  -webkit-animation: wing-roof-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: wing-roof-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="6"] .house-front > .house-gable {
+  -webkit-animation: front-roof-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: front-roof-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="6"] .house-wings:before,
+[data-rooms="6"] .house-left-wing,
+[data-rooms="6"] .house-right-wing {
+  -webkit-animation: house-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: house-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="6"] .house-facade,
+[data-rooms="6"] .house-front .house-window,
+[data-rooms="6"] .house-doorway {
+  -webkit-animation: facade-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: facade-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="6"] .house-chimney {
+  -webkit-animation: chimney-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: chimney-6-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+[data-rooms="5"] .house-wings > .house-roof {
+  -webkit-animation: wing-roof-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: wing-roof-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="5"] .house-front > .house-gable {
+  -webkit-animation: front-roof-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: front-roof-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="5"] .house-wings:before,
+[data-rooms="5"] .house-left-wing,
+[data-rooms="5"] .house-right-wing {
+  -webkit-animation: house-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: house-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="5"] .house-facade,
+[data-rooms="5"] .house-front .house-window,
+[data-rooms="5"] .house-doorway {
+  -webkit-animation: facade-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: facade-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="5"] .house-chimney {
+  -webkit-animation: chimney-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: chimney-5-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+[data-rooms="4"] .house-wings > .house-roof {
+  -webkit-animation: wing-roof-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: wing-roof-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="4"] .house-front > .house-gable {
+  -webkit-animation: front-roof-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: front-roof-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="4"] .house-wings:before,
+[data-rooms="4"] .house-left-wing,
+[data-rooms="4"] .house-right-wing {
+  -webkit-animation: house-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: house-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="4"] .house-facade,
+[data-rooms="4"] .house-front .house-window,
+[data-rooms="4"] .house-doorway {
+  -webkit-animation: facade-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: facade-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="4"] .house-chimney {
+  -webkit-animation: chimney-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: chimney-4-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+[data-rooms="3"] .house-wings > .house-roof {
+  -webkit-animation: wing-roof-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: wing-roof-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="3"] .house-front > .house-gable {
+  -webkit-animation: front-roof-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: front-roof-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="3"] .house-wings:before,
+[data-rooms="3"] .house-left-wing,
+[data-rooms="3"] .house-right-wing {
+  -webkit-animation: house-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: house-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="3"] .house-facade,
+[data-rooms="3"] .house-front .house-window,
+[data-rooms="3"] .house-doorway {
+  -webkit-animation: facade-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: facade-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+[data-rooms="3"] .house-chimney {
+  -webkit-animation: chimney-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+          animation: chimney-3-move 500ms 70ms cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.house-front {
+  position: absolute;
+  bottom: 0;
+  height: 160px;
+}
+.house-front > .house-window {
+  width: 60px;
+  height: 55px;
+  position: absolute;
+  left: calc(50% - 30px);
+  top: -10px;
+}
+[data-rooms="4"] .house-front > .house-window, [data-rooms="3"] .house-front > .house-window {
+  border-bottom-left-radius: 50% 40%;
+  border-bottom-right-radius: 50% 40%;
+}
+[data-rooms="4"] .house-front > .house-window:after, [data-rooms="3"] .house-front > .house-window:after {
+  display: none;
+}
+[data-rooms="4"]:not([data-prev-rooms="3"]) .house-front > .house-window > .house-sparkle, [data-rooms="3"]:not([data-prev-rooms="4"]) .house-front > .house-window > .house-sparkle, [data-rooms="5"]:not([data-prev-rooms="6"]) .house-front > .house-window > .house-sparkle, [data-rooms="6"]:not([data-prev-rooms="5"]) .house-front > .house-window > .house-sparkle {
+  display: block;
+}
+.house-front > .house-window > .house-sparkle {
+  display: none;
+}
+.house-front .house-ledge {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background: #000;
+  left: calc(50% - 10px);
+  background-color: #79AAFF;
+  border: 5px solid #224889;
+  -webkit-transform: rotate(-45deg) translate(5px, -5px);
+          transform: rotate(-45deg) translate(5px, -5px);
+}
+.house-front .house-ledge:before, .house-front .house-ledge:after {
+  position: absolute;
+  width: calc(var(--front-width) / 1.25);
+  height: calc(100% + 10px);
+  top: -5px;
+  background-color: #79AAFF;
+  border: 5px solid #224889;
+}
+.house-front .house-ledge:before {
+  right: 100%;
+  border-right: none;
+}
+.house-front .house-ledge:after {
+  left: 0;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(90deg) translate(-5px, 5px);
+          transform: rotate(90deg) translate(-5px, 5px);
+  border-left: none;
+}
+
+.house-gable {
+  position: absolute;
+  bottom: calc(100% - 5px);
+  left: 0;
+  width: 100%;
+  height: 70px;
+}
+.house-gable > .house-roof {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  z-index: 1;
+}
+
+.house-chimney {
+  width: 35px;
+  height: 70px;
+  position: absolute;
+  background-color: #224889;
+  left: 15px;
+  bottom: 100%;
+  z-index: 0;
+}
+
+.house-left-wing,
+.house-right-wing {
+  position: absolute;
+  height: 100%;
+  width: calc(50% - var(--front-width) / 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.house:not([data-rooms="6"]) .house-wings .house-window:first-child {
+  display: none;
+}
+.house[data-rooms="3"] .house-wings .house-window {
+  display: none;
+}
+.house[data-rooms="6"] .house-wings .house-sparkle, .house[data-rooms="5"]:not([data-prev-rooms="4"]) .house-wings .house-sparkle, .house[data-rooms="4"][data-prev-rooms="3"] .house-wings .house-sparkle, .house[data-rooms="3"] .house-wings .house-sparkle {
+  display: block;
+}
+
+.house-left-wing {
+  left: 0;
+}
+
+.house-right-wing {
+  right: 0;
+  -ms-flex-flow: row-reverse;
+      flex-flow: row-reverse;
+}
+
+.house-sparkle {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 5px solid #224889;
+  top: calc(50% - 45px);
+  left: calc(50% - 45px);
+  display: none;
+}
+.house-sparkle:before {
+  top: 0;
+  left: 0;
+  background-color: #65EBFF;
+}
+.house-sparkle:after {
+  bottom: 0;
+  right: 0;
+  background-color: #224889;
+}
+
+.house-sparkle:before, .house-sparkle:after,
+.house-sparkle-dots:before,
+.house-sparkle-dots:after {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.house-sparkle-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.house-sparkle-dots:before {
+  bottom: -15px;
+  right: 40px;
+  background-color: #A6CFFF;
+}
+
+.house[data-rooms="6"] .house-left-wing .house-sparkle {
+  left: calc(25% - 45px);
+}
+.house[data-rooms="6"] .house-right-wing .house-sparkle {
+  left: initial;
+  right: calc(25% - 45px);
+}
+
+@-webkit-keyframes sparkle-6 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    border-width: 0;
+  }
+}
+
+@keyframes sparkle-6 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    border-width: 0;
+  }
+}
+@-webkit-keyframes sparkle-dots-6 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes sparkle-dots-6 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+.house[data-rooms="6"] .house-sparkle {
+  -webkit-animation: sparkle-6 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: sparkle-6 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house[data-rooms="6"] .house-sparkle:before, .house[data-rooms="6"] .house-sparkle:after,
+.house[data-rooms="6"] .house-sparkle-dots:before,
+.house[data-rooms="6"] .house-sparkle-dots:after {
+  -webkit-animation: sparkle-dots-6 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: sparkle-dots-6 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+
+@-webkit-keyframes sparkle-5 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    border-width: 0;
+  }
+}
+
+@keyframes sparkle-5 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    border-width: 0;
+  }
+}
+@-webkit-keyframes sparkle-dots-5 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes sparkle-dots-5 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+.house[data-rooms="5"] .house-sparkle {
+  -webkit-animation: sparkle-5 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: sparkle-5 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house[data-rooms="5"] .house-sparkle:before, .house[data-rooms="5"] .house-sparkle:after,
+.house[data-rooms="5"] .house-sparkle-dots:before,
+.house[data-rooms="5"] .house-sparkle-dots:after {
+  -webkit-animation: sparkle-dots-5 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: sparkle-dots-5 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+
+@-webkit-keyframes sparkle-4 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    border-width: 0;
+  }
+}
+
+@keyframes sparkle-4 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    border-width: 0;
+  }
+}
+@-webkit-keyframes sparkle-dots-4 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes sparkle-dots-4 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+.house[data-rooms="4"] .house-sparkle {
+  -webkit-animation: sparkle-4 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: sparkle-4 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house[data-rooms="4"] .house-sparkle:before, .house[data-rooms="4"] .house-sparkle:after,
+.house[data-rooms="4"] .house-sparkle-dots:before,
+.house[data-rooms="4"] .house-sparkle-dots:after {
+  -webkit-animation: sparkle-dots-4 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: sparkle-dots-4 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+
+@-webkit-keyframes sparkle-3 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    border-width: 0;
+  }
+}
+
+@keyframes sparkle-3 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    border-width: 0;
+  }
+}
+@-webkit-keyframes sparkle-dots-3 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes sparkle-dots-3 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+.house[data-rooms="3"] .house-sparkle {
+  -webkit-animation: sparkle-3 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: sparkle-3 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+.house[data-rooms="3"] .house-sparkle:before, .house[data-rooms="3"] .house-sparkle:after,
+.house[data-rooms="3"] .house-sparkle-dots:before,
+.house[data-rooms="3"] .house-sparkle-dots:after {
+  -webkit-animation: sparkle-dots-3 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+          animation: sparkle-dots-3 500ms cubic-bezier(0.1, 0, 0.3, 1) both;
+}
+
+@-webkit-keyframes windows-leave {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes windows-leave {
+  to {
+    width: 0;
+  }
+}
+.house-window {
+  height: 60px;
+  width: 30px;
+  border: 5px solid #224889;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: -webkit-linear-gradient(left, #65EBFF, #65EBFF 49.9%, #71FBFF 50%, #71FBFF);
+  background-image: linear-gradient(to right, #65EBFF, #65EBFF 49.9%, #71FBFF 50%, #71FBFF);
+}
+.house-window:before {
+  height: 100%;
+  width: 5px;
+  left: calc(50% - 2.5px);
+  top: 0;
+  background-color: #224889;
+}
+.house-window:after {
+  height: 15px;
+  width: calc(100% + 20px);
+  left: -10px;
+  bottom: 5px;
+  border-radius: 15px;
+  background-color: #79AAFF;
+  border: 5px solid #224889;
+  box-shadow: 0 5px #E1EAFF;
+}
+
+.house-doorway {
+  width: 65px;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 65px / 2);
+}
+
+.house-stairs {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  border: 5px solid #224889;
+  z-index: 0;
+  box-shadow: 5px -5px #E1EAFF;
+}
+.house-stairs, .house-stairs:before, .house-stairs:after {
+  background-color: white;
+}
+.house-stairs:before, .house-stairs:after {
+  box-shadow: 5px -5px #E1EAFF;
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  border: 5px solid #224889;
+}
+.house-stairs:before {
+  bottom: 100%;
+  -webkit-transform: scaleX(0.9);
+          transform: scaleX(0.9);
+  z-index: 0;
+}
+.house-stairs:after {
+  bottom: calc(200% + 5px);
+  -webkit-transform: scaleX(0.75);
+          transform: scaleX(0.75);
+  z-index: 0;
+}
+
+.house-door {
+  position: absolute;
+  background-color: #224889;
+  width: 50%;
+  height: 55px;
+  left: 25%;
+  bottom: 35px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EFEFEF;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+*:before, *:after {
+  content: '';
+  display: block;
+}
+
+[type='range'] {
+  -webkit-appearance: none;
+  margin: 20px 0;
+  width: 330px;
+}
+[type='range']:focus {
+  outline: 0;
+}
+[type='range']:focus::-webkit-slider-runnable-track {
+  background: -webkit-linear-gradient(top, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+  background: linear-gradient(to bottom, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+}
+[type='range']:focus::-ms-fill-lower {
+  background: linear-gradient(to bottom, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+}
+[type='range']:focus::-ms-fill-upper {
+  background: linear-gradient(to bottom, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+}
+[type='range']::-webkit-slider-runnable-track {
+  cursor: pointer;
+  height: 25px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 330px;
+  background: -webkit-linear-gradient(top, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+  background: linear-gradient(to bottom, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+  border: 5px solid #224889;
+  border-radius: 25px;
+}
+[type='range']::-webkit-slider-thumb {
+  background: #224889;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  -webkit-appearance: none;
+  margin-top: -12.5px;
+}
+[type='range']::-moz-range-track {
+  cursor: pointer;
+  height: 25px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 330px;
+  background: linear-gradient(to bottom, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+  border: 5px solid #224889;
+  border-radius: 25px;
+}
+[type='range']::-moz-range-thumb {
+  background: #224889;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+[type='range']::-ms-track {
+  cursor: pointer;
+  height: 25px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 330px;
+  background: transparent;
+  border-color: transparent;
+  border-width: 20px 0;
+  color: transparent;
+}
+[type='range']::-ms-fill-lower {
+  background: linear-gradient(to bottom, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+  border: 5px solid #224889;
+  border-radius: 50px;
+}
+[type='range']::-ms-fill-upper {
+  background: linear-gradient(to bottom, #79AAFF, #79AAFF 49.9%, #609aff 50%, #609aff 100%);
+  border: 5px solid #224889;
+  border-radius: 50px;
+}
+[type='range']::-ms-thumb {
+  background: #224889;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  margin-top: 0;
+}
+
+  </style>
+</head>
+
+<body>
+    <div class="house" id="house" data-rooms="6">
+        <div class="house-wings" data-flip-key="wings">
+            <div class="house-left-wing">
+                <div class="house-window"></div>
+                <div class="house-window"></div>
+                <div class="house-sparkle">
+                    <div class="house-sparkle-dots"></div>
+                </div>
+            </div>
+            <div class="house-right-wing">
+                <div class="house-window"></div>
+                <div class="house-window"></div>
+                <div class="house-sparkle">
+                    <div class="house-sparkle-dots"></div>
+                </div>
+            </div>
+            <div class="house-roof">
+                <div class="house-ledge"></div>
+            </div>
+        </div>
+        <div class="house-front" data-flip-key="front">
+            <div class="house-chimney"></div>
+            <div class="house-facade"></div>
+            <div class="house-window">
+                <div class="house-sparkle">
+                    <div class="house-sparkle-dots"></div>
+                </div>
+            </div>
+            <div class="house-doorway">
+                <div class="house-stairs"></div>
+                <div class="house-door"></div>
+            </div>
+            <div class="house-gable">
+                <div class="house-roof">
+                    <div class="house-ledge"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <label class="house-label" for="range" id="label">Rooms</label>
+    <input type="range" min="3" max="6" step="1" value="6" id="range">
+    <script>
+    <!-- flipping.animationFrame.js -->
+    ! function(t, n) { "object" == typeof exports && "object" == typeof module ? module.exports = n() : "function" == typeof define && define.amd ? define([], n) : "object" == typeof exports ? exports.Flipping = n() : t.Flipping = n() }(this, function() { return function(t) {
+            function n(e) { if (r[e]) return r[e].exports; var o = r[e] = { i: e, l: !1, exports: {} }; return t[e].call(o.exports, o, o.exports, n), o.l = !0, o.exports } var r = {}; return n.m = t, n.c = r, n.i = function(t) { return t }, n.d = function(t, r, e) { n.o(t, r) || Object.defineProperty(t, r, { configurable: !1, enumerable: !0, get: e }) }, n.n = function(t) { var r = t && t.__esModule ? function() { return t.default } : function() { return t }; return n.d(r, "a", r), r }, n.o = function(t, n) { return Object.prototype.hasOwnProperty.call(t, n) }, n.p = "", n(n.s = 7) }([function(t, n, r) { "use strict";
+
+            function e(t) { var n = c(t),
+                    r = n.width,
+                    e = n.height; return 0 === r && 0 === e }
+
+            function o(t, n) { return t ? t.height ? n.height ? { top: t.top - n.top, left: t.left - n.left, width: t.width / n.width, height: t.height / n.height } : n : t : f } var i = this && this.__assign || Object.assign || function(t) { for (var n, r = 1, e = arguments.length; r < e; r++) { n = arguments[r]; for (var o in n) Object.prototype.hasOwnProperty.call(n, o) && (t[o] = n[o]) } return t };
+            n.__esModule = !0; var u = function(t) { return t },
+                a = function() {},
+                c = function(t) { var n = t.getBoundingClientRect(); return { top: n.top, left: n.left, width: n.width, height: n.height, transform: getComputedStyle(t).transform } },
+                f = { top: 0, left: 0, width: 1, height: 1 },
+                s = function(t) { var n = t.querySelectorAll("[data-flip-key]"),
+                        r = {},
+                        o = []; return n.forEach(function(t) { if (!e(t)) { var n = t.getAttribute("data-flip-key");
+                            r[n] = t, o.push(t) } }), o },
+                l = function() { return !0 },
+                h = function(t) { return t.getAttribute("data-flip-key") },
+                p = function() {
+                    function t(t) { void 0 === t && (t = {}); var n = this;
+                        this.selector = t.selector || s, this.active = t.active || l, this.selectActive = function(t) { return n.selector(t).filter(function(t) { return n.active(t) }) }, this.getBounds = t.getBounds || c, this.getDelta = t.getDelta || o, this.getKey = t.getKey || h, this.onRead = t.onRead || u, this.onEnter = t.onEnter || a, this.onFlip = t.onFlip || a, this.onLeave = t.onLeave || a, this.states = {} } return t.prototype.getRelativeBounds = function(t, n) { return i({}, n, { top: n.top - t.top, left: n.left - t.left }) }, t.prototype.read = function(t, n) { void 0 === t && (t = document.documentElement), void 0 === n && (n = {}), this.flip(t, i({}, n, { readOnly: !0 })) }, t.prototype.flip = function(t, n) { var r = this;
+                        void 0 === t && (t = document.documentElement), void 0 === n && (n = {}); var e = this.selectActive(t),
+                            o = {},
+                            i = this.getBounds(t),
+                            u = !1;
+                        e.forEach(function(t) { var e = r.getKey(t),
+                                a = r.states[e],
+                                c = a && "LEAVE" !== a.type;
+                            u = !0; var f = r.getRelativeBounds(i, r.getBounds(t)),
+                                s = { type: c ? "MOVE" : "ENTER", key: e, node: t, bounds: f, delta: c ? r.getDelta(a.bounds, f) : void 0, start: Date.now(), animation: c ? a.animation : void 0, previous: a };
+                            r.states[e] = o[e] = s, n.readOnly && r.onRead(s) }), n.readOnly || (Object.keys(this.states).forEach(function(t) { o[t] || (r.states[t] = o[t] = { type: "LEAVE", key: t, node: void 0, bounds: void 0, start: Date.now(), animation: void 0, previous: r.states[t] }) }), Object.keys(o).forEach(function(t) { var n = o[t],
+                                e = n.node || n.previous && n.previous.node; if (e) { var i = e.getAttribute("data-flip-follow"); "ENTER" !== n.type && "LEAVE" !== n.type || !i || (n.delta = o[i].delta) } var u = { ENTER: r.onEnter, MOVE: r.onFlip, LEAVE: r.onLeave } [n.type].call(r, n, t, o);
+                            u && r.animate(t, u) })) }, t.prototype.animate = function(t, n) { this.states[t].animation = n }, t.prototype.wrap = function(t, n, r) { var e = this; return void 0 === r && (r = {}),
+                            function() { for (var o = [], i = 0; i < arguments.length; i++) o[i] = arguments[i];
+                                e.read(n); var u = t.apply(null, o); return e.flip(n, r), u } }, t.rect = c, t }();
+            n.default = p }, function(t, n, r) { "use strict";
+
+            function e(t) { if (t.constructor !== Array) throw new TypeError("Expected array."); if (16 === t.length) return t; if (6 === t.length) { var n = o(); return n[0] = t[0], n[1] = t[1], n[4] = t[2], n[5] = t[3], n[12] = t[4], n[13] = t[5], n } throw new RangeError("Expected array with either 6 or 16 values.") }
+
+            function o() { for (var t = [], n = 0; n < 16; n++) n % 5 == 0 ? t.push(1) : t.push(0); return t }
+
+            function i(t) { var n = e(t),
+                    r = n[0] * n[5] - n[4] * n[1],
+                    o = n[0] * n[6] - n[4] * n[2],
+                    i = n[0] * n[7] - n[4] * n[3],
+                    u = n[1] * n[6] - n[5] * n[2],
+                    a = n[1] * n[7] - n[5] * n[3],
+                    c = n[2] * n[7] - n[6] * n[3],
+                    f = n[10] * n[15] - n[14] * n[11],
+                    s = n[9] * n[15] - n[13] * n[11],
+                    l = n[9] * n[14] - n[13] * n[10],
+                    h = n[8] * n[15] - n[12] * n[11],
+                    p = n[8] * n[14] - n[12] * n[10],
+                    d = n[8] * n[13] - n[12] * n[9],
+                    v = 1 / (r * f - o * s + i * l + u * h - a * p + c * d); if (isNaN(v) || v === 1 / 0) throw new Error("Inverse determinant attempted to divide by zero."); return [(n[5] * f - n[6] * s + n[7] * l) * v, (-n[1] * f + n[2] * s - n[3] * l) * v, (n[13] * c - n[14] * a + n[15] * u) * v, (-n[9] * c + n[10] * a - n[11] * u) * v, (-n[4] * f + n[6] * h - n[7] * p) * v, (n[0] * f - n[2] * h + n[3] * p) * v, (-n[12] * c + n[14] * i - n[15] * o) * v, (n[8] * c - n[10] * i + n[11] * o) * v, (n[4] * s - n[5] * h + n[7] * d) * v, (-n[0] * s + n[1] * h - n[3] * d) * v, (n[12] * a - n[13] * i + n[15] * r) * v, (-n[8] * a + n[9] * i - n[11] * r) * v, (-n[4] * l + n[5] * p - n[6] * d) * v, (n[0] * l - n[1] * p + n[2] * d) * v, (-n[12] * u + n[13] * o - n[14] * r) * v, (n[8] * u - n[9] * o + n[10] * r) * v] }
+
+            function u(t, n) { for (var r = e(t), o = e(n), i = [], u = 0; u < 4; u++)
+                    for (var a = [r[u], r[u + 4], r[u + 8], r[u + 12]], c = 0; c < 4; c++) { var f = 4 * c,
+                            s = [o[f], o[f + 1], o[f + 2], o[f + 3]],
+                            l = a[0] * s[0] + a[1] * s[1] + a[2] * s[2] + a[3] * s[3];
+                        i[u + f] = l }
+                return i }
+
+            function a(t) { if ("string" == typeof t) { var n = t.match(/matrix(3d)?\(([^)]+)\)/); if (n) { return e(n[2].split(", ").map(function(t) { return parseFloat(t) })) } } return o() }
+
+            function c(t) { var n = Math.PI / 180 * t,
+                    r = o(); return r[5] = r[10] = Math.cos(n), r[6] = r[9] = Math.sin(n), r[9] *= -1, r }
+
+            function f(t) { var n = Math.PI / 180 * t,
+                    r = o(); return r[0] = r[10] = Math.cos(n), r[2] = r[8] = Math.sin(n), r[2] *= -1, r }
+
+            function s(t) { var n = Math.PI / 180 * t,
+                    r = o(); return r[0] = r[5] = Math.cos(n), r[1] = r[4] = Math.sin(n), r[4] *= -1, r }
+
+            function l(t, n) { var r = o(); return r[0] = t, r[5] = n || t, r }
+
+            function h(t) { var n = o(); return n[0] = t, n }
+
+            function p(t) { var n = o(); return n[5] = t, n }
+
+            function d(t) { var n = o(); return n[10] = t, n }
+
+            function v(t, n) { var r = Math.PI / 180 * t,
+                    e = o(); if (e[4] = Math.tan(r), n) { var i = Math.PI / 180 * n;
+                    e[1] = Math.tan(i) } return e }
+
+            function b(t) { var n = Math.PI / 180 * t,
+                    r = o(); return r[4] = Math.tan(n), r }
+
+            function m(t) { var n = Math.PI / 180 * t,
+                    r = o(); return r[1] = Math.tan(n), r }
+
+            function y(t, n) { var r = o(); return r[12] = t, n && (r[13] = n), r }
+
+            function g(t) { var n = o(); return n[12] = t, n }
+
+            function w(t) { var n = o(); return n[13] = t, n }
+
+            function x(t) { var n = o(); return n[14] = t, n } Object.defineProperty(n, "__esModule", { value: !0 }), r.d(n, "format", function() { return e }), r.d(n, "identity", function() { return o }), r.d(n, "inverse", function() { return i }), r.d(n, "multiply", function() { return u }), r.d(n, "parse", function() { return a }), r.d(n, "rotateX", function() { return c }), r.d(n, "rotateY", function() { return f }), r.d(n, "rotateZ", function() { return s }), r.d(n, "scale", function() { return l }), r.d(n, "scaleX", function() { return h }), r.d(n, "scaleY", function() { return p }), r.d(n, "scaleZ", function() { return d }), r.d(n, "skew", function() { return v }), r.d(n, "skewX", function() { return b }), r.d(n, "skewY", function() { return m }), r.d(n, "translate", function() { return y }), r.d(n, "translateX", function() { return g }), r.d(n, "translateY", function() { return w }), r.d(n, "translateZ", function() { return x }) }, function(t, n, r) { "use strict";
+
+            function e(t, n) { var r = {}; return Object.keys(t || {}).forEach(function(e) { r[e] = n(t[e], e, t) }), r }
+
+            function o(t, n, r) { var e = {}; return Object.keys(t || {}).forEach(function(o) { e[o] = r(t[o], n[o], o) }), e }
+
+            function i(t, n) { return c.translate(t, n).join(",") }
+
+            function u(t, n) { return c.scale(t, n).join(",") }
+
+            function a() { for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n]; return t.filter(function(t) { return !!t }).reduce(c.multiply).join(",") } n.__esModule = !0; var c = r(1);
+            n.mapValues = e, n.mapTwoValues = o, n.matrixTranslate = i, n.matrixScale = u, n.matrixMultiply = a }, function(t, n, r) { "use strict";
+            n.__esModule = !0; var e = r(2),
+                o = r(1);
+            n.scale = function(t) { var n = t.bounds,
+                    r = t.delta,
+                    i = 1 !== r.width || 1 !== r.height,
+                    u = o.translate(r.left, r.top),
+                    a = i ? o.scale(r.width, r.height) : void 0,
+                    c = i ? "top left" : void 0,
+                    f = e.matrixMultiply(u, a); return { node: { from: { x: r.left, y: r.top, transformOrigin: c, transform: "matrix3d(" + f + ")" }, to: { x: n.left, y: n.top, transformOrigin: c, transform: n.transform } } } }, n.slide = function(t) { var n = t.delta,
+                    r = t.previous,
+                    o = t.bounds; if (r) { var i = Math.max(r.bounds.height, o.height),
+                        u = Math.max(r.bounds.width, o.width),
+                        a = { from: { height: i, width: u, transformOrigin: "top left" }, to: { height: i, width: u, transformOrigin: "top left" } },
+                        c = { from: { height: i, width: u, transformOrigin: "top left" }, to: { height: i, width: u, transformOrigin: "top left" } },
+                        f = o.width - r.bounds.width,
+                        s = o.height - r.bounds.height;
+                    f > 0 ? (c.from.x = -f + n.left, c.to.x = 0, a.from.x = f, a.to.x = 0) : (c.from.x = 0, c.to.x = f - n.left, a.from.x = 0, a.to.x = -f), s > 0 ? (c.from.y = -s + n.top, c.to.y = 0, a.from.y = s, a.to.y = 0) : (c.from.y = 0, c.to.y = s - n.top, a.from.y = 0, a.to.y = -s); var l = e.matrixTranslate(a.from.x, a.from.y),
+                        h = e.matrixTranslate(a.to.x, a.to.y),
+                        p = e.matrixTranslate(c.from.x, c.from.y),
+                        d = e.matrixTranslate(c.to.x, c.to.y); return a.from.transform = "matrix3d(" + l + ")", a.to.transform = "matrix3d(" + h + ")", c.from.transform = "matrix3d(" + p + ")", c.to.transform = "matrix3d(" + d + ")", { node: a, container: c } } } }, function(t, n) {
+            function r(t) { return -t * (t - 2) } t.exports = r }, function(t, n) {
+            function r(t) { return -.5 * (Math.cos(Math.PI * t) - 1) } t.exports = r }, function(t, n, r) { t.exports = r(11).Observable }, function(t, n, r) { "use strict"; var e = this && this.__extends || function() { var t = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(t, n) { t.__proto__ = n } || function(t, n) { for (var r in n) n.hasOwnProperty(r) && (t[r] = n[r]) }; return function(n, r) {
+                        function e() { this.constructor = n } t(n, r), n.prototype = null === r ? Object.create(r) : (e.prototype = r.prototype, new e) } }(),
+                o = this && this.__assign || Object.assign || function(t) { for (var n, r = 1, e = arguments.length; r < e; r++) { n = arguments[r]; for (var o in n) Object.prototype.hasOwnProperty.call(n, o) && (t[o] = n[o]) } return t },
+                i = r(0),
+                u = r(3),
+                a = r(2),
+                c = r(5),
+                f = r(4),
+                s = r(6),
+                l = r(1),
+                h = Date.now,
+                p = function(t) { return t },
+                d = function(t) { return new s(function(n) { var r = h(),
+                            e = !0,
+                            o = function() { var i = (h() - r) / t;
+                                i >= 1 || !e ? (n.next(1), n.complete()) : (n.next(i), requestAnimationFrame(o)) },
+                            i = function() { e = !1, n.complete() }; return o(), i }) },
+                v = function(t, n) { t.setAttribute("style", n) },
+                b = function(t) { t.setAttribute("style", "") },
+                m = function(t, n) { var r = t.node,
+                        e = u.slide(t); return d(n.duration).subscribe(function(t) { var o = (n.easing || c)(t),
+                            i = e.container.to.x - e.container.from.x,
+                            u = e.container.to.y - e.container.from.y,
+                            f = e.node.to.x - e.node.from.x,
+                            s = e.node.to.y - e.node.from.y,
+                            l = e.container.from.x + i * o,
+                            h = e.container.from.y + u * o,
+                            p = e.node.from.x + f * o,
+                            d = e.node.from.y + s * o;
+                        v(r, "\n        height: " + e.node.from.height + "px;\n        width: " + e.node.from.width + "px;\n        transform-origin: " + e.node.from.transformOrigin + ";\n        transform: matrix3d(" + a.matrixTranslate(p, d) + ");\n      "), v(r.parentElement, "\n        height: " + e.container.to.height + "px;\n        width: " + e.container.to.width + "px;\n        transform-origin: " + e.container.to.transformOrigin + ";\n        transform: matrix3d(" + a.matrixTranslate(l, h) + ");\n      ") }, p, function() { b(r), b(r.parentElement) }) },
+                y = function(t, n) { var r = t.delta,
+                        e = t.bounds,
+                        o = t.node,
+                        i = n.easing || c; return d(n.duration).subscribe(function(t) { var n = i(t),
+                            u = n * Math.PI / 2,
+                            a = r.left - r.left * Math.sin(u),
+                            c = r.top * Math.cos(u),
+                            f = 1 !== r.width || 1 !== r.height,
+                            s = (1 - r.width) * n + r.width,
+                            h = (1 - r.height) * n + r.height,
+                            p = l.translate(a, c),
+                            d = l.scale(s, h),
+                            b = [p, d, l.parse(e.transform)].reduce(l.multiply).join(",");
+                        v(o, "\n        " + (f ? "transform-origin: top left;" : "") + "\n        transform: matrix3d(" + b + ");\n      ") }, function() { return p }, function() { b(o) }) },
+                g = function(t) { var n = t.animation,
+                        r = t.node;
+                    r.setAttribute("style", ""), r.parentNode.setAttribute("style", ""), n && n.unsubscribe() },
+                w = { duration: 300, easing: f },
+                x = function(t, n) { var r = t.node; return r && r.parentElement && r.parentElement.hasAttribute("data-flip-wrap") ? m(t, n) : y(t, n) },
+                E = function(t) {
+                    function n(r) { void 0 === r && (r = {}); var e = { duration: r.duration || w.duration, easing: r.easing || w.easing }; return t.call(this, o({ onRead: g, onEnter: function(t) { return n.animate.auto(t, e) }, onFlip: function(t) { return n.animate.auto(t, e) }, getBounds: function(t) { var n = i.default.rect(t); if (t && t.parentElement && t.parentElement.hasAttribute("data-flip-wrap")) { var r = i.default.rect(t.parentElement);
+                                    n.width -= Math.abs(n.left - r.left), n.height -= Math.abs(n.top - r.top) } return n } }, r)) || this } return e(n, t), n.animate = { auto: x, transform: y, slidingLayers: m }, n }(i.default);
+            t.exports = E }, , , function(t, n) { t.exports = function(t) { return t.webpackPolyfill || (t.deprecate = function() {}, t.paths = [], t.children || (t.children = []), Object.defineProperty(t, "loaded", { enumerable: !0, get: function() { return t.l } }), Object.defineProperty(t, "id", { enumerable: !0, get: function() { return t.i } }), t.webpackPolyfill = 1), t } }, function(t, n, r) { "use strict";
+            (function(t) {! function(r, e) { r(n, t) }(function(t, n) {
+                    function r(t) { return "function" == typeof Symbol && Boolean(Symbol[t]) }
+
+                    function e(t) { return r(t) ? Symbol[t] : "@@" + t }
+
+                    function o(t, n) { var r = t[n]; if (null != r) { if ("function" != typeof r) throw new TypeError(r + " is not a function"); return r } }
+
+                    function i(t) { var n = t.constructor; return void 0 !== n && null === (n = n[e("species")]) && (n = void 0), void 0 !== n ? n : p }
+
+                    function u(t, n) { Object.keys(n).forEach(function(r) { var e = Object.getOwnPropertyDescriptor(n, r);
+                            e.enumerable = !1, Object.defineProperty(t, r, e) }) }
+
+                    function a(t) { var n = t._cleanup;
+                        n && (t._cleanup = void 0, n()) }
+
+                    function c(t) { return void 0 === t._observer }
+
+                    function f(t) { c(t) || (t._observer = void 0, a(t)) }
+
+                    function s(t) { return function() { t.unsubscribe() } }
+
+                    function l(t, n) { if (Object(t) !== t) throw new TypeError("Observer must be an object");
+                        this._cleanup = void 0, this._observer = t; var r = o(t, "start"); if (r && r.call(t, this), !c(this)) { t = new h(this); try { var e = n.call(void 0, t); if (null != e) { if ("function" == typeof e.unsubscribe) e = s(e);
+                                    else if ("function" != typeof e) throw new TypeError(e + " is not a function");
+                                    this._cleanup = e } } catch (n) { return void t.error(n) } c(this) && a(this) } }
+
+                    function h(t) { this._subscription = t }
+
+                    function p(t) { if ("function" != typeof t) throw new TypeError("Observable initializer must be a function");
+                        this._subscriber = t } "function" != typeof Symbol || Symbol.observable || (Symbol.observable = Symbol("observable")), u(l.prototype = {}, { get closed() { return c(this) }, unsubscribe: function() { f(this) } }), u(h.prototype = {}, { get closed() { return c(this._subscription) }, next: function(t) { var n = this._subscription; if (!c(n)) { var r = n._observer,
+                                    e = o(r, "next"); if (e) return e.call(r, t) } }, error: function(t) { var n = this._subscription; if (c(n)) throw t; var r = n._observer;
+                            n._observer = void 0; try { var e = o(r, "error"); if (!e) throw t;
+                                t = e.call(r, t) } catch (t) { try { a(n) } finally { throw t } } return a(n), t }, complete: function(t) { var n = this._subscription; if (!c(n)) { var r = n._observer;
+                                n._observer = void 0; try { var e = o(r, "complete");
+                                    t = e ? e.call(r, t) : void 0 } catch (t) { try { a(n) } finally { throw t } } return a(n), t } } }), u(p.prototype, { subscribe: function(t) { for (var n = [], r = 1; r < arguments.length; ++r) n.push(arguments[r]); return "function" == typeof t && (t = { next: t, error: n[0], complete: n[1] }), new l(t, this._subscriber) }, forEach: function(t) { var n = this; return new Promise(function(r, e) { if ("function" != typeof t) return Promise.reject(new TypeError(t + " is not a function"));
+                                n.subscribe({ _subscription: null, start: function(t) { if (Object(t) !== t) throw new TypeError(t + " is not an object");
+                                        this._subscription = t }, next: function(n) { var r = this._subscription; if (!r.closed) try { return t(n) } catch (t) { e(t), r.unsubscribe() } }, error: e, complete: r }) }) }, map: function(t) { var n = this; if ("function" != typeof t) throw new TypeError(t + " is not a function"); return new(i(this))(function(r) { return n.subscribe({ next: function(n) { if (!r.closed) { try { n = t(n) } catch (t) { return r.error(t) } return r.next(n) } }, error: function(t) { return r.error(t) }, complete: function(t) { return r.complete(t) } }) }) }, filter: function(t) { var n = this; if ("function" != typeof t) throw new TypeError(t + " is not a function"); return new(i(this))(function(r) { return n.subscribe({ next: function(n) { if (!r.closed) { try { if (!t(n)) return } catch (t) { return r.error(t) } return r.next(n) } }, error: function(t) { return r.error(t) }, complete: function() { return r.complete() } }) }) }, reduce: function(t) { var n = this; if ("function" != typeof t) throw new TypeError(t + " is not a function"); var r = i(this),
+                                e = arguments.length > 1,
+                                o = !1,
+                                u = arguments[1],
+                                a = u; return new r(function(r) { return n.subscribe({ next: function(n) { if (!r.closed) { var i = !o; if (o = !0, !i || e) try { a = t(a, n) } catch (t) { return r.error(t) } else a = n } }, error: function(t) { r.error(t) }, complete: function() { if (!o && !e) return void r.error(new TypeError("Cannot reduce an empty sequence"));
+                                        r.next(a), r.complete() } }) }) }, flatMap: function(t) { var n = this; if ("function" != typeof t) throw new TypeError(t + " is not a function"); return new(i(this))(function(r) {
+                                function e() { o && 0 === i.length && r.complete() } var o = !1,
+                                    i = [],
+                                    u = n.subscribe({ next: function(n) { if (t) try { n = t(n) } catch (t) { return void r.error(t) } p.from(n).subscribe({ _subscription: null, start: function(t) { i.push(this._subscription = t) }, next: function(t) { r.next(t) }, error: function(t) { r.error(t) }, complete: function() { var t = i.indexOf(this._subscription);
+                                                    t >= 0 && i.splice(t, 1), e() } }) }, error: function(t) { return r.error(t) }, complete: function() { o = !0, e() } }); return function() { i.forEach(function(t) { return t.unsubscribe() }), u.unsubscribe() } }) } }), Object.defineProperty(p.prototype, e("observable"), { value: function() { return this }, writable: !0, configurable: !0 }), u(p, { from: function(t) { var n = "function" == typeof this ? this : p; if (null == t) throw new TypeError(t + " is not an object"); var i = o(t, e("observable")); if (i) { var u = i.call(t); if (Object(u) !== u) throw new TypeError(u + " is not an object"); return u.constructor === n ? u : new n(function(t) { return u.subscribe(t) }) } if (r("iterator") && (i = o(t, e("iterator")))) return new n(function(n) { for (var r, e = i.call(t)[Symbol.iterator](); r = e.next(), !r.done;) { var o = r.value; if (n.next(o), n.closed) return } n.complete() }); if (Array.isArray(t)) return new n(function(n) { for (var r = 0; r < t.length; ++r)
+                                    if (n.next(t[r]), n.closed) return;
+                                n.complete() }); throw new TypeError(t + " is not observable") }, of: function() { for (var t = [], n = 0; n < arguments.length; ++n) t.push(arguments[n]); return new("function" == typeof this ? this : p)(function(n) { for (var r = 0; r < t.length; ++r)
+                                    if (n.next(t[r]), n.closed) return;
+                                n.complete() }) } }), Object.defineProperty(p, e("species"), { get: function() { return this }, configurable: !0 }), t.Observable = p }) }).call(n, r(10)(t)) }]) });
+    </script>
+    <script>
+    'use strict';
+
+    var house = document.querySelector('#house');
+    var range = document.querySelector('#range');
+    var label = document.querySelector('#label');
+
+    var f = new Flipping();
+    var update = f.wrap(function(rooms) {
+        var prevRooms = house.getAttribute('data-rooms');
+        house.setAttribute('data-prev-rooms', prevRooms);
+        house.setAttribute('data-rooms', rooms);
+
+        label.setAttribute('data-prev-rooms', prevRooms);
+        label.setAttribute('data-rooms', rooms);
+        label.setAttribute('data-rooms-delta', rooms - prevRooms);
+    });
+    range.addEventListener('input', function(e) {
+        return update(e.target.value);
+    });
+
+    // start with 6
+    update(6);
+    </script>
+</body>
+
+</html>

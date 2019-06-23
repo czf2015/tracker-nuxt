@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript和CSS3色彩对比度可视化实现DEMO演示</title>
+    <style>
+        :root {
+  --bg1: #fd5;
+  --bg2: #fd5;
+  --fg1: #000;
+  --fg2: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: normal 19px/1.5 helvetica, sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 400px;
+  position: relative;
+}
+
+.top {
+  position: absolute;
+  top: -48px;
+  font-size: .7em;
+}
+.top h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: .5em;
+  color: #333;
+  display: inline-block;
+}
+.top label {
+  margin-left: 1.75em;
+}
+.top input {
+  margin-left: .1em;
+}
+
+.bottom {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.bottom .left, .bottom .right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  overflow: hidden;
+}
+.bottom .left .content, .bottom .right .content {
+  width: 500px;
+  padding: 3em;
+}
+.bottom .left {
+  width: 50%;
+  max-width: 100%;
+  min-width: 10px;
+  resize: horizontal;
+  z-index: 1;
+  -webkit-animation: demo 4.5s 1;
+          animation: demo 4.5s 1;
+}
+.bottom .left .resizable-handle {
+  width: 8px;
+  height: 100%;
+  background: rgba(255, 238, 204, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.75);
+  border-right: 1px solid rgba(0, 0, 0, 0.06125);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.06125);
+  transition: all .2s;
+}
+.bottom .left .resizable-handle:hover {
+  width: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.125);
+}
+.bottom .left .resizable-handle-active {
+  width: 13px !important;
+  background: rgba(255, 238, 204, 0.65);
+}
+.bottom .left {
+  background: var(--bg1);
+  color: var(--fg1);
+}
+.bottom .right {
+  background: var(--bg2);
+  color: var(--fg2);
+}
+.bottom h1 {
+  margin-top: 0;
+}
+.bottom .small {
+  font-size: .75em;
+}
+
+@-webkit-keyframes demo {
+  12.5% {
+    width: 80%;
+  }
+  50% {
+    width: 25%;
+  }
+  80% {
+    width: 50%;
+  }
+}
+
+@keyframes demo {
+  12.5% {
+    width: 80%;
+  }
+  50% {
+    width: 25%;
+  }
+  80% {
+    width: 50%;
+  }
+}
+
+      </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <h3>Colors</h3>
+            <label>
+                BG 1:
+                <input type="color" id="bg1" value="#ffdd55" />
+            </label>
+            <label>
+                Text 1:
+                <input type="color" id="fg1" value="#000000" />
+            </label>
+            <label>
+                BG 2:
+                <input type="color" id="bg2" value="#ffdd55" />
+            </label>
+            <label>
+                Text 2:
+                <input type="color" id="fg2" value="#ffffff" />
+            </label>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <div class="content">
+                    <h1>My Huge Page Title</h1>
+                    <p>Sed dapibus neque placerat nisi posuere, et porta nunc aliquam. Quisque at nisi quis mauris condimentum hendrerit a at libero. Nunc vestibulum tellus ut lacus fringilla, eget consectetur justo rhoncus.</p>
+                    <p class="small">Aenean consectetur sapien eu congue lobortis. Integer vitae cursus sapien, sed blandit felis.</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="content">
+                    <h1>My Huge Page Title</h1>
+                    <p>Sed dapibus neque placerat nisi posuere, et porta nunc aliquam. Quisque at nisi quis mauris condimentum hendrerit a at libero. Nunc vestibulum tellus ut lacus fringilla, eget consectetur justo rhoncus.</p>
+                    <p class="small">Aenean consectetur sapien eu congue lobortis. Integer vitae cursus sapien, sed blandit felis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function createReactiveCSSProps(props) {
+        const keys = Object.keys(props)
+        const DOM = document.documentElement
+
+        keys.forEach(key => {
+            const { initial, windowEvents } = props[key]
+            if (initial) {
+                DOM.style.setProperty(key, initial)
+            }
+            Object.keys(windowEvents || []).forEach(event => {
+                const handler = windowEvents[event]
+                window.addEventListener(event, e => {
+                    DOM.style.setProperty(key, handler(e))
+                })
+            })
+        })
+
+        return {
+            dispatch({ type, data }) {
+                keys.forEach(key => {
+                    const { reducer } = props[key]
+                    const newValue = reducer && reducer({ type, data })
+                    if (newValue != null) {
+                        DOM.style.setProperty(key, newValue)
+                    }
+                })
+            }
+        }
+    }
+    <!--  -->
+    function resizable(el) {
+        var getX = function getX(e) {
+            return e.clientX || e.touches[0].clientX;
+        };
+
+        var togglePressed = function togglePressed(isActive) {
+            return function(event) {
+                if (state.pressed !== isActive) {
+                    state.pressed = isActive;
+                    handle.classList.toggle('resizable-handle-active');
+                    state.x = isActive ? getX(event) : -1;
+                }
+            };
+        };
+
+        var move = function move(event) {
+            if (state.pressed) {
+                var width = el.getBoundingClientRect().width;
+                var clientX = getX(event);
+                var direction = state.x < clientX ? 1 : -1;
+                var diff = Math.abs(state.x - clientX) * direction;
+                el.style.cssText += 'width: ' + (width + diff) + 'px;';
+                state.x = clientX;
+            }
+        };
+
+        var state = {
+            pressed: false,
+            x: -1
+        };
+
+        var handle = document.createElement('div');
+        handle.classList.add('resizable-handle');
+        handle.style.cssText += '\n    position: absolute;\n    right: 0;\n    top: 0;\n    height: 100%;\n    cursor: col-resize;\n  ';
+
+        handle.addEventListener('mousedown', togglePressed(true));
+        window.addEventListener('mouseup', togglePressed(false));
+        window.addEventListener('mousemove', move);
+
+        handle.addEventListener('touchstart', togglePressed(true));
+        handle.addEventListener('touchend', togglePressed(false));
+        handle.addEventListener('touchcancel', togglePressed(false));
+        handle.addEventListener('touchmove', move);
+
+        el.appendChild(handle);
+    }
+
+    var leftPanel = document.querySelector('.left');
+    resizable(leftPanel);
+
+    var reactiveCSSProps = createReactiveCSSProps({
+        '--bg1': {
+            reducer: function reducer(_ref) {
+                var type = _ref.type,
+                    data = _ref.data;
+
+                switch (type) {
+                    case 'bg1':
+                        return data.target.value;
+                }
+            }
+        },
+        '--bg2': {
+            reducer: function reducer(_ref2) {
+                var type = _ref2.type,
+                    data = _ref2.data;
+
+                switch (type) {
+                    case 'bg2':
+                        return data.target.value;
+                }
+            }
+        },
+        '--fg1': {
+            reducer: function reducer(_ref3) {
+                var type = _ref3.type,
+                    data = _ref3.data;
+
+                switch (type) {
+                    case 'fg1':
+                        return data.target.value;
+                }
+            }
+        },
+        '--fg2': {
+            reducer: function reducer(_ref4) {
+                var type = _ref4.type,
+                    data = _ref4.data;
+
+                switch (type) {
+                    case 'fg2':
+                        return data.target.value;
+                }
+            }
+        }
+    });
+    [bg1, bg2, fg1, fg2].forEach(function(input) {
+        input.addEventListener('change', function(event) {
+            reactiveCSSProps.dispatch({ type: input.id, data: event });
+        });
+    });
+    </script>
+</body>
+
+</html>

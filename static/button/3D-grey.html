@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>CSS3灰色立体按钮DEMO演示</title>
+  <style> 
+  @charset "utf-8";
+@import url("http://www.w3cplus.com/download/reset.css");
+/* -------------------------------------------------
+ * common
+ * -------------------------------------------------
+*/
+.page{
+    text-align:left;
+  padding-top:40px;
+}
+.wrap_top_nav{
+    background-color:#333;
+  box-shadow:0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+  height:40px;
+}
+#top_nav{
+    width:1000px;
+  margin:0 auto;
+  position:relative;
+}
+#top_nav a{
+    font-size:16px;
+  line-height:40px;
+  float:left;
+  margin-right:20px;
+  color:#999;
+  text-decoration:none;
+}
+#top_nav a:hover{
+    color:#fff;
+}
+#top_nav li:nth-child(1) a{
+    background-image:url(http://www.w3cplus.com/sites/all/themes/marvin/logo.png);
+  background-position: 0 -12px;
+    background-repeat: no-repeat;
+    background-size: 68px 60px;
+  padding-left:74px;
+  color:#fff;
+  width:74px;
+  overflow:hidden;
+}
+#read{
+    position:absolute;
+  right:0;
+  top:0;
+  font-family:'宋体';
+}
+#header{
+    text-align:center;
+}
+#header .white{
+    color:#fff;
+}
+#header .blank{
+    color:#444;
+}
+#header h1{
+    font-size:24px;
+}
+#header h2{
+  font-weight:normal;
+}
+#ad_w3cplus {
+  width: 750px;
+  margin: 100px auto;
+  text-align: center;
+}
+#ad_w3cplus .grid-ad {
+ float:left;
+}
+</style>
+    <style type="text/css">
+body{
+  background: #35393d;
+}
+.controls_ui{ 
+  width: 300px; 
+  margin: 40px auto;
+}
+.button{
+  color: #0f1214;
+  text-shadow:0 1px 0 #484f58;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  border:1px solid #202124;
+  box-shadow: 0 1px 0 #616a74 inset,0 1px 5px #212528;
+  background: -webkit-linear-gradient(top,#474d54,#2f363d);
+  background: -moz-linear-gradient(top,#474d54,#2f363d);
+  background: -ms-linear-gradient(top,#474d54,#2f363d);
+  background: -o-linear-gradient(top,#474d54,#2f363d);
+  background: linear-gradient(top,#474d54,#2f363d);
+}
+.button:nth-child(3n){
+  margin-right: 35px;
+}
+.button:hover{
+  background: -webkit-linear-gradient(top,#5b6167,#30373e);
+  background: -moz-linear-gradient(top,#5b6167,#30373e);
+  background: -ms-linear-gradient(top,#5b6167,#30373e);
+  background: -o-linear-gradient(top,#5b6167,#30373e);
+  background: linear-gradient(top,#5b6167,#30373e);
+}
+.button:active{
+  box-shadow: 0 1px #484c50;
+  background: -webkit-linear-gradient(top,#232930,#3c4249);
+  background: -moz-linear-gradient(top,#232930,#3c4249);
+  background: -ms-linear-gradient(top,#232930,#3c4249);
+  background: -o-linear-gradient(top,#232930,#3c4249);
+  background: linear-gradient(top,#232930,#3c4249); 
+}
+.round,
+.square{
+  width: 30px;
+  height: 30px;
+}
+.round,
+.roundbig{
+  border-radius:15px;
+}
+.square,
+.squarebig{
+  border-radius:5px;
+}
+.button:after{
+  display: block;
+}
+.round:nth-of-type(1):after,
+.square:nth-of-type(4):after{
+  content: "\2716";
+}
+.round:nth-of-type(2):after,
+.square:nth-of-type(5):after{
+  content: "\2714";
+}
+.round:nth-of-type(3):after,
+.square:nth-of-type(6):after{
+  content: "\271a";
+}
+.round:nth-of-type(7):after,
+.square:nth-of-type(10):after{
+  content: "\2717";
+}
+.round:nth-of-type(8):after,
+.square:nth-of-type(11):after{
+  content: "\2713";
+}
+.round:nth-of-type(9):after,
+.square:nth-of-type(12):after{
+  content: "\271d";
+}
+.roundbig,
+.squarebig{
+  width: 80px;
+  height: 30px;
+}
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <header id="header">
+    <hgrounp class="white">
+      <h1>Button UI Kit</h1>
+      <h2><h2>
+    </hgrounp>
+  </header>
+  <section class="demo">
+<div class="controls_ui">
+  <button type="button" class="button round"></button>
+  <button type="button" class="button round"></button>
+  <button type="button" class="button round"></button>
+
+  <button type="button" class="button square"></button>
+  <button type="button" class="button square"></button>
+  <button type="button" class="button square"></button>
+
+  <button type="button" class="button round"></button>
+  <button type="button" class="button round"></button>
+  <button type="button" class="button round"></button>
+
+  <button type="button" class="button square"></button>
+  <button type="button" class="button square"></button>
+  <button type="button" class="button square"></button>
+
+  <button type="button" class="button roundbig">Button</button>
+  <button type="button" class="button roundbig">Button</button>
+  <button type="button" class="button roundbig">Button</button>
+
+  <button type="button" class="button squarebig">Button</button>
+  <button type="button" class="button squarebig">Button</button>
+  <button type="button" class="button squarebig">Button</button>
+</div>
+  </section>
+</div>
+<div style="text-align:center;clear:both"/>
+</body>
+</html>

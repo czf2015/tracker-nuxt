@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>5个可爱的CSS3 Loading加载动画DEMO演示</title>
+  <style>
+  body {
+    background: gainsboro;
+  }
+
+  .loader {
+    margin: 4em auto;
+  }
+
+  .loader--audioWave {
+    width: 3em;
+    height: 2em;
+    background: linear-gradient(#9b59b6, #9b59b6) 0 50%, linear-gradient(#9b59b6, #9b59b6) 0.625em 50%, linear-gradient(#9b59b6, #9b59b6) 1.25em 50%, linear-gradient(#9b59b6, #9b59b6) 1.875em 50%, linear-gradient(#9b59b6, #9b59b6) 2.5em 50%;
+    background-repeat: no-repeat;
+    background-size: 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em;
+    animation: audioWave 1.5s linear infinite;
+  }
+
+  @keyframes audioWave {
+    25% {
+      background: linear-gradient(#3498db, #3498db) 0 50%, linear-gradient(#9b59b6, #9b59b6) 0.625em 50%, linear-gradient(#9b59b6, #9b59b6) 1.25em 50%, linear-gradient(#9b59b6, #9b59b6) 1.875em 50%, linear-gradient(#9b59b6, #9b59b6) 2.5em 50%;
+      background-repeat: no-repeat;
+      background-size: 0.5em 2em, 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em;
+    }
+
+    37.5% {
+      background: linear-gradient(#9b59b6, #9b59b6) 0 50%, linear-gradient(#3498db, #3498db) 0.625em 50%, linear-gradient(#9b59b6, #9b59b6) 1.25em 50%, linear-gradient(#9b59b6, #9b59b6) 1.875em 50%, linear-gradient(#9b59b6, #9b59b6) 2.5em 50%;
+      background-repeat: no-repeat;
+      background-size: 0.5em 0.25em, 0.5em 2em, 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em;
+    }
+
+    50% {
+      background: linear-gradient(#9b59b6, #9b59b6) 0 50%, linear-gradient(#9b59b6, #9b59b6) 0.625em 50%, linear-gradient(#3498db, #3498db) 1.25em 50%, linear-gradient(#9b59b6, #9b59b6) 1.875em 50%, linear-gradient(#9b59b6, #9b59b6) 2.5em 50%;
+      background-repeat: no-repeat;
+      background-size: 0.5em 0.25em, 0.5em 0.25em, 0.5em 2em, 0.5em 0.25em, 0.5em 0.25em;
+    }
+
+    62.5% {
+      background: linear-gradient(#9b59b6, #9b59b6) 0 50%, linear-gradient(#9b59b6, #9b59b6) 0.625em 50%, linear-gradient(#9b59b6, #9b59b6) 1.25em 50%, linear-gradient(#3498db, #3498db) 1.875em 50%, linear-gradient(#9b59b6, #9b59b6) 2.5em 50%;
+      background-repeat: no-repeat;
+      background-size: 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em, 0.5em 2em, 0.5em 0.25em;
+    }
+
+    75% {
+      background: linear-gradient(#9b59b6, #9b59b6) 0 50%, linear-gradient(#9b59b6, #9b59b6) 0.625em 50%, linear-gradient(#9b59b6, #9b59b6) 1.25em 50%, linear-gradient(#9b59b6, #9b59b6) 1.875em 50%, linear-gradient(#3498db, #3498db) 2.5em 50%;
+      background-repeat: no-repeat;
+      background-size: 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em, 0.5em 0.25em, 0.5em 2em;
+    }
+  }
+
+  .loader--snake {
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 50%;
+    transform: translate(-4.125em);
+    box-shadow: 1.375em 0em #debf23, 1.375em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 2.75em 0.29721em #b8b64c, 2.75em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 4.125em 0.18368em #92ae75, 4.125em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 5.5em -0.18368em #6ca59d, 5.5em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 6.875em -0.29721em #469cc6, 6.875em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52);
+    animation: snake 2s linear infinite;
+  }
+
+  @keyframes snake {
+    0% {
+      box-shadow: 1.375em 0em #debf23, 1.375em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 2.75em 0.29721em #b8b64c, 2.75em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 4.125em 0.18368em #92ae75, 4.125em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 5.5em -0.18368em #6ca59d, 5.5em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 6.875em -0.29721em #469cc6, 6.875em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52);
+    }
+
+    20% {
+      box-shadow: 1.375em 0.29721em #b8b64c, 1.375em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 2.75em 0.18368em #92ae75, 2.75em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 4.125em -0.18368em #6ca59d, 4.125em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 5.5em -0.29721em #469cc6, 5.5em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 6.875em 0.0em #debf23, 6.875em 0.0em 0.625em -0.3125em rgba(0, 0, 0, 0.52);
+    }
+
+    40% {
+      box-shadow: 1.375em 0.18368em #92ae75, 1.375em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 2.75em -0.18368em #6ca59d, 2.75em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 4.125em -0.29721em #469cc6, 4.125em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 5.5em 0.0em #debf23, 5.5em 0.0em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 6.875em 0.29721em #b8b64c, 6.875em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52);
+    }
+
+    60% {
+      box-shadow: 1.375em -0.18368em #6ca59d, 1.375em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 2.75em -0.29721em #469cc6, 2.75em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 4.125em 0.0em #debf23, 4.125em 0.0em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 5.5em 0.29721em #b8b64c, 5.5em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 6.875em 0.18368em #92ae75, 6.875em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52);
+    }
+
+    80% {
+      box-shadow: 1.375em -0.29721em #469cc6, 1.375em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 2.75em 0.0em #debf23, 2.75em 0.0em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 4.125em 0.29721em #b8b64c, 4.125em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 5.5em 0.18368em #92ae75, 5.5em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 6.875em -0.18368em #6ca59d, 6.875em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52);
+    }
+
+    100% {
+      box-shadow: 1.375em 0.0em #debf23, 1.375em 0.0em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 2.75em 0.29721em #b8b64c, 2.75em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 4.125em 0.18368em #92ae75, 4.125em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 5.5em -0.18368em #6ca59d, 5.5em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.52), 6.875em -0.29721em #469cc6, 6.875em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.52);
+    }
+  }
+
+  .loader--spinningDisc {
+    border: solid 0.5em #9b59b6;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    padding: 0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background: #3498db;
+    background-clip: content-box;
+    animation: spinDisc 1.5s linear infinite;
+  }
+
+  @keyframes spinDisc {
+    50% {
+      border-top-color: #3498db;
+      border-bottom-color: #3498db;
+      background-color: #2ecc71;
+    }
+
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  .loader--glisteningWindow {
+    width: 0.25em;
+    height: 0.25em;
+    box-shadow: 0.70711em 0.70711em 0 0em #2ecc71, -0.70711em 0.70711em 0 0.17678em #9b59b6, -0.70711em -0.70711em 0 0.25em #3498db, 0.70711em -0.70711em 0 0.17678em #f1c40f;
+    animation: gw 1s ease-in-out infinite, rot 2.8s linear infinite;
+  }
+
+  @keyframes rot {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes gw {
+    0% {
+      box-shadow: 0.70711em 0.70711em 0 0.125em #2ecc71, -0.70711em 0.70711em 0 0.39017em #9b59b6, -0.70711em -0.70711em 0 0.5em #3498db, 0.70711em -0.70711em 0 0.39017em #f1c40f;
+    }
+
+    25% {
+      box-shadow: 0.70711em 0.70711em 0 0.39017em #2ecc71, -0.70711em 0.70711em 0 0.5em #9b59b6, -0.70711em -0.70711em 0 0.39017em #3498db, 0.70711em -0.70711em 0 0.125em #f1c40f;
+    }
+
+    50% {
+      box-shadow: 0.70711em 0.70711em 0 0.5em #2ecc71, -0.70711em 0.70711em 0 0.39017em #9b59b6, -0.70711em -0.70711em 0 0.125em #3498db, 0.70711em -0.70711em 0 0.39017em #f1c40f;
+    }
+
+    75% {
+      box-shadow: 0.70711em 0.70711em 0 0.39017em #2ecc71, -0.70711em 0.70711em 0 0.125em #9b59b6, -0.70711em -0.70711em 0 0.39017em #3498db, 0.70711em -0.70711em 0 0.5em #f1c40f;
+    }
+
+    100% {
+      box-shadow: 0.70711em 0.70711em 0 0.125em #2ecc71, -0.70711em 0.70711em 0 0.39017em #9b59b6, -0.70711em -0.70711em 0 0.5em #3498db, 0.70711em -0.70711em 0 0.39017em #f1c40f;
+    }
+  }
+
+  .loader--circularSquare {
+    width: 0;
+    height: 0;
+    box-shadow: -0.625em -0.625em 0 0.625em #9b59b6, 0.625em -0.625em 0 0.625em #9b59b6, -0.625em 0.625em 0 0.625em #9b59b6, 0.625em 0.625em 0 0.625em #9b59b6;
+    animation: circSquare 1.5s ease-in-out infinite;
+  }
+
+  @keyframes circSquare {
+    50% {
+      width: 1.25em;
+      height: 1.25em;
+      border-radius: 50%;
+      transform: rotate(0.5turn);
+      box-shadow: -2.5em 0 0 #2ecc71, 2.5em 0 0 #e74c3c, -2.5em 0 0 #3498db, 2.5em 0 0 #f1c40f;
+    }
+
+    80%,
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  </style>
+  <script>
+  <!-- prefixfree -->
+  ! function() {
+    function e(e, r) { return [].slice.call((r || document).querySelectorAll(e)) }
+    if (window.addEventListener) {
+      var r = window.StyleFix = {
+        link: function(e) {
+          try { if ("stylesheet" !== e.rel || e.hasAttribute("data-noprefix")) return } catch (t) { return }
+          var n, i = e.href || e.getAttribute("data-href"),
+            a = i.replace(/[^\/]+$/, ""),
+            o = (/^[a-z]{3,10}:/.exec(a) || [""])[0],
+            s = (/^[a-z]{3,10}:\/\/[^\/]+/.exec(a) || [""])[0],
+            l = /^([^?]*)\??/.exec(i)[1],
+            u = e.parentNode,
+            p = new XMLHttpRequest;
+          p.onreadystatechange = function() { 4 === p.readyState && n() }, n = function() {
+            var t = p.responseText;
+            if (t && e.parentNode && (!p.status || p.status < 400 || p.status > 600)) {
+              if (t = r.fix(t, !0, e), a) {
+                t = t.replace(/url\(\s*?((?:"|')?)(.+?)\1\s*?\)/gi, function(e, r, t) { return /^([a-z]{3,10}:|#)/i.test(t) ? e : /^\/\//.test(t) ? 'url("' + o + t + '")' : /^\//.test(t) ? 'url("' + s + t + '")' : /^\?/.test(t) ? 'url("' + l + t + '")' : 'url("' + a + t + '")' });
+                var n = a.replace(/([\\\^\$*+[\]?{}.=!:(|)])/g, "\\$1");
+                t = t.replace(RegExp("\\b(behavior:\\s*?url\\('?\"?)" + n, "gi"), "$1")
+              }
+              var i = document.createElement("style");
+              i.textContent = t, i.media = e.media, i.disabled = e.disabled, i.setAttribute("data-href", e.getAttribute("href")), u.insertBefore(i, e), u.removeChild(e), i.media = e.media
+            }
+          };
+          try { p.open("GET", i), p.send(null) } catch (t) { "undefined" != typeof XDomainRequest && (p = new XDomainRequest, p.onerror = p.onprogress = function() {}, p.onload = n, p.open("GET", i), p.send(null)) } e.setAttribute("data-inprogress", "")
+        },
+        styleElement: function(e) {
+          if (!e.hasAttribute("data-noprefix")) {
+            var t = e.disabled;
+            e.textContent = r.fix(e.textContent, !0, e), e.disabled = t
+          }
+        },
+        styleAttribute: function(e) {
+          var t = e.getAttribute("style");
+          t = r.fix(t, !1, e), e.setAttribute("style", t)
+        },
+        process: function() { e("style").forEach(StyleFix.styleElement), e("[style]").forEach(StyleFix.styleAttribute) },
+        register: function(e, t) {
+          (r.fixers = r.fixers || []).splice(void 0 === t ? r.fixers.length : t, 0, e)
+        },
+        fix: function(e, t, n) { for (var i = 0; i < r.fixers.length; i++) e = r.fixers[i](e, t, n) || e; return e },
+        camelCase: function(e) { return e.replace(/-([a-z])/g, function(e, r) { return r.toUpperCase() }).replace("-", "") },
+        deCamelCase: function(e) { return e.replace(/[A-Z]/g, function(e) { return "-" + e.toLowerCase() }) }
+      };
+      ! function() { setTimeout(function() {}, 10), document.addEventListener("DOMContentLoaded", StyleFix.process, !1) }()
+    }
+  }(),
+  function(e) {
+    function r(e, r, n, i, a) {
+      if (e = t[e], e.length) {
+        var o = RegExp(r + "(" + e.join("|") + ")" + n, "gi");
+        a = a.replace(o, i)
+      }
+      return a
+    }
+    if (window.StyleFix && window.getComputedStyle) {
+      var t = window.PrefixFree = {
+        prefixCSS: function(e, n) {
+          var i = t.prefix;
+          if (t.functions.indexOf("linear-gradient") > -1 && (e = e.replace(/(\s|:|,)(repeating-)?linear-gradient\(\s*(-?\d*\.?\d*)deg/gi, function(e, r, t, n) { return r + (t || "") + "linear-gradient(" + (90 - n) + "deg" })), e = r("functions", "(\\s|:|,)", "\\s*\\(", "$1" + i + "$2(", e), e = r("keywords", "(\\s|:)", "(\\s|;|\\}|$)", "$1" + i + "$2$3", e), e = r("properties", "(^|\\{|\\s|;)", "\\s*:", "$1" + i + "$2:", e), t.properties.length) {
+            var a = RegExp("\\b(" + t.properties.join("|") + ")(?!:)", "gi");
+            e = r("valueProperties", "\\b", ":(.+?);", function(e) { return e.replace(a, i + "$1") }, e)
+          }
+          return n && (e = r("selectors", "", "\\b", t.prefixSelector, e), e = r("atrules", "@", "\\b", "@" + i + "$1", e)), e = e.replace(RegExp("-" + i, "g"), "-"), e = e.replace(/-\*-(?=[a-z]+)/gi, t.prefix)
+        },
+        property: function(e) { return (t.properties.indexOf(e) ? t.prefix : "") + e },
+        value: function(e) { return e = r("functions", "(^|\\s|,)", "\\s*\\(", "$1" + t.prefix + "$2(", e), e = r("keywords", "(^|\\s)", "(\\s|$)", "$1" + t.prefix + "$2$3", e) },
+        prefixSelector: function(e) { return e.replace(/^:{1,2}/, function(e) { return e + t.prefix }) },
+        prefixProperty: function(e, r) { var n = t.prefix + e; return r ? StyleFix.camelCase(n) : n }
+      };
+      ! function() {
+        var e = {},
+          r = [],
+          n = getComputedStyle(document.documentElement, null),
+          i = document.createElement("div").style,
+          a = function(t) {
+            if ("-" === t.charAt(0)) {
+              r.push(t);
+              var n = t.split("-"),
+                i = n[1];
+              for (e[i] = ++e[i] || 1; n.length > 3;) {
+                n.pop();
+                var a = n.join("-");
+                o(a) && -1 === r.indexOf(a) && r.push(a)
+              }
+            }
+          },
+          o = function(e) { return StyleFix.camelCase(e) in i };
+        if (n.length > 0)
+          for (var s = 0; s < n.length; s++) a(n[s]);
+        else
+          for (var l in n) a(StyleFix.deCamelCase(l));
+        var u = { uses: 0 };
+        for (var p in e) {
+          var f = e[p];
+          u.uses < f && (u = { prefix: p, uses: f })
+        }
+        t.prefix = "-" + u.prefix + "-", t.Prefix = StyleFix.camelCase(t.prefix), t.properties = [];
+        for (var s = 0; s < r.length; s++) {
+          var l = r[s];
+          if (0 === l.indexOf(t.prefix)) {
+            var c = l.slice(t.prefix.length);
+            o(c) || t.properties.push(c)
+          }
+        }
+        "Ms" != t.Prefix || "transform" in i || "MsTransform" in i || !("msTransform" in i) || t.properties.push("transform", "transform-origin"), t.properties.sort()
+      }(),
+      function() {
+        function e(e, r) { return i[r] = "", i[r] = e, !!i[r] }
+        var r = { "linear-gradient": { property: "backgroundImage", params: "red, teal" }, calc: { property: "width", params: "1px + 5%" }, element: { property: "backgroundImage", params: "#foo" }, "cross-fade": { property: "backgroundImage", params: "url(a.png), url(b.png), 50%" } };
+        r["repeating-linear-gradient"] = r["repeating-radial-gradient"] = r["radial-gradient"] = r["linear-gradient"];
+        var n = { initial: "color", "zoom-in": "cursor", "zoom-out": "cursor", box: "display", flexbox: "display", "inline-flexbox": "display", flex: "display", "inline-flex": "display", grid: "display", "inline-grid": "display", "min-content": "width" };
+        t.functions = [], t.keywords = [];
+        var i = document.createElement("div").style;
+        for (var a in r) {
+          var o = r[a],
+            s = o.property,
+            l = a + "(" + o.params + ")";
+          !e(l, s) && e(t.prefix + l, s) && t.functions.push(a)
+        }
+        for (var u in n) { var s = n[u];!e(u, s) && e(t.prefix + u, s) && t.keywords.push(u) }
+      }(),
+      function() {
+        function r(e) { return a.textContent = e + "{}", !!a.sheet.cssRules.length }
+        var n = { ":read-only": null, ":read-write": null, ":any-link": null, "::selection": null },
+          i = { keyframes: "name", viewport: null, document: 'regexp(".")' };
+        t.selectors = [], t.atrules = [];
+        var a = e.appendChild(document.createElement("style"));
+        for (var o in n) { var s = o + (n[o] ? "(" + n[o] + ")" : "");!r(s) && r(t.prefixSelector(s)) && t.selectors.push(o) }
+        for (var l in i) { var s = l + " " + (i[l] || "");!r("@" + s) && r("@" + t.prefix + s) && t.atrules.push(l) } e.removeChild(a)
+      }(), t.valueProperties = ["transition", "transition-property"], e.className += " " + t.prefix, StyleFix.register(t.prefixCSS)
+    }
+  }(document.documentElement);
+  // 
+  window.Modernizr = function(e, t, n) {
+      function r(e) { b.cssText = e }
+
+      function o(e, t) { return r(S.join(e + ";") + (t || "")) }
+
+      function i(e, t) { return typeof e === t }
+
+      function a(e, t) { return !!~("" + e).indexOf(t) }
+
+      function c(e, t) { for (var r in e) { var o = e[r]; if (!a(o, "-") && b[o] !== n) return "pfx" == t ? o : !0 } return !1 }
+
+      function s(e, t, r) { for (var o in e) { var a = t[e[o]]; if (a !== n) return r === !1 ? e[o] : i(a, "function") ? a.bind(r || t) : a } return !1 }
+
+      function u(e, t, n) {
+        var r = e.charAt(0).toUpperCase() + e.slice(1),
+          o = (e + " " + k.join(r + " ") + r).split(" ");
+        return i(t, "string") || i(t, "undefined") ? c(o, t) : (o = (e + " " + T.join(r + " ") + r).split(" "), s(o, t, n))
+      }
+
+      function l() { m.input = function(n) { for (var r = 0, o = n.length; o > r; r++) P[n[r]] = n[r] in E; return P.list && (P.list = !!t.createElement("datalist") && !!e.HTMLDataListElement), P }("autocomplete autofocus list placeholder max min multiple pattern required step".split(" ")), m.inputtypes = function(e) { for (var r, o, i, a = 0, c = e.length; c > a; a++) E.setAttribute("type", o = e[a]), r = "text" !== E.type, r && (E.value = x, E.style.cssText = "position:absolute;visibility:hidden;", /^range$/.test(o) && E.style.WebkitAppearance !== n ? (g.appendChild(E), i = t.defaultView, r = i.getComputedStyle && "textfield" !== i.getComputedStyle(E, null).WebkitAppearance && 0 !== E.offsetHeight, g.removeChild(E)) : /^(search|tel)$/.test(o) || (r = /^(url|email)$/.test(o) ? E.checkValidity && E.checkValidity() === !1 : E.value != x)), M[e[a]] = !!r; return M }("search tel url email datetime date month week time datetime-local number range color".split(" ")) }
+      var f, d, p = "2.8.2",
+        m = {},
+        h = !0,
+        g = t.documentElement,
+        v = "modernizr",
+        y = t.createElement(v),
+        b = y.style,
+        E = t.createElement("input"),
+        x = ":)",
+        w = {}.toString,
+        S = " -webkit- -moz- -o- -ms- ".split(" "),
+        C = "Webkit Moz O ms",
+        k = C.split(" "),
+        T = C.toLowerCase().split(" "),
+        j = { svg: "http://www.w3.org/2000/svg" },
+        N = {},
+        M = {},
+        P = {},
+        A = [],
+        D = A.slice,
+        L = function(e, n, r, o) {
+          var i, a, c, s, u = t.createElement("div"),
+            l = t.body,
+            f = l || t.createElement("body");
+          if (parseInt(r, 10))
+            for (; r--;) c = t.createElement("div"), c.id = o ? o[r] : v + (r + 1), u.appendChild(c);
+          return i = ["&#173;", '<style id="s', v, '">', e, "</style>"].join(""), u.id = v, (l ? u : f).innerHTML += i, f.appendChild(u), l || (f.style.background = "", f.style.overflow = "hidden", s = g.style.overflow, g.style.overflow = "hidden", g.appendChild(f)), a = n(u, e), l ? u.parentNode.removeChild(u) : (f.parentNode.removeChild(f), g.style.overflow = s), !!a
+        },
+        $ = function(t) { var n = e.matchMedia || e.msMatchMedia; if (n) return n(t) && n(t).matches || !1; var r; return L("@media " + t + " { #" + v + " { position: absolute; } }", function(t) { r = "absolute" == (e.getComputedStyle ? getComputedStyle(t, null) : t.currentStyle).position }), r },
+        z = function() {
+          function e(e, o) { o = o || t.createElement(r[e] || "div"), e = "on" + e; var a = e in o; return a || (o.setAttribute || (o = t.createElement("div")), o.setAttribute && o.removeAttribute && (o.setAttribute(e, ""), a = i(o[e], "function"), i(o[e], "undefined") || (o[e] = n), o.removeAttribute(e))), o = null, a }
+          var r = { select: "input", change: "input", submit: "form", reset: "form", error: "img", load: "img", abort: "img" };
+          return e
+        }(),
+        F = {}.hasOwnProperty;
+      d = i(F, "undefined") || i(F.call, "undefined") ? function(e, t) { return t in e && i(e.constructor.prototype[t], "undefined") } : function(e, t) { return F.call(e, t) }, Function.prototype.bind || (Function.prototype.bind = function(e) {
+        var t = this;
+        if ("function" != typeof t) throw new TypeError;
+        var n = D.call(arguments, 1),
+          r = function() {
+            if (this instanceof r) {
+              var o = function() {};
+              o.prototype = t.prototype;
+              var i = new o,
+                a = t.apply(i, n.concat(D.call(arguments)));
+              return Object(a) === a ? a : i
+            }
+            return t.apply(e, n.concat(D.call(arguments)))
+          };
+        return r
+      }), N.flexbox = function() { return u("flexWrap") }, N.flexboxlegacy = function() { return u("boxDirection") }, N.canvas = function() { var e = t.createElement("canvas"); return !!e.getContext && !!e.getContext("2d") }, N.canvastext = function() { return !!m.canvas && !!i(t.createElement("canvas").getContext("2d").fillText, "function") }, N.webgl = function() { return !!e.WebGLRenderingContext }, N.touch = function() { var n; return "ontouchstart" in e || e.DocumentTouch && t instanceof DocumentTouch ? n = !0 : L(["@media (", S.join("touch-enabled),("), v, ")", "{#modernizr{top:9px;position:absolute}}"].join(""), function(e) { n = 9 === e.offsetTop }), n }, N.geolocation = function() { return "geolocation" in navigator }, N.postmessage = function() { return !!e.postMessage }, N.websqldatabase = function() { return !!e.openDatabase }, N.indexedDB = function() { return !!u("indexedDB", e) }, N.hashchange = function() { return z("hashchange", e) && (t.documentMode === n || t.documentMode > 7) }, N.history = function() { return !!e.history && !!history.pushState }, N.draganddrop = function() { var e = t.createElement("div"); return "draggable" in e || "ondragstart" in e && "ondrop" in e }, N.websockets = function() { return "WebSocket" in e || "MozWebSocket" in e }, N.rgba = function() { return r("background-color:rgba(150,255,150,.5)"), a(b.backgroundColor, "rgba") }, N.hsla = function() { return r("background-color:hsla(120,40%,100%,.5)"), a(b.backgroundColor, "rgba") || a(b.backgroundColor, "hsla") }, N.multiplebgs = function() { return r("background:url(https://),url(https://),red url(https://)"), /(url\s*\(.*?){3}/.test(b.background) }, N.backgroundsize = function() { return u("backgroundSize") }, N.borderimage = function() { return u("borderImage") }, N.borderradius = function() { return u("borderRadius") }, N.boxshadow = function() { return u("boxShadow") }, N.textshadow = function() { return "" === t.createElement("div").style.textShadow }, N.opacity = function() { return o("opacity:.55"), /^0.55$/.test(b.opacity) }, N.cssanimations = function() { return u("animationName") }, N.csscolumns = function() { return u("columnCount") }, N.cssgradients = function() {
+        var e = "background-image:",
+          t = "gradient(linear,left top,right bottom,from(#9f9),to(white));",
+          n = "linear-gradient(left top,#9f9, white);";
+        return r((e + "-webkit- ".split(" ").join(t + e) + S.join(n + e)).slice(0, -e.length)), a(b.backgroundImage, "gradient")
+      }, N.cssreflections = function() { return u("boxReflect") }, N.csstransforms = function() { return !!u("transform") }, N.csstransforms3d = function() { var e = !!u("perspective"); return e && "webkitPerspective" in g.style && L("@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}", function(t) { e = 9 === t.offsetLeft && 3 === t.offsetHeight }), e }, N.csstransitions = function() { return u("transition") }, N.fontface = function() {
+        var e;
+        return L('@font-face {font-family:"font";src:url("https://")}', function(n, r) {
+          var o = t.getElementById("smodernizr"),
+            i = o.sheet || o.styleSheet,
+            a = i ? i.cssRules && i.cssRules[0] ? i.cssRules[0].cssText : i.cssText || "" : "";
+          e = /src/i.test(a) && 0 === a.indexOf(r.split(" ")[0])
+        }), e
+      }, N.generatedcontent = function() { var e; return L(["#", v, "{font:0/0 a}#", v, ':after{content:"', x, '";visibility:hidden;font:3px/1 a}'].join(""), function(t) { e = t.offsetHeight >= 3 }), e }, N.video = function() {
+        var e = t.createElement("video"),
+          n = !1;
+        try {
+          (n = !!e.canPlayType) && (n = new Boolean(n), n.ogg = e.canPlayType('video/ogg; codecs="theora"').replace(/^no$/, ""), n.h264 = e.canPlayType('video/mp4; codecs="avc1.42E01E"').replace(/^no$/, ""), n.webm = e.canPlayType('video/webm; codecs="vp8, vorbis"').replace(/^no$/, ""))
+        } catch (r) {}
+        return n
+      }, N.audio = function() {
+        var e = t.createElement("audio"),
+          n = !1;
+        try {
+          (n = !!e.canPlayType) && (n = new Boolean(n), n.ogg = e.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""), n.mp3 = e.canPlayType("audio/mpeg;").replace(/^no$/, ""), n.wav = e.canPlayType('audio/wav; codecs="1"').replace(/^no$/, ""), n.m4a = (e.canPlayType("audio/x-m4a;") || e.canPlayType("audio/aac;")).replace(/^no$/, ""))
+        } catch (r) {}
+        return n
+      }, N.localstorage = function() { try { return localStorage.setItem(v, v), localStorage.removeItem(v), !0 } catch (e) { return !1 } }, N.sessionstorage = function() { try { return sessionStorage.setItem(v, v), sessionStorage.removeItem(v), !0 } catch (e) { return !1 } }, N.webworkers = function() { return !!e.Worker }, N.applicationcache = function() { return !!e.applicationCache }, N.svg = function() { return !!t.createElementNS && !!t.createElementNS(j.svg, "svg").createSVGRect }, N.inlinesvg = function() { var e = t.createElement("div"); return e.innerHTML = "<svg/>", (e.firstChild && e.firstChild.namespaceURI) == j.svg }, N.smil = function() { return !!t.createElementNS && /SVGAnimate/.test(w.call(t.createElementNS(j.svg, "animate"))) }, N.svgclippaths = function() { return !!t.createElementNS && /SVGClipPath/.test(w.call(t.createElementNS(j.svg, "clipPath"))) };
+      for (var O in N) d(N, O) && (f = O.toLowerCase(), m[f] = N[O](), A.push((m[f] ? "" : "no-") + f));
+      return m.input || l(), m.addTest = function(e, t) {
+          if ("object" == typeof e)
+            for (var r in e) d(e, r) && m.addTest(r, e[r]);
+          else {
+            if (e = e.toLowerCase(), m[e] !== n) return m;
+            t = "function" == typeof t ? t() : t, "undefined" != typeof h && h && (g.className += " " + (t ? "" : "no-") + e), m[e] = t
+          }
+          return m
+        }, r(""), y = E = null,
+        function(e, t) {
+          function n(e, t) {
+            var n = e.createElement("p"),
+              r = e.getElementsByTagName("head")[0] || e.documentElement;
+            return n.innerHTML = "x<style>" + t + "</style>", r.insertBefore(n.lastChild, r.firstChild)
+          }
+
+          function r() { var e = y.elements; return "string" == typeof e ? e.split(" ") : e }
+
+          function o(e) { var t = v[e[h]]; return t || (t = {}, g++, e[h] = g, v[g] = t), t }
+
+          function i(e, n, r) {
+            if (n || (n = t), l) return n.createElement(e);
+            r || (r = o(n));
+            var i;
+            return i = r.cache[e] ? r.cache[e].cloneNode() : m.test(e) ? (r.cache[e] = r.createElem(e)).cloneNode() : r.createElem(e), !i.canHaveChildren || p.test(e) || i.tagUrn ? i : r.frag.appendChild(i)
+          }
+
+          function a(e, n) {
+            if (e || (e = t), l) return e.createDocumentFragment();
+            n = n || o(e);
+            for (var i = n.frag.cloneNode(), a = 0, c = r(), s = c.length; s > a; a++) i.createElement(c[a]);
+            return i
+          }
+
+          function c(e, t) { t.cache || (t.cache = {}, t.createElem = e.createElement, t.createFrag = e.createDocumentFragment, t.frag = t.createFrag()), e.createElement = function(n) { return y.shivMethods ? i(n, e, t) : t.createElem(n) }, e.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + r().join().replace(/[\w\-]+/g, function(e) { return t.createElem(e), t.frag.createElement(e), 'c("' + e + '")' }) + ");return n}")(y, t.frag) }
+
+          function s(e) { e || (e = t); var r = o(e); return y.shivCSS && !u && !r.hasCSS && (r.hasCSS = !!n(e, "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")), l || c(e, r), e }
+          var u, l, f = "3.7.0",
+            d = e.html5 || {},
+            p = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,
+            m = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,
+            h = "_html5shiv",
+            g = 0,
+            v = {};
+          ! function() {
+            try {
+              var e = t.createElement("a");
+              e.innerHTML = "<xyz></xyz>", u = "hidden" in e, l = 1 == e.childNodes.length || function() { t.createElement("a"); var e = t.createDocumentFragment(); return "undefined" == typeof e.cloneNode || "undefined" == typeof e.createDocumentFragment || "undefined" == typeof e.createElement }()
+            } catch (n) { u = !0, l = !0 }
+          }();
+          var y = { elements: d.elements || "abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video", version: f, shivCSS: d.shivCSS !== !1, supportsUnknownElements: l, shivMethods: d.shivMethods !== !1, type: "default", shivDocument: s, createElement: i, createDocumentFragment: a };
+          e.html5 = y, s(t)
+        }(this, t), m._version = p, m._prefixes = S, m._domPrefixes = T, m._cssomPrefixes = k, m.mq = $, m.hasEvent = z, m.testProp = function(e) { return c([e]) }, m.testAllProps = u, m.testStyles = L, m.prefixed = function(e, t, n) { return t ? u(e, t, n) : u(e, "pfx") }, g.className = g.className.replace(/(^|\s)no-js(\s|$)/, "$1$2") + (h ? " js " + A.join(" ") : ""), m
+    }(this, this.document),
+    function(e, t, n) {
+      function r(e) { return "[object Function]" == g.call(e) }
+
+      function o(e) { return "string" == typeof e }
+
+      function i() {}
+
+      function a(e) { return !e || "loaded" == e || "complete" == e || "uninitialized" == e }
+
+      function c() {
+        var e = v.shift();
+        y = 1, e ? e.t ? m(function() {
+          ("c" == e.t ? d.injectCss : d.injectJs)(e.s, 0, e.a, e.x, e.e, 1)
+        }, 0) : (e(), c()) : y = 0
+      }
+
+      function s(e, n, r, o, i, s, u) {
+        function l(t) { if (!p && a(f.readyState) && (b.r = p = 1, !y && c(), f.onload = f.onreadystatechange = null, t)) { "img" != e && m(function() { x.removeChild(f) }, 50); for (var r in T[n]) T[n].hasOwnProperty(r) && T[n][r].onload() } }
+        var u = u || d.errorTimeout,
+          f = t.createElement(e),
+          p = 0,
+          g = 0,
+          b = { t: r, s: n, e: i, a: s, x: u };
+        1 === T[n] && (g = 1, T[n] = []), "object" == e ? f.data = n : (f.src = n, f.type = e), f.width = f.height = "0", f.onerror = f.onload = f.onreadystatechange = function() { l.call(this, g) }, v.splice(o, 0, b), "img" != e && (g || 2 === T[n] ? (x.insertBefore(f, E ? null : h), m(l, u)) : T[n].push(f))
+      }
+
+      function u(e, t, n, r, i) { return y = 0, t = t || "j", o(e) ? s("c" == t ? S : w, e, t, this.i++, n, r, i) : (v.splice(this.i++, 0, e), 1 == v.length && c()), this }
+
+      function l() { var e = d; return e.loader = { load: u, i: 0 }, e }
+      var f, d, p = t.documentElement,
+        m = e.setTimeout,
+        h = t.getElementsByTagName("script")[0],
+        g = {}.toString,
+        v = [],
+        y = 0,
+        b = "MozAppearance" in p.style,
+        E = b && !!t.createRange().compareNode,
+        x = E ? p : h.parentNode,
+        p = e.opera && "[object Opera]" == g.call(e.opera),
+        p = !!t.attachEvent && !p,
+        w = b ? "object" : p ? "script" : "img",
+        S = p ? "script" : w,
+        C = Array.isArray || function(e) { return "[object Array]" == g.call(e) },
+        k = [],
+        T = {},
+        j = { timeout: function(e, t) { return t.length && (e.timeout = t[0]), e } };
+      d = function(e) {
+        function t(e) {
+          var t, n, r, e = e.split("!"),
+            o = k.length,
+            i = e.pop(),
+            a = e.length,
+            i = { url: i, origUrl: i, prefixes: e };
+          for (n = 0; a > n; n++) r = e[n].split("="), (t = j[r.shift()]) && (i = t(i, r));
+          for (n = 0; o > n; n++) i = k[n](i);
+          return i
+        }
+
+        function a(e, o, i, a, c) {
+          var s = t(e),
+            u = s.autoCallback;
+          s.url.split(".").pop().split("?").shift(), s.bypass || (o && (o = r(o) ? o : o[e] || o[a] || o[e.split("/").pop().split("?")[0]]), s.instead ? s.instead(e, o, i, a, c) : (T[s.url] ? s.noexec = !0 : T[s.url] = 1, i.load(s.url, s.forceCSS || !s.forceJS && "css" == s.url.split(".").pop().split("?").shift() ? "c" : n, s.noexec, s.attrs, s.timeout), (r(o) || r(u)) && i.load(function() { l(), o && o(s.origUrl, c, a), u && u(s.origUrl, c, a), T[s.url] = 2 })))
+        }
+
+        function c(e, t) {
+          function n(e, n) {
+            if (e) {
+              if (o(e)) n || (f = function() {
+                var e = [].slice.call(arguments);
+                d.apply(this, e), p()
+              }), a(e, f, t, 0, u);
+              else if (Object(e) === e)
+                for (s in c = function() { var t, n = 0; for (t in e) e.hasOwnProperty(t) && n++; return n }(), e) e.hasOwnProperty(s) && (!n && !--c && (r(f) ? f = function() {
+                  var e = [].slice.call(arguments);
+                  d.apply(this, e), p()
+                } : f[s] = function(e) {
+                  return function() {
+                    var t = [].slice.call(arguments);
+                    e && e.apply(this, t), p()
+                  }
+                }(d[s])), a(e[s], f, t, s, u))
+            } else !n && p()
+          }
+          var c, s, u = !!e.test,
+            l = e.load || e.both,
+            f = e.callback || i,
+            d = f,
+            p = e.complete || i;
+          n(u ? e.yep : e.nope, !!l), l && n(l)
+        }
+        var s, u, f = this.yepnope.loader;
+        if (o(e)) a(e, 0, f, 0);
+        else if (C(e))
+          for (s = 0; s < e.length; s++) u = e[s], o(u) ? a(u, 0, f, 0) : C(u) ? d(u) : Object(u) === u && c(u, f);
+        else Object(e) === e && c(e, f)
+      }, d.addPrefix = function(e, t) { j[e] = t }, d.addFilter = function(e) { k.push(e) }, d.errorTimeout = 1e4, null == t.readyState && t.addEventListener && (t.readyState = "loading", t.addEventListener("DOMContentLoaded", f = function() { t.removeEventListener("DOMContentLoaded", f, 0), t.readyState = "complete" }, 0)), e.yepnope = l(), e.yepnope.executeStack = c, e.yepnope.injectJs = function(e, n, r, o, s, u) {
+        var l, f, p = t.createElement("script"),
+          o = o || d.errorTimeout;
+        p.src = e;
+        for (f in r) p.setAttribute(f, r[f]);
+        n = u ? c : n || i, p.onreadystatechange = p.onload = function() {!l && a(p.readyState) && (l = 1, n(), p.onload = p.onreadystatechange = null) }, m(function() { l || (l = 1, n(1)) }, o), s ? p.onload() : h.parentNode.insertBefore(p, h)
+      }, e.yepnope.injectCss = function(e, n, r, o, a, s) {
+        var u, o = t.createElement("link"),
+          n = s ? c : n || i;
+        o.href = e, o.rel = "stylesheet", o.type = "text/css";
+        for (u in r) o.setAttribute(u, r[u]);
+        a || (h.parentNode.insertBefore(o, h), m(n, 0))
+      }
+    }(this, document), Modernizr.load = function() { yepnope.apply(window, [].slice.call(arguments, 0)) };
+
+  </script>
+</head>
+
+<body>
+  <div style="text-align:center;clear:both;">
+  </div>
+  <div class='loader loader--audioWave'></div>
+  <div class='loader loader--snake'></div>
+  <div class='loader loader--spinningDisc'></div>
+  <div class='loader loader--glisteningWindow'></div>
+  <div class='loader loader--circularSquare'></div>
+</body>
+
+</html>

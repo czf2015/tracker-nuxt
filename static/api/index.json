@@ -1,0 +1,81 @@
+{
+	"ok": true,
+	"banners": [{
+		"id": "0001",
+		"link": "https://sale.piao.qunar.com/touch/topic/mk/t_3236.htm?cat=from_value%3DTOPIC-%E8%BF%AA%E5%A3%AB%E5%B0%BC5%E6%8A%98%26from_area%3Dts_topic%26dist_city%3D%E5%8C%97%E4%BA%AC%26from_index%3D1",
+		"picture": "/img/pictures/demo01.jpg",
+		"desc": "南海军演"
+	}, {
+		"id": "0002",
+		"link": "https://sale.piao.qunar.com/touch/topic/mk/t_3236.htm?cat=from_value%3DTOPIC-%E8%BF%AA%E5%A3%AB%E5%B0%BC5%E6%8A%98%26from_area%3Dts_topic%26dist_city%3D%E5%8C%97%E4%BA%AC%26from_index%3D1",
+		"picture": "/img/pictures/demo01.jpg",
+		"desc": "南海军演"
+	}, {
+		"id": "0003",
+		"link": "https://sale.piao.qunar.com/touch/topic/mk/t_3236.htm?cat=from_value%3DTOPIC-%E8%BF%AA%E5%A3%AB%E5%B0%BC5%E6%8A%98%26from_area%3Dts_topic%26dist_city%3D%E5%8C%97%E4%BA%AC%26from_index%3D1",
+		"picture": "/img/pictures/demo01.jpg",
+		"desc": "南海军演"
+	}],
+	"recommends": [{
+		"id": "0001",
+		"link": "http://touch.piao.qunar.com/touch/detail.htm?id=33575&from=as_recommend_sight",
+		"picture": "http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_200x200_36727f69.jpg",
+		"subject": "金海湖风景区",
+		"mark": 80,
+		"reviews": [{
+			"user": "*****",
+			"content": ""
+		}],
+		"price": 20,
+		"place": "平谷区"
+	}, {
+		"id": "0002",
+		"link": "http://touch.piao.qunar.com/touch/detail.htm?id=33575&from=as_recommend_sight",
+		"picture": "http://img1.qunarzz.com/sight/p0/1803/12/126471e0966aca5ba3.img.jpg_200x200_f1286016.jpg",
+		"subject": "北京国际鲜花港",
+		"mark": 80,
+		"reviews": [{
+			"user": "*****",
+			"content": ""
+		}],
+		"price": 20,
+		"place": "顺义区"
+	}, {
+		"id": "0003",
+		"link": "http://touch.piao.qunar.com/touch/detail.htm?id=33575&from=as_recommend_sight",
+		"picture": "http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_200x200_7690e4cd.jpg",
+		"subject": "北京欢乐谷",
+		"mark": 80,
+		"reviews": [{
+			"user": "*****",
+			"content": ""
+		}],
+		"price": 20,
+		"place": "朝阳区"
+	}],
+	"ranks": [{
+		"id": "0001",
+		"link": "#",
+		"picture": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_150x150_06cb3e52.jpg",
+		"subject": "故宫",
+		"price": 30
+	}, {
+		"id": "0002",
+		"link": "#",
+		"picture": "http://img1.qunarzz.com/sight/p0/1501/40/40b2b6c951b28fdd.water.jpg_150x150_8a63d940.jpg",
+		"subject": "水立方",
+		"price": 30
+	}, {
+		"id": "0003",
+		"link": "#",
+		"picture": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_150x150_2dec3e78.jpg",
+		"subject": "八达岭长城",
+		"price": 20
+	}, {
+		"id": "0004",
+		"link": "#",
+		"picture": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_150x150_2dec3e78.jpg",
+		"subject": "八达岭长城",
+		"price": 20
+	}]
+}

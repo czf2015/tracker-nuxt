@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 组有趣的 HTML5 SVG 文字播放动画DEMO演示</title>
+  <style>
+    /*normalize*/
+  article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;margin:0.67em 0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}dfn{font-style:italic;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}pre{white-space:pre-wrap;}q{quotes:"\201C" "\201D" "\2018" "\2019";}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
+  /**/
+  body, html { font-size: 100%;   padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+body{
+  color: #fff;
+  background: #27272d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Microsoft YaHei","瀹嬩綋","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+}
+a {
+  outline: none;
+  color: #fdf7b5;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #fff;
+}
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.htmleaf-container{
+  margin: 0 auto;
+}
+/* Icons */
+.icon {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+/* Buttons */
+
+.btn {
+  display: block;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  color: #fdf7b5;
+  border: none;
+  background: none;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn--start {
+  border: 2px solid;
+  border-radius: 1.85em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95em;
+  padding: 1em 2em;
+  margin: 0 auto;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.btn--github {
+  position: absolute;
+  right: 1em;
+  top: 0.75em;
+  font-size: 1.5em;
+  margin: 0.15em 0 0 0;
+}
+
+.btn--github .icon {
+  stroke: #fdf7b5;
+  fill: none;
+}
+
+.btn--github:hover .icon,
+.btn--github:focus .icon {
+  stroke: #fff;
+}
+/*sponsor*/
+/* Sponsor */
+.pater {
+  display: block;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+.pater::before {
+  content: 'Sponsor:';
+  position: absolute;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.5em;
+  top: 0.75em;
+  left: 0.75em;
+  opacity: 0.4;
+}
+
+.pater__img {
+  display: none;
+}
+
+.pater__title {
+  display: block;
+  background: #fdf7b5;
+  color: #333;
+  text-align: left;
+  padding: 2em 1em 1em;
+  font-size: 1em;
+  margin: 0;
+}
+
+.pater__title span {
+  color: #f84242;
+}
+
+@media screen and (min-width: 50em) {
+  .pater {
+    width: 280px;
+    height: 258px;
+  }
+  .pater::before {
+    left: 6em;
+    top: 6em;
+  }
+  .pater__img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    -webkit-transform: translate3d(50px,50px,0);
+    transform: translate3d(50px,50px,0);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  }
+  .pater:hover .pater__img {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  .pater__title {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    font-size: 0.85em;
+    padding: 1.25em 50px 1em 1.5em;
+    -webkit-transform: translate3d(105px,-20px,0);
+    transform: translate3d(105px,-20px,0);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  }
+  .pater:hover .pater__title {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+/*component*/
+/* Main SVG */
+
+.letters {
+  position: relative;
+  display: block;
+  min-height: 400px;
+  max-height: 70vh;
+  margin: 0 auto;
+}
+
+
+/* Letter path */
+
+.letter__layer {
+  fill: none;
+  stroke-miterlimit: 3;
+  stroke-linecap: butt;
+  stroke-linejoin: bevel;
+}
+
+
+/* Individual effects/styles */
+
+
+/* Effect 1 */
+
+.letters--effect-1 .letter__layer:first-child {
+  stroke-width: 9px;
+}
+
+.letters--effect-1 .letter__layer:nth-child(2) {
+  stroke-width: 9.5px;
+}
+
+.letters--effect-1 .letter__layer:nth-child(3) {
+  stroke-width: 10px;
+}
+
+
+/* Effect 1 colors */
+
+.color-1 { stroke: #dea521; }
+.color-2 { stroke: #f84242; }
+.color-3 { stroke: #3758a7; }
+.color-4 { stroke: #f79c8c; }
+.color-5 { stroke: #84b5bd; }
+.color-6 { stroke: #feefde; }
+
+
+/* Effect 2 */
+
+.letters--effect-2 .letter__layer:first-child {
+  stroke: #4caf50;
+  stroke-width: 1px;
+}
+
+.letters--effect-2 .letter__layer:nth-child(2) {
+  stroke: #ffeb3b;
+  stroke-width: 4px;
+}
+
+.letters--effect-2 .letter__layer:nth-child(3) {
+  stroke: #e6437b;
+  stroke-width: 10px;
+}
+
+
+/* Effect 3 */
+
+.letters--effect-3 .letter__layer:first-child {
+  -webkit-transform: translate3d(-2px, -2px, 0);
+  transform: translate3d(-2px, -2px, 0);
+  stroke: #dddde6;
+  stroke-width: 10px;
+}
+
+.letters--effect-3 .letter__layer:nth-child(2) {
+  stroke: #eca80e;
+  stroke-width: 6px;
+}
+
+.letters--effect-3 .letter__layer:nth-child(3) {
+  stroke: #607d8b;
+  stroke-width: 8px;
+}
+
+
+/* Effect 4 */
+
+.letters--effect-4 .letter__layer:first-child {
+  stroke: #00966c;
+  stroke-width: 10px;
+}
+
+.letters--effect-4 .letter__layer:nth-child(2) {
+  stroke: #27272d;
+  stroke-width: 4px;
+}
+
+.letters--effect-4 .letter__layer:nth-child(3) {
+  stroke: #fcec9b;
+  stroke-width: 1px;
+}
+
+</style>
+  <script>
+  document.documentElement.className = 'js';
+
+  </script>
+</head>
+
+<body>
+  <svg class="hidden">
+    <defs>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <title>arrow</title>
+        <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+      </symbol>
+      <symbol id="icon-drop" viewBox="0 0 24 24">
+        <title>drop</title>
+        <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+        <path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+      </symbol>
+      <symbol id="icon-octicon" viewBox="0 0 24 24">
+        <title>octicon</title>
+        <path d="M12,2.2C6.4,2.2,1.9,6.7,1.9,12.2c0,4.4,2.9,8.2,6.9,9.6c0.5,0.1,0.7-0.2,0.7-0.5c0-0.2,0-0.9,0-1.7c-2.8,0.6-3.4-1.4-3.4-1.4C5.6,17.1,5,16.8,5,16.8C4.1,16.2,5,16.2,5,16.2c1,0.1,1.5,1,1.5,1c0.9,1.5,2.4,1.1,2.9,0.8c0.1-0.7,0.4-1.1,0.6-1.3c-2.2-0.3-4.6-1.1-4.6-5c0-1.1,0.4-2,1-2.7C6.5,8.8,6.2,7.7,6.7,6.4c0,0,0.8-0.3,2.8,1C10.3,7.2,11.1,7.1,12,7c0.9,0,1.7,0.1,2.5,0.3c1.9-1.3,2.8-1,2.8-1c0.5,1.4,0.2,2.4,0.1,2.7c0.6,0.7,1,1.6,1,2.7c0,3.9-2.4,4.7-4.6,5c0.4,0.3,0.7,0.9,0.7,1.9c0,1.3,0,2.4,0,2.8c0,0.3,0.2,0.6,0.7,0.5c4-1.3,6.9-5.1,6.9-9.6C22.1,6.7,17.6,2.2,12,2.2z" />
+      </symbol>
+    </defs>
+  </svg>
+  <main>
+    <div class="content content--1">
+      <svg width="100%" height="100%" viewBox="0 0 320 180" class="letters letters--effect-1">
+        <!--W-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M25,39.7l22.4,51l7.9-32.2L76.2,84l1.3-61.2" />
+            <path class="letter__layer color-1" d="M25,39.7l22.4,51l7.9-32.2L76.2,84l1.3-61.2" />
+            <path class="letter__layer color-2" d="M25,39.7l22.4,51l7.9-32.2L76.2,84l1.3-61.2" />
+          </g>
+        </g>
+        <!--I-->
+        <g class="letter letter--2">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M100,20.3l8.4,58.4" />
+            <path class="letter__layer color-2" d="M100,20.3l8.4,58.4" />
+            <path class="letter__layer color-3" d="M100,20.3l8.4,58.4" />
+          </g>
+        </g>
+        <!--L-->
+        <g class="letter letter--3">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M126.4,70.8l27.6,0.5" />
+            <path class="letter__layer color-3" d="M126.4,70.8l27.6,0.5" />
+            <path class="letter__layer color-4" d="M126.4,70.8l27.6,0.5" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M128.9,15.6l-2.3,60.2" />
+            <path class="letter__layer color-3" d="M128.9,15.6l-2.3,60.2" />
+            <path class="letter__layer color-4" d="M128.9,15.6l-2.3,60.2" />
+          </g>
+        </g>
+        <!--D-->
+        <g class="letter letter--4">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M167.4,27.6l3.7,49.1" />
+            <path class="letter__layer color-4" d="M167.4,27.6l3.7,49.1" />
+            <path class="letter__layer color-5" d="M167.4,27.6l3.7,49.1" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M157.8,30.9c0,0,31.2-10.9,40.3,6.8c8.9,17-23.5,38.4-35,42.6" />
+            <path class="letter__layer color-4" d="M157.8,30.9c0,0,31.2-10.9,40.3,6.8c8.9,17-23.5,38.4-35,42.6" />
+            <path class="letter__layer color-5" d="M157.8,30.9c0,0,31.2-10.9,40.3,6.8c8.9,17-23.5,38.4-35,42.6" />
+          </g>
+        </g>
+        <!--E-->
+        <g class="letter letter--5">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M215,52l25.6,2.8" />
+            <path class="letter__layer color-5" d="M215,52l25.6,2.8" />
+            <path class="letter__layer color-1" d="M215,52l25.6,2.8" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M211.8,76.9l30.6,3.4" />
+            <path class="letter__layer color-5" d="M211.8,76.9l30.6,3.4" />
+            <path class="letter__layer color-1" d="M211.8,76.9l30.6,3.4" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M218.6,27.4l30.9,2.9" />
+            <path class="letter__layer color-5" d="M218.6,27.4l30.9,2.9" />
+            <path class="letter__layer color-1" d="M218.6,27.4l30.9,2.9" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M218.4,22.4l-6.9,59.6" />
+            <path class="letter__layer color-5" d="M218.4,22.4l-6.9,59.6" />
+            <path class="letter__layer color-1" d="M218.4,22.4l-6.9,59.6" />
+          </g>
+        </g>
+        <!--R-->
+        <g class="letter letter--6">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M264.2,29.8l24.1,8c12,4.2,12,11,9.4,18.5c-2.6,7.5-6.7,12.9-18.7,8.8l-14.2-4.8" />
+            <path class="letter__layer color-4" d="M264.2,29.8l24.1,8c12,4.2,12,11,9.4,18.5c-2.6,7.5-6.7,12.9-18.7,8.8l-14.2-4.8" />
+            <path class="letter__layer color-2" d="M264.2,29.8l24.1,8c12,4.2,12,11,9.4,18.5c-2.6,7.5-6.7,12.9-18.7,8.8l-14.2-4.8" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M284.9,96.2l-20.4-35.1" />
+            <path class="letter__layer color-4" d="M284.9,96.2l-20.4-35.1" />
+            <path class="letter__layer color-2" d="M284.9,96.2l-20.4-35.1" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M275.2,29.4l-20.5,60.6" />
+            <path class="letter__layer color-4" d="M275.2,29.4l-20.5,60.6" />
+            <path class="letter__layer color-2" d="M275.2,29.4l-20.5,60.6" />
+          </g>
+        </g>
+        <!--M-->
+        <g class="letter letter--7">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M72.9,156.9l-7.1-56.5L91.7,127l18.8-29.8l7.1,56.5" />
+            <path class="letter__layer color-3" d="M72.9,156.9l-7.1-56.5L91.7,127l18.8-29.8l7.1,56.5" />
+            <path class="letter__layer color-1" d="M72.9,156.9l-7.1-56.5L91.7,127l18.8-29.8l7.1,56.5" />
+          </g>
+        </g>
+        <!--I-->
+        <g class="letter letter--8">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M144.9,99.5l-6,61.3" />
+            <path class="letter__layer color-4" d="M144.9,99.5l-6,61.3" />
+            <path class="letter__layer color-2" d="M144.9,99.5l-6,61.3" />
+          </g>
+        </g>
+        <!--N-->
+        <g class="letter letter--9">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M170.4,161.9l-3.2-61.8l43.4,58.1l-7.2-62.6" />
+            <path class="letter__layer color-1" d="M170.4,161.9l-3.2-61.8l43.4,58.1l-7.2-62.6" />
+            <path class="letter__layer color-3" d="M170.4,161.9l-3.2-61.8l43.4,58.1l-7.2-62.6" />
+          </g>
+        </g>
+        <!--D-->
+        <g class="letter letter--10">
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M233.8,107.9l3.9,51.7" />
+            <path class="letter__layer color-5" d="M233.8,107.9l3.9,51.7" />
+            <path class="letter__layer color-4" d="M233.8,107.9l3.9,51.7" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer color-6" d="M222.4,109.4c0,0,33.9-11.8,43.8,7.4c10.9,20.9-23.6,43.4-34.8,47.5" />
+            <path class="letter__layer color-5" d="M222.4,109.4c0,0,33.9-11.8,43.8,7.4c10.9,20.9-23.6,43.4-34.8,47.5" />
+            <path class="letter__layer color-4" d="M222.4,109.4c0,0,33.9-11.8,43.8,7.4c10.9,20.9-23.6,43.4-34.8,47.5" />
+          </g>
+        </g>
+      </svg>
+      <div class="content__meta"><button class="btn btn--start" aria-label="Start animation">Start</button></div>
+    </div>
+    <div class="content content--2">
+      <svg width="100%" height="100%" viewBox="0 0 320 180" class="letters letters--effect-2">
+        <!--O-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M92.8,80.4C64.5,87.7,64,42.1,83.4,31.3C109.2,30.3,117.6,74.1,92.8,80.4z" />
+            <path class="letter__layer" d="M92.8,80.4C64.5,87.7,64,42.1,83.4,31.3C109.2,30.3,117.6,74.1,92.8,80.4z" />
+            <path class="letter__layer" d="M92.8,80.4C64.5,87.7,64,42.1,83.4,31.3C109.2,30.3,117.6,74.1,92.8,80.4z" />
+          </g>
+        </g>
+        <!--N-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M162.1,27.1v57.4l-38.3-57.4v57.4" />
+            <path class="letter__layer" d="M162.1,27.1v57.4l-38.3-57.4v57.4" />
+            <path class="letter__layer" d="M162.1,27.1v57.4l-38.3-57.4v57.4" />
+          </g>
+        </g>
+        <!--L-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M183.9,27.1v57.4" />
+            <path class="letter__layer" d="M183.9,27.1v57.4" />
+            <path class="letter__layer" d="M183.9,27.1v57.4" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M183.9,79.5h32.8" />
+            <path class="letter__layer" d="M183.9,79.5h32.8" />
+            <path class="letter__layer" d="M183.9,79.5h32.8" />
+          </g>
+        </g>
+        <!--Y-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M250,27.1l-21.9,27.3" />
+            <path class="letter__layer" d="M250,27.1l-21.9,27.3" />
+            <path class="letter__layer" d="M250,27.1l-21.9,27.3" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M206.2,27.1c17.4,14.3,27.6,34.9,21.9,57.4" />
+            <path class="letter__layer" d="M206.2,27.1c17.4,14.3,27.6,34.9,21.9,57.4" />
+            <path class="letter__layer" d="M206.2,27.1c17.4,14.3,27.6,34.9,21.9,57.4" />
+          </g>
+        </g>
+        <!--L-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M71.3,91.9v57.4" />
+            <path class="letter__layer" d="M71.3,91.9v57.4" />
+            <path class="letter__layer" d="M71.3,91.9v57.4" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M71.3,144.4h32.8" />
+            <path class="letter__layer" d="M71.3,144.4h32.8" />
+            <path class="letter__layer" d="M71.3,144.4h32.8" />
+          </g>
+        </g>
+        <!--O-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M132.8,147.1c-28.2,7.2-28.8-38.3-9.4-49.1C149.2,96.9,157.6,140.7,132.8,147.1z" />
+            <path class="letter__layer" d="M132.8,147.1c-28.2,7.2-28.8-38.3-9.4-49.1C149.2,96.9,157.6,140.7,132.8,147.1z" />
+            <path class="letter__layer" d="M132.8,147.1c-28.2,7.2-28.8-38.3-9.4-49.1C149.2,96.9,157.6,140.7,132.8,147.1z" />
+          </g>
+        </g>
+        <!--V-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M202,93.7l-21.9,57.4l-21.9-57.4" />
+            <path class="letter__layer" d="M202,93.7l-21.9,57.4l-21.9-57.4" />
+            <path class="letter__layer" d="M202,93.7l-21.9,57.4l-21.9-57.4" />
+          </g>
+        </g>
+        <!--E-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M217,95.5v57.4" />
+            <path class="letter__layer" d="M217,95.5v57.4" />
+            <path class="letter__layer" d="M217,95.5v57.4" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M217,100.5h32.5" />
+            <path class="letter__layer" d="M217,100.5h32.5" />
+            <path class="letter__layer" d="M217,100.5h32.5" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M217,122.8h20" />
+            <path class="letter__layer" d="M217,122.8h20" />
+            <path class="letter__layer" d="M217,122.8h20" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M217,147.9h32.5" />
+            <path class="letter__layer" d="M217,147.9h32.5" />
+            <path class="letter__layer" d="M217,147.9h32.5" />
+          </g>
+        </g>
+      </svg>
+      <div class="content__meta"><button class="btn btn--start" aria-label="Start animation">Start</button></div>
+    </div>
+    <div class="content content--3">
+      <svg width="100%" height="100%" viewBox="0 0 400 300" class="letters letters--effect-3">
+        <!--J-->
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M20.4,52.1c17.9,0.2,46.3,1.2,63.3-4.4C73,72.5,68.1,114.4,66.3,141.3c-0.2,3-0.6,6.3-2.7,8.4c-3,3-8,2.2-11.9,0.7c-5.4-2.2-10.3-5.7-13.4-10.6c-3.1-4.9-4.2-11.2-2.1-16.7c1.7-4.5,5.4-8.1,9.6-10.5s8.9-3.8,13.6-5.1c16-4.4,32.2-7.9,48.6-10.4" />
+            <path class="letter__layer" d="M20.4,52.1c17.9,0.2,46.3,1.2,63.3-4.4C73,72.5,68.1,114.4,66.3,141.3c-0.2,3-0.6,6.3-2.7,8.4c-3,3-8,2.2-11.9,0.7c-5.4-2.2-10.3-5.7-13.4-10.6c-3.1-4.9-4.2-11.2-2.1-16.7c1.7-4.5,5.4-8.1,9.6-10.5s8.9-3.8,13.6-5.1c16-4.4,32.2-7.9,48.6-10.4" />
+            <path class="letter__layer" d="M20.4,52.1c17.9,0.2,46.3,1.2,63.3-4.4C73,72.5,68.1,114.4,66.3,141.3c-0.2,3-0.6,6.3-2.7,8.4c-3,3-8,2.2-11.9,0.7c-5.4-2.2-10.3-5.7-13.4-10.6c-3.1-4.9-4.2-11.2-2.1-16.7c1.7-4.5,5.4-8.1,9.6-10.5s8.9-3.8,13.6-5.1c16-4.4,32.2-7.9,48.6-10.4" />
+          </g>
+        </g>
+        <!--u-->
+        <g class="letter letter--2">
+          <g class="letter__part">
+            <path class="letter__layer" d="M93.2,83.7c8.8-6.2,17.5-12.4,26.3-18.6c-0.2,11.9-0.1,23.7,0.1,35.6c0.1,2.5,0.7,5.8,3.2,6.2c1,0.2,2.1-0.2,3-0.6c14.6-6.7,22.9-22.4,27.6-37.8c-0.6,7.1-1.2,14.2-0.1,21.2c1.1,7,4.1,13.9,9.5,18.5" />
+            <path class="letter__layer" d="M93.2,83.7c8.8-6.2,17.5-12.4,26.3-18.6c-0.2,11.9-0.1,23.7,0.1,35.6c0.1,2.5,0.7,5.8,3.2,6.2c1,0.2,2.1-0.2,3-0.6c14.6-6.7,22.9-22.4,27.6-37.8c-0.6,7.1-1.2,14.2-0.1,21.2c1.1,7,4.1,13.9,9.5,18.5" />
+            <path class="letter__layer" d="M93.2,83.7c8.8-6.2,17.5-12.4,26.3-18.6c-0.2,11.9-0.1,23.7,0.1,35.6c0.1,2.5,0.7,5.8,3.2,6.2c1,0.2,2.1-0.2,3-0.6c14.6-6.7,22.9-22.4,27.6-37.8c-0.6,7.1-1.2,14.2-0.1,21.2c1.1,7,4.1,13.9,9.5,18.5" />
+          </g>
+        </g>
+        <!--s-->
+        <g class="letter letter--3">
+          <g class="letter__part">
+            <path class="letter__layer" d="M207.4,86.7c0.6-3.1,1.3-6.5-0.3-9.4c-2.9-5.4-11-5.7-16.4-5.6c-3.9,0.1-7.9,0.8-11.4,2.5c-3.5,1.8-6.5,4.8-7.8,8.6c-0.8,2.6-0.7,5.8,1.4,7.5c0.8,0.6,1.7,1,2.7,1.3c4.7,1.4,9.6,0.5,14.5,0.1s10.1-0.2,14,2.8c4.9,3.8,5.8,11.8,2,16.6c-2.9,3.6-7.6,5.1-12.1,5.5c-5.5,0.5-11-0.5-16-2.8c-2.6-1.2-5.3-3-5.9-5.9" />
+            <path class="letter__layer" d="M207.4,86.7c0.6-3.1,1.3-6.5-0.3-9.4c-2.9-5.4-11-5.7-16.4-5.6c-3.9,0.1-7.9,0.8-11.4,2.5c-3.5,1.8-6.5,4.8-7.8,8.6c-0.8,2.6-0.7,5.8,1.4,7.5c0.8,0.6,1.7,1,2.7,1.3c4.7,1.4,9.6,0.5,14.5,0.1s10.1-0.2,14,2.8c4.9,3.8,5.8,11.8,2,16.6c-2.9,3.6-7.6,5.1-12.1,5.5c-5.5,0.5-11-0.5-16-2.8c-2.6-1.2-5.3-3-5.9-5.9" />
+            <path class="letter__layer" d="M207.4,86.7c0.6-3.1,1.3-6.5-0.3-9.4c-2.9-5.4-11-5.7-16.4-5.6c-3.9,0.1-7.9,0.8-11.4,2.5c-3.5,1.8-6.5,4.8-7.8,8.6c-0.8,2.6-0.7,5.8,1.4,7.5c0.8,0.6,1.7,1,2.7,1.3c4.7,1.4,9.6,0.5,14.5,0.1s10.1-0.2,14,2.8c4.9,3.8,5.8,11.8,2,16.6c-2.9,3.6-7.6,5.1-12.1,5.5c-5.5,0.5-11-0.5-16-2.8c-2.6-1.2-5.3-3-5.9-5.9" />
+          </g>
+        </g>
+        <!--t-->
+        <g class="letter letter--4">
+          <g class="letter__part">
+            <path class="letter__layer" d="M281.1,127.4c-7.2,5.6-13,10.5-22.7,11.1c-8.5,0.5-17.2-2.7-23.6-8.2c-6.5-5.6-8.2-15.4-8-23.5c0.5-17.8,2.9-35.5,7.2-52.8" />
+            <path class="letter__layer" d="M281.1,127.4c-7.2,5.6-13,10.5-22.7,11.1c-8.5,0.5-17.2-2.7-23.6-8.2c-6.5-5.6-8.2-15.4-8-23.5c0.5-17.8,2.9-35.5,7.2-52.8" />
+            <path class="letter__layer" d="M281.1,127.4c-7.2,5.6-13,10.5-22.7,11.1c-8.5,0.5-17.2-2.7-23.6-8.2c-6.5-5.6-8.2-15.4-8-23.5c0.5-17.8,2.9-35.5,7.2-52.8" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M217.1,90.5c14.6,0.2,29.3,0,43.9-0.7" />
+            <path class="letter__layer" d="M217.1,90.5c14.6,0.2,29.3,0,43.9-0.7" />
+            <path class="letter__layer" d="M217.1,90.5c14.6,0.2,29.3,0,43.9-0.7" />
+          </g>
+        </g>
+        <!--S-->
+        <g class="letter letter--5">
+          <g class="letter__part">
+            <path class="letter__layer" d="M127.8,141.5c-1.3-0.2-4.3-0.6-7.2,1c-5.2,2.8-7.4,10.1-5.2,14.2c3,5.8,14.2,5.3,21.2,2.1c1.6-0.7,8.2-3.8,10.3-10.6c2.7-8.9-4.7-19-12-23.9c-6.4-4.3-14.6-6-22-3.8c-7.7,2.3-13.9,8.4-17.9,15.4c-8.1,14.2-10,30.6-3.9,45.9c2.9,7.4,8.3,13.8,12.7,20.4c4.3,6.5,10.5,15.3,12.1,23.3c5.9,29.5-32.8,30.9-50.8,21.7c-7.8-4-13-9.6-16.1-15.9c-7.5-15.4,2.2-37.9,17.6-43.2c6-2.1,11.7-1.2,15.6-0.2" />
+            <path class="letter__layer" d="M127.8,141.5c-1.3-0.2-4.3-0.6-7.2,1c-5.2,2.8-7.4,10.1-5.2,14.2c3,5.8,14.2,5.3,21.2,2.1c1.6-0.7,8.2-3.8,10.3-10.6c2.7-8.9-4.7-19-12-23.9c-6.4-4.3-14.6-6-22-3.8c-7.7,2.3-13.9,8.4-17.9,15.4c-8.1,14.2-10,30.6-3.9,45.9c2.9,7.4,8.3,13.8,12.7,20.4c4.3,6.5,10.5,15.3,12.1,23.3c5.9,29.5-32.8,30.9-50.8,21.7c-7.8-4-13-9.6-16.1-15.9c-7.5-15.4,2.2-37.9,17.6-43.2c6-2.1,11.7-1.2,15.6-0.2" />
+            <path class="letter__layer" d="M127.8,141.5c-1.3-0.2-4.3-0.6-7.2,1c-5.2,2.8-7.4,10.1-5.2,14.2c3,5.8,14.2,5.3,21.2,2.1c1.6-0.7,8.2-3.8,10.3-10.6c2.7-8.9-4.7-19-12-23.9c-6.4-4.3-14.6-6-22-3.8c-7.7,2.3-13.9,8.4-17.9,15.4c-8.1,14.2-10,30.6-3.9,45.9c2.9,7.4,8.3,13.8,12.7,20.4c4.3,6.5,10.5,15.3,12.1,23.3c5.9,29.5-32.8,30.9-50.8,21.7c-7.8-4-13-9.6-16.1-15.9c-7.5-15.4,2.2-37.9,17.6-43.2c6-2.1,11.7-1.2,15.6-0.2" />
+          </g>
+        </g>
+        <!--m-->
+        <g class="letter letter--6">
+          <g class="letter__part">
+            <path class="letter__layer" d="M205.3,237.9c1.8-17.6,3.6-35.4,0.6-52.8c-0.3-1.5-0.8-3.2-2.3-3.5c-0.7-0.1-1.4,0.2-2.1,0.5c-9.3,4.1-17.8,10.2-24.8,17.6" />
+            <path class="letter__layer" d="M205.3,237.9c1.8-17.6,3.6-35.4,0.6-52.8c-0.3-1.5-0.8-3.2-2.3-3.5c-0.7-0.1-1.4,0.2-2.1,0.5c-9.3,4.1-17.8,10.2-24.8,17.6" />
+            <path class="letter__layer" d="M205.3,237.9c1.8-17.6,3.6-35.4,0.6-52.8c-0.3-1.5-0.8-3.2-2.3-3.5c-0.7-0.1-1.4,0.2-2.1,0.5c-9.3,4.1-17.8,10.2-24.8,17.6" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M174.8,237.3c1.8-17.6,3.6-35.4,0.6-52.8c-0.3-1.5-0.8-3.2-2.3-3.5c-0.7-0.1-1.4,0.2-2.1,0.5c-9.3,4.1-17.8,10.2-24.8,17.6" />
+            <path class="letter__layer" d="M174.8,237.3c1.8-17.6,3.6-35.4,0.6-52.8c-0.3-1.5-0.8-3.2-2.3-3.5c-0.7-0.1-1.4,0.2-2.1,0.5c-9.3,4.1-17.8,10.2-24.8,17.6" />
+            <path class="letter__layer" d="M174.8,237.3c1.8-17.6,3.6-35.4,0.6-52.8c-0.3-1.5-0.8-3.2-2.3-3.5c-0.7-0.1-1.4,0.2-2.1,0.5c-9.3,4.1-17.8,10.2-24.8,17.6" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M116.4,198c7-7.4,15.5-13.4,24.8-17.6c0.7-0.3,1.4-0.6,2.1-0.5c1.5,0.3,2,2,2.3,3.5c3,17.4,1.2,35.2-0.6,52.8" />
+            <path class="letter__layer" d="M116.4,198c7-7.4,15.5-13.4,24.8-17.6c0.7-0.3,1.4-0.6,2.1-0.5c1.5,0.3,2,2,2.3,3.5c3,17.4,1.2,35.2-0.6,52.8" />
+            <path class="letter__layer" d="M116.4,198c7-7.4,15.5-13.4,24.8-17.6c0.7-0.3,1.4-0.6,2.1-0.5c1.5,0.3,2,2,2.3,3.5c3,17.4,1.2,35.2-0.6,52.8" />
+          </g>
+        </g>
+        <!--o-->
+        <g class="letter letter--7">
+          <g class="letter__part">
+            <path class="letter__layer" d="M224.7,214.5c-1.6,25.1,46.6,25.5,35.2-13.9C251.5,171.6,226.4,188.7,224.7,214.5z" />
+            <path class="letter__layer" d="M224.7,214.5c-1.6,25.1,46.6,25.5,35.2-13.9C251.5,171.6,226.4,188.7,224.7,214.5z" />
+            <path class="letter__layer" d="M224.7,214.5c-1.6,25.1,46.6,25.5,35.2-13.9C251.5,171.6,226.4,188.7,224.7,214.5z" />
+          </g>
+        </g>
+        <!--k-->
+        <g class="letter letter--8">
+          <g class="letter__part">
+            <path class="letter__layer" d="M266.8,188.2c0.7,1.4,7.1,13.8,21.2,16.1c11.3,1.9,19.6-4.2,22.2-5.8c5.9-3.6,12.9-12.1,12.7-19.4c-0.4-11.6-15.7-7.5-22.2-4.8c-10.3,4.3-17.8,11.6-18,25.8c-0.2,13.2,24.7,43.2,49.3,24.5" />
+            <path class="letter__layer" d="M266.8,188.2c0.7,1.4,7.1,13.8,21.2,16.1c11.3,1.9,19.6-4.2,22.2-5.8c5.9-3.6,12.9-12.1,12.7-19.4c-0.4-11.6-15.7-7.5-22.2-4.8c-10.3,4.3-17.8,11.6-18,25.8c-0.2,13.2,24.7,43.2,49.3,24.5" />
+            <path class="letter__layer" d="M266.8,188.2c0.7,1.4,7.1,13.8,21.2,16.1c11.3,1.9,19.6-4.2,22.2-5.8c5.9-3.6,12.9-12.1,12.7-19.4c-0.4-11.6-15.7-7.5-22.2-4.8c-10.3,4.3-17.8,11.6-18,25.8c-0.2,13.2,24.7,43.2,49.3,24.5" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M175.8,138.2c11.1,17.1,28.4,27.9,48.6,30.7c16.8,2.3,34-0.4,50.1-5.3c9.7-3,19.4-6.6,27.7-12.4c10.4-7.3,10.4-7.3,20-18.3c10.1-11.6,6.8-25.6-8.3-24.2c-8.4,0.8-16.4,8.7-20.2,16.4c-4,8.1-4.4,17.7-5,26.5c-0.7,9.5-2.6,18.7-4,28.1c-2.6,18.2-4.7,36.5-6.4,54.8" />
+            <path class="letter__layer" d="M175.8,138.2c11.1,17.1,28.4,27.9,48.6,30.7c16.8,2.3,34-0.4,50.1-5.3c9.7-3,19.4-6.6,27.7-12.4c10.4-7.3,10.4-7.3,20-18.3c10.1-11.6,6.8-25.6-8.3-24.2c-8.4,0.8-16.4,8.7-20.2,16.4c-4,8.1-4.4,17.7-5,26.5c-0.7,9.5-2.6,18.7-4,28.1c-2.6,18.2-4.7,36.5-6.4,54.8" />
+            <path class="letter__layer" d="M175.8,138.2c11.1,17.1,28.4,27.9,48.6,30.7c16.8,2.3,34-0.4,50.1-5.3c9.7-3,19.4-6.6,27.7-12.4c10.4-7.3,10.4-7.3,20-18.3c10.1-11.6,6.8-25.6-8.3-24.2c-8.4,0.8-16.4,8.7-20.2,16.4c-4,8.1-4.4,17.7-5,26.5c-0.7,9.5-2.6,18.7-4,28.1c-2.6,18.2-4.7,36.5-6.4,54.8" />
+          </g>
+        </g>
+        <!--e-->
+        <g class="letter letter--9">
+          <g class="letter__part">
+            <path class="letter__layer" d="M335.6,204.7c51.4,1.2,40.3-43.1,10.9-22.9c-28,19.3,0.9,66.8,33.1,38.7" />
+            <path class="letter__layer" d="M335.6,204.7c51.4,1.2,40.3-43.1,10.9-22.9c-28,19.3,0.9,66.8,33.1,38.7" />
+            <path class="letter__layer" d="M335.6,204.7c51.4,1.2,40.3-43.1,10.9-22.9c-28,19.3,0.9,66.8,33.1,38.7" />
+          </g>
+        </g>
+      </svg>
+      <div class="content__meta"><button class="btn btn--start" aria-label="Start animation">Start</button></div>
+    </div>
+    <div class="content content--4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 320 180" class="letters letters--effect-4">
+        <g class="letter letter--1">
+          <g class="letter__part">
+            <path class="letter__layer" d="M41.5,88.4c0,0,26.8,0.9,32.9-9.9c8.4-15-10.8-31.6-46.7-25.2" />
+            <path class="letter__layer" d="M41.5,88.4c0,0,26.8,0.9,32.9-9.9c8.4-15-10.8-31.6-46.7-25.2" />
+            <path class="letter__layer" d="M41.5,88.4c0,0,26.8,0.9,32.9-9.9c8.4-15-10.8-31.6-46.7-25.2" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M39.2,89.6c45.8-10.3,59.4,49.7-13,36.4" />
+            <path class="letter__layer" d="M39.2,89.6c45.8-10.3,59.4,49.7-13,36.4" />
+            <path class="letter__layer" d="M39.2,89.6c45.8-10.3,59.4,49.7-13,36.4" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M40.5,63.4v54.9" />
+            <path class="letter__layer" d="M40.5,63.4v54.9" />
+            <path class="letter__layer" d="M40.5,63.4v54.9" />
+          </g>
+        </g>
+        <g class="letter letter--2">
+          <g class="letter__part">
+            <path class="letter__layer" d="M91,97.4h31.3c-12.9-65.4-51.4,62.3,0,13.1" />
+            <path class="letter__layer" d="M91,97.4h31.3c-12.9-65.4-51.4,62.3,0,13.1" />
+            <path class="letter__layer" d="M91,97.4h31.3c-12.9-65.4-51.4,62.3,0,13.1" />
+          </g>
+        </g>
+        <g class="letter letter--3">
+          <g class="letter__part">
+            <path class="letter__layer" d="M140.6,63.4v61.7" />
+            <path class="letter__layer" d="M140.6,63.4v61.7" />
+            <path class="letter__layer" d="M140.6,63.4v61.7" />
+          </g>
+        </g>
+        <g class="letter letter--4">
+          <g class="letter__part">
+            <path class="letter__layer" d="M161.5,72.1l6.3-10" />
+            <path class="letter__layer" d="M161.5,72.1l6.3-10" />
+            <path class="letter__layer" d="M161.5,72.1l6.3-10" />
+          </g>
+          <g class="letter__part">
+            <path class="letter__layer" d="M161.5,81.7v43.4" />
+            <path class="letter__layer" d="M161.5,81.7v43.4" />
+            <path class="letter__layer" d="M161.5,81.7v43.4" />
+          </g>
+        </g>
+        <g class="letter letter--5">
+          <g class="letter__part">
+            <path class="letter__layer" d="M177.3,97.4h31.3c-12.9-65.4-51.4,62.3,0,13.1" />
+            <path class="letter__layer" d="M177.3,97.4h31.3c-12.9-65.4-51.4,62.3,0,13.1" />
+            <path class="letter__layer" d="M177.3,97.4h31.3c-12.9-65.4-51.4,62.3,0,13.1" />
+          </g>
+        </g>
+        <g class="letter letter--6">
+          <g class="letter__part">
+            <path class="letter__layer" d="M222.2,81.7l15.8,42.4l15.5-42.4" />
+            <path class="letter__layer" d="M222.2,81.7l15.8,42.4l15.5-42.4" />
+            <path class="letter__layer" d="M222.2,81.7l15.8,42.4l15.5-42.4" />
+          </g>
+        </g>
+        <g class="letter letter--7">
+          <g class="letter__part">
+            <path class="letter__layer" d="M293.7,110.5c-51.4,49.2-12.9-78.5,0-13.1h-31.3" />
+            <path class="letter__layer" d="M293.7,110.5c-51.4,49.2-12.9-78.5,0-13.1h-31.3" />
+            <path class="letter__layer" d="M293.7,110.5c-51.4,49.2-12.9-78.5,0-13.1h-31.3" />
+          </g>
+        </g>
+      </svg>
+      <div class="content__meta"><button class="btn btn--start" aria-label="Start animation">Start</button></div>
+    </div>
+  </main>
+  <script>
+  <!-- animate -->
+  (function(u, r) { "function" === typeof define && define.amd ? define([], r) : "object" === typeof module && module.exports ? module.exports = r() : u.anime = r() })(this, function() {
+    var u = { duration: 1E3, delay: 0, loop: !1, autoplay: !0, direction: "normal", easing: "easeOutElastic", elasticity: 400, round: !1, begin: void 0, update: void 0, complete: void 0 },
+      r = "translateX translateY translateZ rotate rotateX rotateY rotateZ scale scaleX scaleY scaleZ skewX skewY".split(" "),
+      y, f = {
+        arr: function(a) { return Array.isArray(a) },
+        obj: function(a) {
+          return -1 <
+            Object.prototype.toString.call(a).indexOf("Object")
+        },
+        svg: function(a) { return a instanceof SVGElement },
+        dom: function(a) { return a.nodeType || f.svg(a) },
+        num: function(a) { return !isNaN(parseInt(a)) },
+        str: function(a) { return "string" === typeof a },
+        fnc: function(a) { return "function" === typeof a },
+        und: function(a) { return "undefined" === typeof a },
+        nul: function(a) { return "null" === typeof a },
+        hex: function(a) { return /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(a) },
+        rgb: function(a) { return /^rgb/.test(a) },
+        hsl: function(a) { return /^hsl/.test(a) },
+        col: function(a) { return f.hex(a) || f.rgb(a) || f.hsl(a) }
+      },
+      D = function() {
+        var a = {},
+          b = { Sine: function(a) { return 1 - Math.cos(a * Math.PI / 2) }, Circ: function(a) { return 1 - Math.sqrt(1 - a * a) }, Elastic: function(a, b) { if (0 === a || 1 === a) return a; var d = 1 - Math.min(b, 998) / 1E3,
+                g = a / 1 - 1; return -(Math.pow(2, 10 * g) * Math.sin(2 * (g - d / (2 * Math.PI) * Math.asin(1)) * Math.PI / d)) }, Back: function(a) { return a * a * (3 * a - 2) }, Bounce: function(a) { for (var b, d = 4; a < ((b = Math.pow(2, --d)) - 1) / 11;); return 1 / Math.pow(4, 3 - d) - 7.5625 * Math.pow((3 * b - 2) / 22 - a, 2) } };
+        ["Quad",
+          "Cubic", "Quart", "Quint", "Expo"
+        ].forEach(function(a, e) { b[a] = function(a) { return Math.pow(a, e + 2) } });
+        Object.keys(b).forEach(function(c) { var e = b[c];
+          a["easeIn" + c] = e;
+          a["easeOut" + c] = function(a, b) { return 1 - e(1 - a, b) };
+          a["easeInOut" + c] = function(a, b) { return .5 > a ? e(2 * a, b) / 2 : 1 - e(-2 * a + 2, b) / 2 };
+          a["easeOutIn" + c] = function(a, b) { return .5 > a ? (1 - e(1 - 2 * a, b)) / 2 : (e(2 * a - 1, b) + 1) / 2 } });
+        a.linear = function(a) { return a };
+        return a
+      }(),
+      z = function(a) { return f.str(a) ? a : a + "" },
+      E = function(a) { return a.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase() },
+      F = function(a) { if (f.col(a)) return !1; try { return document.querySelectorAll(a) } catch (b) { return !1 } },
+      A = function(a) { return a.reduce(function(a, c) { return a.concat(f.arr(c) ? A(c) : c) }, []) },
+      t = function(a) { if (f.arr(a)) return a;
+        f.str(a) && (a = F(a) || a); return a instanceof NodeList || a instanceof HTMLCollection ? [].slice.call(a) : [a] },
+      G = function(a, b) { return a.some(function(a) { return a === b }) },
+      R = function(a, b) {
+        var c = {};
+        a.forEach(function(a) { var d = JSON.stringify(b.map(function(b) { return a[b] }));
+          c[d] = c[d] || [];
+          c[d].push(a) });
+        return Object.keys(c).map(function(a) { return c[a] })
+      },
+      H = function(a) { return a.filter(function(a, c, e) { return e.indexOf(a) === c }) },
+      B = function(a) { var b = {},
+          c; for (c in a) b[c] = a[c]; return b },
+      v = function(a, b) { for (var c in b) a[c] = f.und(a[c]) ? b[c] : a[c]; return a },
+      S = function(a) { a = a.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function(a, b, c, m) { return b + b + c + c + m + m }); var b = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(a);
+        a = parseInt(b[1], 16); var c = parseInt(b[2], 16),
+          b = parseInt(b[3], 16); return "rgb(" + a + "," + c + "," + b + ")" },
+      T = function(a) { a = /hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(a); var b = parseInt(a[1]) / 360,
+          c = parseInt(a[2]) / 100,
+          e = parseInt(a[3]) / 100;
+        a = function(a, b, c) { 0 > c && (c += 1);
+          1 < c && --c; return c < 1 / 6 ? a + 6 * (b - a) * c : .5 > c ? b : c < 2 / 3 ? a + (b - a) * (2 / 3 - c) * 6 : a }; if (0 == c) c = e = b = e;
+        else var d = .5 > e ? e * (1 + c) : e + c - e * c,
+          g = 2 * e - d,
+          c = a(g, d, b + 1 / 3),
+          e = a(g, d, b),
+          b = a(g, d, b - 1 / 3); return "rgb(" + 255 * c + "," + 255 * e + "," + 255 * b + ")" },
+      p = function(a) { return /([\+\-]?[0-9|auto\.]+)(%|px|pt|em|rem|in|cm|mm|ex|pc|vw|vh|deg)?/.exec(a)[2] },
+      I = function(a, b, c) {
+        return p(b) ?
+          b : -1 < a.indexOf("translate") ? p(c) ? b + p(c) : b + "px" : -1 < a.indexOf("rotate") || -1 < a.indexOf("skew") ? b + "deg" : b
+      },
+      w = function(a, b) { if (b in a.style) return getComputedStyle(a).getPropertyValue(E(b)) || "0" },
+      U = function(a, b) { var c = -1 < b.indexOf("scale") ? 1 : 0,
+          e = a.style.transform; if (!e) return c; for (var d = /(\w+)\((.+?)\)/g, g = [], m = [], f = []; g = d.exec(e);) m.push(g[1]), f.push(g[2]);
+        e = f.filter(function(a, c) { return m[c] === b }); return e.length ? e[0] : c },
+      J = function(a, b) {
+        if (f.dom(a) && G(r, b)) return "transform";
+        if (f.dom(a) && (a.getAttribute(b) ||
+            f.svg(a) && a[b])) return "attribute";
+        if (f.dom(a) && "transform" !== b && w(a, b)) return "css";
+        if (!f.nul(a[b]) && !f.und(a[b])) return "object"
+      },
+      K = function(a, b) { switch (J(a, b)) {
+          case "transform":
+            return U(a, b);
+          case "css":
+            return w(a, b);
+          case "attribute":
+            return a.getAttribute(b) } return a[b] || 0 },
+      L = function(a, b, c) { if (f.col(b)) return b = f.rgb(b) ? b : f.hex(b) ? S(b) : f.hsl(b) ? T(b) : void 0, b; if (p(b)) return b;
+        a = p(a.to) ? p(a.to) : p(a.from);!a && c && (a = p(c)); return a ? b + a : b },
+      M = function(a) {
+        var b = /-?\d*\.?\d+/g;
+        return {
+          original: a,
+          numbers: z(a).match(b) ?
+            z(a).match(b).map(Number) : [0],
+          strings: z(a).split(b)
+        }
+      },
+      V = function(a, b, c) { return b.reduce(function(b, d, g) { d = d ? d : c[g - 1]; return b + a[g - 1] + d }) },
+      W = function(a) { a = a ? A(f.arr(a) ? a.map(t) : t(a)) : []; return a.map(function(a, c) { return { target: a, id: c } }) },
+      N = function(a, b, c, e) { "transform" === c ? (c = a + "(" + I(a, b.from, b.to) + ")", b = a + "(" + I(a, b.to) + ")") : (a = "css" === c ? w(e, a) : void 0, c = L(b, b.from, a), b = L(b, b.to, a)); return { from: M(c), to: M(b) } },
+      X = function(a, b) {
+        var c = [];
+        a.forEach(function(e, d) {
+          var g = e.target;
+          return b.forEach(function(b) {
+            var l =
+              J(g, b.name);
+            if (l) { var q;
+              q = b.name; var h = b.value,
+                h = t(f.fnc(h) ? h(g, d) : h);
+              q = { from: 1 < h.length ? h[0] : K(g, q), to: 1 < h.length ? h[1] : h[0] };
+              h = B(b);
+              h.animatables = e;
+              h.type = l;
+              h.from = N(b.name, q, h.type, g).from;
+              h.to = N(b.name, q, h.type, g).to;
+              h.round = f.col(q.from) || h.round ? 1 : 0;
+              h.delay = (f.fnc(h.delay) ? h.delay(g, d, a.length) : h.delay) / k.speed;
+              h.duration = (f.fnc(h.duration) ? h.duration(g, d, a.length) : h.duration) / k.speed;
+              c.push(h) }
+          })
+        });
+        return c
+      },
+      Y = function(a, b) {
+        var c = X(a, b);
+        return R(c, ["name", "from", "to", "delay", "duration"]).map(function(a) {
+          var b =
+            B(a[0]);
+          b.animatables = a.map(function(a) { return a.animatables });
+          b.totalDuration = b.delay + b.duration;
+          return b
+        })
+      },
+      C = function(a, b) { a.tweens.forEach(function(c) { var e = c.from,
+            d = a.duration - (c.delay + c.duration);
+          c.from = c.to;
+          c.to = e;
+          b && (c.delay = d) });
+        a.reversed = a.reversed ? !1 : !0 },
+      Z = function(a) { if (a.length) return Math.max.apply(Math, a.map(function(a) { return a.totalDuration })) },
+      O = function(a) {
+        var b = [],
+          c = [];
+        a.tweens.forEach(function(a) {
+          if ("css" === a.type || "transform" === a.type) b.push("css" === a.type ? E(a.name) : "transform"),
+            a.animatables.forEach(function(a) { c.push(a.target) })
+        });
+        return { properties: H(b).join(", "), elements: H(c) }
+      },
+      aa = function(a) { var b = O(a);
+        b.elements.forEach(function(a) { a.style.willChange = b.properties }) },
+      ba = function(a) { O(a).elements.forEach(function(a) { a.style.removeProperty("will-change") }) },
+      ca = function(a, b) {
+        var c = a.path,
+          e = a.value * b,
+          d = function(d) { d = d || 0; return c.getPointAtLength(1 < b ? a.value + d : e + d) },
+          g = d(),
+          f = d(-1),
+          d = d(1);
+        switch (a.name) {
+          case "translateX":
+            return g.x;
+          case "translateY":
+            return g.y;
+          case "rotate":
+            return 180 *
+              Math.atan2(d.y - f.y, d.x - f.x) / Math.PI
+        }
+      },
+      da = function(a, b) { var c = Math.min(Math.max(b - a.delay, 0), a.duration) / a.duration,
+          e = a.to.numbers.map(function(b, e) { var f = a.from.numbers[e],
+              l = D[a.easing](c, a.elasticity),
+              f = a.path ? ca(a, l) : f + l * (b - f); return f = a.round ? Math.round(f * a.round) / a.round : f }); return V(e, a.to.strings, a.from.strings) },
+      P = function(a, b) {
+        var c;
+        a.currentTime = b;
+        a.progress = b / a.duration * 100;
+        for (var e = 0; e < a.tweens.length; e++) {
+          var d = a.tweens[e];
+          d.currentValue = da(d, b);
+          for (var f = d.currentValue, m = 0; m < d.animatables.length; m++) {
+            var l =
+              d.animatables[m],
+              k = l.id,
+              l = l.target,
+              h = d.name;
+            switch (d.type) {
+              case "css":
+                l.style[h] = f; break;
+              case "attribute":
+                l.setAttribute(h, f); break;
+              case "object":
+                l[h] = f; break;
+              case "transform":
+                c || (c = {}), c[k] || (c[k] = []), c[k].push(f) }
+          }
+        }
+        if (c)
+          for (e in y || (y = (w(document.body, "transform") ? "" : "-webkit-") + "transform"), c) a.animatables[e].target.style[y] = c[e].join(" ");
+        a.settings.update && a.settings.update(a)
+      },
+      Q = function(a) {
+        var b = {};
+        b.animatables = W(a.targets);
+        b.settings = v(a, u);
+        var c = b.settings,
+          e = [],
+          d;
+        for (d in a)
+          if (!u.hasOwnProperty(d) &&
+            "targets" !== d) { var g = f.obj(a[d]) ? B(a[d]) : { value: a[d] };
+            g.name = d;
+            e.push(v(g, c)) } b.properties = e;
+        b.tweens = Y(b.animatables, b.properties);
+        b.duration = Z(b.tweens) || a.duration;
+        b.currentTime = 0;
+        b.progress = 0;
+        b.ended = !1;
+        return b
+      },
+      n = [],
+      x = 0,
+      ea = function() { var a = function() { x = requestAnimationFrame(b) },
+          b = function(b) { if (n.length) { for (var e = 0; e < n.length; e++) n[e].tick(b);
+              a() } else cancelAnimationFrame(x), x = 0 }; return a }(),
+      k = function(a) {
+        var b = Q(a),
+          c = {};
+        b.tick = function(a) {
+          b.ended = !1;
+          c.start || (c.start = a);
+          c.current = Math.min(Math.max(c.last +
+            a - c.start, 0), b.duration);
+          P(b, c.current);
+          var d = b.settings;
+          d.begin && c.current >= d.delay && (d.begin(b), d.begin = void 0);
+          c.current >= b.duration && (d.loop ? (c.start = a, "alternate" === d.direction && C(b, !0), f.num(d.loop) && d.loop--) : (b.ended = !0, b.pause(), d.complete && d.complete(b)), c.last = 0)
+        };
+        b.seek = function(a) { P(b, a / 100 * b.duration) };
+        b.pause = function() { ba(b); var a = n.indexOf(b); - 1 < a && n.splice(a, 1) };
+        b.play = function(a) {
+          b.pause();
+          a && (b = v(Q(v(a, b.settings)), b));
+          c.start = 0;
+          c.last = b.ended ? 0 : b.currentTime;
+          a = b.settings;
+          "reverse" ===
+          a.direction && C(b);
+          "alternate" !== a.direction || a.loop || (a.loop = 1);
+          aa(b);
+          n.push(b);
+          x || ea()
+        };
+        b.restart = function() { b.reversed && C(b);
+          b.pause();
+          b.seek(0);
+          b.play() };
+        b.settings.autoplay && b.play();
+        return b
+      };
+    k.version = "1.1.1";
+    k.speed = 1;
+    k.list = n;
+    k.remove = function(a) { a = A(f.arr(a) ? a.map(t) : t(a)); for (var b = n.length - 1; 0 <= b; b--)
+        for (var c = n[b], e = c.tweens, d = e.length - 1; 0 <= d; d--)
+          for (var g = e[d].animatables, k = g.length - 1; 0 <= k; k--) G(a, g[k].target) && (g.splice(k, 1), g.length || e.splice(d, 1), e.length || c.pause()) };
+    k.easings = D;
+    k.getValue = K;
+    k.path = function(a) { a = f.str(a) ? F(a)[0] : a; return { path: a, value: a.getTotalLength() } };
+    k.random = function(a, b) { return Math.floor(Math.random() * (b - a + 1)) + a };
+    return k
+  });
+
+  </script>
+  <script>
+  /**
+   * main.js
+   * http://www.codrops.com
+   *
+   * Licensed under the MIT license.
+   * http://www.opensource.org/licenses/mit-license.php
+   * 
+   * Copyright 2016, Codrops
+   * http://www.codrops.com
+   */
+  ;
+  (function(window) {
+
+    'use strict';
+
+    // Helper vars and functions.
+    function extend(a, b) {
+      for (var key in b) {
+        if (b.hasOwnProperty(key)) {
+          a[key] = b[key];
+        }
+      }
+      return a;
+    }
+    // Concatenate JS objs.
+    // From http://stackoverflow.com/a/2454315.
+    function collect() {
+      var ret = {};
+      var len = arguments.length;
+      for (var i = 0; i < len; i++) {
+        for (var p in arguments[i]) {
+          if (arguments[i].hasOwnProperty(p)) {
+            ret[p] = arguments[i][p];
+          }
+        }
+      }
+      return ret;
+    }
+
+    /**
+     * LetterPart obj. A letter can be split in several parts. Each part will contain one or more layers/paths.
+     */
+    function LetterPart(el, options) {
+      this.el = el;
+      this.options = extend({}, this.options);
+      extend(this.options, options);
+      // The layers/paths.
+      this.layers = [].slice.call(this.el.querySelectorAll('path'));
+      // Total number of layers.
+      this.layersTotal = this.layers.length;
+      var self = this;
+      this.layers.forEach(function(layer, pos) {
+        if (self.options.pathOpacityAnim) {
+          // If pathOpacityAnim is true, then set the opacity to 0 for all the paths except the last one. We want to make sure that given 2 or more overlapping paths the ones behind will not be shown.
+          layer.style.opacity = pos === self.layersTotal - 1 ? 1 : 0;
+        }
+        // Set the stroke dasharray to the path麓s total length and stroke dashoffset to 0 so the paths are initially rendered.
+        layer.style.strokeDashoffset = 0;
+        layer.style.strokeDasharray = layer.getTotalLength();
+      });
+    }
+
+    /**
+     * Show all the layers by setting the opacity to 1.
+     */
+    LetterPart.prototype.showLayers = function() {
+      this.layers.forEach(function(layer, pos) {
+        layer.style.opacity = 1;
+      });
+    };
+
+    /**
+     * Letter obj. The letter element is a SVG group containing one or more parts (LetterParts).
+     */
+    function Letter(el, options) {
+      this.el = el;
+      this.options = extend({}, this.options);
+      extend(this.options, options);
+      // Set transform origin (center center).
+      var bcr = this.el.getBBox();
+      this.el.style.transformOrigin = (bcr.x + bcr.width / 2) + 'px ' + (bcr.y + bcr.height / 2) + 'px';
+      this.parts = [];
+      var self = this;
+      [].slice.call(this.el.querySelectorAll('g.letter__part')).forEach(function(el) {
+        self.parts.push(new LetterPart(el, { pathOpacityAnim: self.options.pathOpacityAnim }));
+      });
+    }
+
+    /**
+     * Phrase obj. The Phrase element is the SVG element itself containing all the SVG groups that represent each letter.
+     */
+    function Phrase(el, options) {
+      this.el = el;
+      this.options = extend({}, this.options);
+      extend(this.options, options);
+      this.letterElems = [].slice.call(this.el.querySelectorAll('g.letter'));
+      this.letters = [];
+      var self = this;
+      this.letterElems.forEach(function(el) {
+        self.letters.push(new Letter(el, { pathOpacityAnim: self.options.pathOpacityAnim }));
+      });
+    }
+
+    Phrase.prototype.options = {
+      // If true, all the layers/paths of each letter part (except the last one) will animate the opacity to 0.
+      // With this, we avoid any overlapping path behind the last one to be shown.
+      pathOpacityAnim: false,
+      // The animation settings for the 麓out麓 animation (when we click the button and the letters disappear). We are using the anime.js lib so the syntax is the same.
+      outAnimation: {
+        translateY: [0, 15],
+        opacity: [1, 0],
+        duration: 250,
+        easing: 'easeInOutQuad'
+      },
+      // The animation settings for the 麓in麓 animation (when the letters appear again).
+      inAnimation: {
+        properties: {
+          translateY: {
+            value: [-30, 0],
+            duration: 900,
+            elasticity: 600,
+            easing: 'easeOutElastic'
+          },
+          opacity: {
+            value: [0, 1],
+            duration: 500,
+            easing: 'linear'
+          },
+        },
+        delay: 40 // delay increment per letter.
+      },
+      // Stroke animation settings
+      pathAnimation: {
+        duration: 800,
+        easing: 'easeOutQuint',
+        delay: 200 // delay increment per path.
+      }
+    };
+
+    Phrase.prototype.animate = function() {
+      var self = this,
+        animOutProps = {
+          targets: this.letterElems,
+          complete: function() {
+            var animLettersProps = {
+              targets: self.letterElems,
+              delay: function(el, index) {
+                return index * self.options.inAnimation.delay;
+              }
+            };
+
+            anime(collect(animLettersProps, self.options.inAnimation.properties));
+
+            for (var i = 0, len = self.letters.length; i < len; ++i) {
+              var parts = self.letters[i].parts,
+                partsTotal = parts.length;
+
+              for (var j = 0, len2 = parts.length; j < len2; ++j) {
+                parts[j].showLayers();
+
+                var animProps = {
+                  targets: parts[j].layers,
+                  strokeDashoffset: function(el) {
+                    return [el.getTotalLength(), 0];
+                  },
+                  easing: self.options.pathAnimation.easing,
+                  duration: self.options.pathAnimation.duration,
+                  delay: function(el, index) {
+                    return index * self.options.pathAnimation.delay + i * self.options.inAnimation.delay;
+                  }
+                };
+
+                if (self.options.pathOpacityAnim) {
+                  animProps.opacity = {
+                    value: function(el, index) {
+                      return index !== parts[j].layers.length - 1 ? 0 : 1;
+                    },
+                    duration: 200,
+                    delay: function(el, index) {
+                      return index * self.options.pathAnimation.delay + i * self.options.inAnimation.delay + self.options.pathAnimation.duration - 0.1 * self.options.pathAnimation.duration;
+                    }
+                  }
+                }
+
+                anime(animProps);
+              }
+            }
+          }
+        };
+
+      anime(collect(animOutProps, this.options.outAnimation));
+    };
+
+    window.Phrase = Phrase;
+
+  })(window);
+
+  </script>
+  <script>
+  (function() {
+    var svgFx1 = document.querySelector('.letters--effect-1'),
+      svgFx2 = document.querySelector('.letters--effect-2'),
+      svgFx3 = document.querySelector('.letters--effect-3'),
+      svgFx4 = document.querySelector('.letters--effect-4'),
+      phrase1 = new Phrase(svgFx1, {
+        pathOpacityAnim: true
+      }),
+      phrase2 = new Phrase(svgFx2, {
+        pathOpacityAnim: true,
+        outAnimation: {
+          scale: 0,
+          opacity: [1, 0],
+          duration: 250,
+          easing: 'easeInOutQuad'
+        },
+        inAnimation: {
+          delay: 150,
+          properties: {
+            scale: {
+              value: function() {
+                return [0, 1];
+              },
+              duration: 900,
+              elasticity: 600,
+              easing: 'easeOutElastic'
+            },
+            opacity: {
+              value: [0, 1],
+              duration: 50,
+              easing: 'linear'
+            },
+          }
+        },
+        pathAnimation: {
+          duration: 700,
+          easing: 'easeOutSine',
+          delay: 200
+        }
+      }),
+      phrase3 = new Phrase(svgFx3, {
+        outAnimation: {
+          translateX: -25,
+          rotateZ: 20,
+          opacity: [1, 0],
+          duration: 250,
+          easing: 'easeInBack'
+        },
+        inAnimation: {
+          delay: 100,
+          properties: {
+            translateY: {
+              value: function() {
+                return [-80, 0];
+              },
+              duration: 1200,
+              elasticity: 500,
+              easing: 'easeOutElastic'
+            },
+            translateX: {
+              value: function() {
+                return [50, 0];
+              },
+              duration: 1200,
+              elasticity: 500,
+              easing: 'easeOutElastic'
+            },
+            rotateZ: {
+              value: [-70, 0],
+              duration: 1200,
+              elasticity: 500,
+              easing: 'easeOutElastic'
+            },
+            opacity: {
+              value: [0, 1],
+              duration: 750,
+              easing: 'linear'
+            },
+          }
+        },
+        pathAnimation: {
+          duration: 1400,
+          easing: 'easeOutQuint',
+          delay: 300
+        }
+      }),
+      phrase4 = new Phrase(svgFx4, {
+        outAnimation: {
+          translateY: [0, 15],
+          opacity: [1, 0],
+          duration: 350,
+          easing: 'easeInBack'
+        },
+        inAnimation: {
+          delay: 130,
+          properties: {
+            rotateZ: {
+              value: function() {
+                return [70, 0];
+              },
+              duration: 1200,
+              //elasticity: 500,
+              easing: 'easeOutElastic'
+            },
+            opacity: {
+              value: [0, 1],
+              duration: 400,
+              easing: 'linear'
+            },
+          }
+        },
+        pathAnimation: {
+          duration: 1000,
+          easing: 'easeOutCubic',
+          delay: 400
+        }
+      });
+
+    // Trigger the animations.
+    svgFx1.nextElementSibling.querySelector('button').addEventListener('click', function() { phrase1.animate(); });
+    svgFx2.nextElementSibling.querySelector('button').addEventListener('click', function() { phrase2.animate(); });
+    svgFx3.nextElementSibling.querySelector('button').addEventListener('click', function() { phrase3.animate(); });
+    svgFx4.nextElementSibling.querySelector('button').addEventListener('click', function() { phrase4.animate(); });
+  })();
+
+  </script>
+  <div style="text-align:center;clear:both">
+    <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+    <script src="/follow.js" type="text/javascript"></script>
+  </div>
+</body>
+
+</html>
