@@ -44,45 +44,55 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-img
-  max-width: 100%
-  max-height: 100%
-#billboard
-  margin: .1rem 0
-  background: #fff
-  border-bottom: solid 1px #ccc
-  .clearfix
-    padding: .05rem .1rem
-    text-align: center
-    .left
-      float: left
-      color: red
-    .right
-      float: right
-  .clearfix::after
-    content: ""
-    display: block
-    clear: both
-  .container
-    overflow-y: hidden
-    white-space: nowrap
-    height: 2.85rem
-    .rank
-      display: inline-block
-      list-style: none
-      position: relative
-      width: 2rem
-      margin-right: .05rem
-      text-align: center
-      .label
-        position: absolute
-        z-index: 99
-        left: 0
-        width: .8rem
-      .price
-        position: absolute
-        top: 2.35rem
-        width: 2rem
-        color: red
+<style scoped>
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#billboard {
+  margin: .1rem 0;
+  background: #fff;
+  border-bottom: solid 1px #ccc;
+}
+  .clearfix {
+    padding: .05rem .1rem;
+    text-align: center;
+  }
+    .left {
+      float: left;
+      color: red;
+    }
+    .right {
+      float: right;
+    }
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .container {
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 2.85rem;
+  }
+    .rank {
+      display: inline-block;
+      list-style: none;
+      position: relative;
+      width: 2rem;
+      margin-right: .05rem;
+      text-align: center;
+    }
+      .label {
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        width: .8rem;
+      }
+      .price {
+        position: absolute;
+        top: 2.35rem;
+        width: 2rem;
+        color: red;
+      }
 </style>

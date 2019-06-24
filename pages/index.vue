@@ -30,7 +30,7 @@ export default {
   },
   // https://nuxtjs.org/guide/async-data#returning-a-promise
   asyncData() {
-    return axios.get('http://localhost:3000/api/index.json')
+    return axios.get('/api/index.json')
                 .then(res => ({
                   banners: res.data.banners,
                   ranks: res.data.ranks,

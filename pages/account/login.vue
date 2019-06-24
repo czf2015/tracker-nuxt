@@ -1,0 +1,91 @@
+<template>
+  <article id="login">
+    <header id="login-header">
+      <a href="/">首页</a>
+      <a href="/account/register">注册</a>
+    </header>
+    <form>
+      <legend>用户登录</legend>
+      <h4 v-if="error" class="tips">
+        <i class="fa fa-exclamation-circle"/>
+        {{ error }}
+      </h4>
+      <label id="username">
+        用户名：
+        <input type="text" v-model="username" placeholder="用户名">
+      </label>
+      <label id="password">
+        密码：
+        <input type="password" v-model="password" placeholder="密码">
+      </label>
+      <p class="flex">
+        <lable id="auto">
+          <input type="checkbox" v-model="auto">7天内自动登录
+        </lable>
+        <a href="/account/forget">忘记密码？</a>
+      </p>
+      <button @click="login">登录</button>
+    </form>
+  </article>
+</template>
+
+<script>
+import md5 from "js-md5";
+import api from '../../utils/api.js'
+
+export default {
+  layout: "blank",
+
+  data() {
+    return {
+      username: "",
+      password: "",
+      auto: false,
+      error: ""
+    };
+  },
+
+  methods: {
+    login() {
+      api
+        .post("account/login", {
+          username: encodeURIComponent(this.username),
+          password: md5(this.password).toString()
+        })
+        .then(({ status, data }) => {
+          if (status === 200) {
+            if (data && data.code === 0) {
+              location.href = "/";
+            } else {
+              this.error = data.msg;
+            }
+          } else {
+            this.error = "服务器出错";
+          }
+        });
+    }
+  }
+};
+</script>
+
+<style scoped>
+#login {
+  margin: 0 10px;
+  text-align: center;
+}
+
+#login-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+form > * {
+  margin: 10px 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+</style>

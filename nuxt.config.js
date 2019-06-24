@@ -36,12 +36,25 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/proxy'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    proxy: true
+  },
+
+  proxy: {
+    '/api': {
+      target: 'http://localhost:3000',
+      changeOrigin: true,
+      secure: false,
+      pathRewrite: {
+        '^/api': '/'
+      }
+    }
   },
   /*
   ** Build configuration

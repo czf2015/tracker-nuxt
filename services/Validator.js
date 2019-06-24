@@ -23,7 +23,6 @@ export const wish = {
   }
 }
 
-
 export function tip(validate = {}) {
   const msgs = []
   for (const key in validate) {
