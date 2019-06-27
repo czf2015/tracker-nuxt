@@ -26,7 +26,6 @@ export function matchType(requiredOption, answer/* Array */) {
         case "exclude":
             return answer && !requiredOption.optionId.some(item => answer.includes(item))
     }
-
 }
 
 // 

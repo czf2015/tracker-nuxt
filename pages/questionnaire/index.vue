@@ -1,6 +1,6 @@
 <template>
   <section class="page">
-    <Back class="back" v-show="questionId !== 1" :r="r"/>
+    <Prev class="prev" v-show="questionId !== 1" :r="r"/>
     <Question :question="q[questionId]" :r="r" :key="questionId"/>
   </section>
 </template>
@@ -8,7 +8,7 @@
 <script>
 import api from "@/utils/api.js";
 import { convert, prerequisite } from "@/services/Questionnaire.js";
-import Back from "@/components/questionnaire/control/Back.vue";
+import Prev from "@/components/questionnaire/control/Prev.vue";
 import Question from "@/components/questionnaire/Question.vue";
 
 export default {
@@ -28,7 +28,7 @@ export default {
   },
 
   components: {
-    Back,
+    Prev,
     Question
   },
 
@@ -74,7 +74,7 @@ export default {
   padding: 0 8px;
 }
 
-.back {
+.prev {
   position: absolute;
 }
 </style>

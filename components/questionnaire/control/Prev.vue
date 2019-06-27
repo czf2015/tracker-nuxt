@@ -1,24 +1,20 @@
 <template>
-  <span class="back" @click="back">
+  <span class="prev" @click="prev">
     <i class="fas fa-chevron-left"/>
-    {{prev}}
+    上一题
   </span>
 </template>
 
 <script>
-import {prerequisite} from "@/services/Questionnaire.js";
+import { prerequisite } from "@/services/Questionnaire.js";
 
 export default {
   props: {
-    r: Object,
-    prev: {
-      type: String,
-      default: "上一题"
-    }
+    r: Object
   },
 
   methods: {
-    back() {
+    prev() {
       const that = this;
       let id = that.$store.state.questionId;
       do {
@@ -31,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-.back {
+.prev {
   font-size: 16px;
   line-height: 2;
 }
