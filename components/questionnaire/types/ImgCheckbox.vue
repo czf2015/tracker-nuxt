@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import { isOption } from "../../utils/prerequisite.js";
-import Sign from "../base/Sign.vue";
+import { isOption } from "@/services/questionnaire.js";
+import Sign from "@/components/base/Sign.vue";
 
 const cancle = ["无"];
 
@@ -83,7 +83,7 @@ export default {
       } else {
         that.$store.commit("submit", {
           questionId: that.question.id,
-          value: val
+          result: val
         });
       }
     },

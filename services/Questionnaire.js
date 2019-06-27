@@ -1,20 +1,3 @@
-export function convert(q/* questions */, answers, key) {
-    // debugger
-    // console.log(answers[key])
-    return Array.isArray(answers[key])
-        ? q[key].type === "RADIO"
-            ? Object.assign(q[key].options.find(item => item.id === answers[key][0]), {
-                question_id: q[key].question_id,
-                question_text: q[key].question_text
-            })
-            : answers[key]
-                .map(answer => Object.assign(q[key].options.find(item => item.id === answer), {
-                    question_id: q[key].question_id,
-                    question_text: q[key].question_text
-                }))
-        : { value: answers[key], question_text: q[key].question_text }
-}
-
 // 
 export function matchType(requiredOption, answer/* Array */) {
     // debugger
@@ -64,3 +47,20 @@ export function isOption(optionId, options, answers) {
     return prov(option, answers)
 }
 
+// 
+export function convert(q/* questions */, answers, key) {
+    // debugger
+    // console.log(answers[key])
+    return Array.isArray(answers[key])
+        ? q[key].type === "RADIO"
+            ? Object.assign(q[key].options.find(item => item.id === answers[key][0]), {
+                question_id: q[key].question_id,
+                question_text: q[key].question_text
+            })
+            : answers[key]
+                .map(answer => Object.assign(q[key].options.find(item => item.id === answer), {
+                    question_id: q[key].question_id,
+                    question_text: q[key].question_text
+                }))
+        : { value: answers[key], question_text: q[key].question_text }
+}

@@ -8,9 +8,9 @@ export const mutations = {
     set(state, id) {
         state.questionId = id
     },
-    submit(state, { questionId, value }) {
+    submit(state, {questionId, result}) {
         // debugger
-        state.answers[questionId] = value
+        state.answers[questionId] = result
         if (state.questionId === 1) {
             state.questionId += 2
         } else {

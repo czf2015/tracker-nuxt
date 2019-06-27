@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { isOption } from "../../utils/prerequisite.js";
+import { isOption } from "@/services/questionnaire.js";
 
 export default {
   props: {
@@ -19,20 +19,19 @@ export default {
   },
 
   data() {
-    return {
-      picked: this.$store.state.answers[this.$store.state.questionId] || []
-    };
+    // return {
+    //   picked: this.$store.state.answers[this.$store.state.questionId].value || ''
+    // };
   },
 
   computed: {
     options() {
-      const that = this;
-      return that.question.options.filter(item => {
-        return that.r[that.question.id]
+      return this.question.options.filter(item => {
+        return this.r[this.question.id]
           ? isOption(
               item.id,
-              that.r[that.question.id].options,
-              that.$store.state.answers
+              this.r[this.question.id].options,
+              this.$store.state.answers
             )
           : true;
       });
@@ -42,10 +41,10 @@ export default {
   methods: {
     next(val) {
       // debugger;
-      this.picked.push(Number(val));
+      // this.picked = val;
       this.$store.commit("submit", {
         questionId: this.question.id,
-        value: this.picked
+        result: val // this.picked
       });
     }
   }

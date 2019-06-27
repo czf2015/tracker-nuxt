@@ -25,37 +25,40 @@ export default {
 
   methods: {
     next() {
-      const that = this;
-      if (that.question.validation.required && that.message.length === 0) {
-        that.$emit("error", {
+      if (this.question.validation.required && this.message.length === 0) {
+        this.$emit("error", {
           type: "null",
-          msg: `请输入${that.question.text}`
+          msg: `请输入${this.question.text}`
         });
       } else if (
-        that.question.validation.minLength !== -1 &&
-        that.message.length < that.question.validation.minLength
+        this.question.validation.minLength !== -1 &&
+        this.message.length < this.question.validation.minLength
       ) {
-        that.$emit("error", {
+        this.$emit("error", {
           type: "short",
-          msg: `${that.question.question_text}长度不能小于${
-            that.question.validation.minLength
+          msg: `${this.question.question_text}长度不能小于${
+            this.question.validation.minLength
           }`
         });
       } else if (
-        that.question.validation.maxLength !== -1 &&
-        that.message.length > that.question.validation.maxLength
+        this.question.validation.maxLength !== -1 &&
+        this.message.length > this.question.validation.maxLength
       ) {
-        that.$emit("error", {
+        this.$emit("error", {
           type: "long",
-          msg: `${that.question.question_text}长度不能大于${
-            that.question.validation.maxLength
+          msg: `${this.question.question_text}长度不能大于${
+            this.question.validation.maxLength
           }`
         });
       } else {
-        that.$store.commit("submit", {
-          questionId: that.question.id,
-          value: that.message
+        this.$store.commit("submit", {
+          questionId: this.question.id,
+          result: this.message
         });
+        // {
+        //   questionId: this.question.id,
+        //   value: that.message
+        // });
       }
     }
   }

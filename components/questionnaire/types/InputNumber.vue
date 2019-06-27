@@ -3,7 +3,7 @@
     <input
       type="number"
       :placeholder="question.placeholder"
-      v-model.number="num"
+      v-model.number="message"
       :required="question.validation.required"
       :key="question.id"
     >
@@ -20,44 +20,47 @@ export default {
   data() {
     // debugger;
     return {
-      num: this.$store.state.answers[this.$store.state.questionId]
+      message: this.$store.state.answers[this.$store.state.questionId]
     };
   },
 
   methods: {
     next() {
-      const that = this;
-      if (typeof that.num === "undefined") {
-        that.$emit("error", {
+      if (typeof this.message === "undefined") {
+        this.$emit("error", {
           type: null,
-          msg: `请输入${that.question.text}`
+          msg: `请输入${this.question.text}`
         });
       } else if (
-        that.question.validation.min !== -1 &&
-        that.num < that.question.validation.min
+        this.question.validation.min !== -1 &&
+        this.message < this.question.validation.min
       ) {
-        that.$emit("error", {
+        this.$emit("error", {
           type: "small",
-          msg: `${that.question.question_text}不能小于${
-            that.question.validation.min
+          msg: `${this.question.question_text}不能小于${
+            this.question.validation.min
           }`
         });
       } else if (
-        that.question.validation.max !== -1 &&
-        that.num > that.question.validation.max
+        this.question.validation.max !== -1 &&
+        this.message > this.question.validation.max
       ) {
-        that.$emit("error", {
+        this.$emit("error", {
           type: "large",
-          msg: `${that.question.question_text}不能大于${
-            that.question.validation.max
+          msg: `${this.question.question_text}不能大于${
+            this.question.validation.max
           }`
         });
       } else {
         // debugger;
-        that.$store.commit("submit", {
-          questionId: that.question.id,
-          value: that.num
+        this.$store.commit("submit", {
+          questionId: this.question.id,
+          result: this.message
         });
+        // {
+        //   questionId: this.question.id,
+        //   value: this.message
+        // });
       }
     }
   }

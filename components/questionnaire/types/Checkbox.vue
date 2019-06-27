@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { isOption } from "../../utils/prerequisite.js";
+import { isOption } from "@/services/questionnaire.js";
 
 const cancel = ["无"];
 
@@ -34,13 +34,12 @@ export default {
 
   computed: {
     options() {
-      const that = this;
-      return that.question.options.filter(item => {
-        return that.r[that.question.id]
+      return this.question.options.filter(item => {
+        return this.r[this.question.id]
           ? isOption(
               item.id,
-              that.r[that.question.id].options,
-              that.$store.state.answers
+              this.r[this.question.id].options,
+              this.$store.state.answers
             )
           : true;
       });
@@ -50,32 +49,31 @@ export default {
   methods: {
     next(val) {
       // debugger;
-      const that = this;
-      if (that.question.validation.required && val.length === 0) {
-        that.$emit("error", {
+      if (this.question.validation.required && val.length === 0) {
+        this.$emit("error", {
           type: null,
           msg: `请选择合适的选项`
         });
       } else if (
-        that.question.validation.minOptionsNumber !== -1 &&
-        val.length < that.question.validation.minOptionsNumber
+        this.question.validation.minOptionsNumber !== -1 &&
+        val.length < this.question.validation.minOptionsNumber
       ) {
-        that.$emit("error", {
+        this.$emit("error", {
           type: "less",
-          msg: `选项数不能少于${that.question.validation.minOptionsNumber}个`
+          msg: `选项数不能少于${this.question.validation.minOptionsNumber}个`
         });
       } else if (
-        that.question.validation.maxOptionsNumber !== -1 &&
-        val.length > that.question.validation.maxOptionsNumber
+        this.question.validation.maxOptionsNumber !== -1 &&
+        val.length > this.question.validation.maxOptionsNumber
       ) {
-        that.$emit("error", {
+        this.$emit("error", {
           type: "more",
-          msg: `选项数不能多于${that.question.validation.maxOptionsNumber}个`
+          msg: `选项数不能多于${this.question.validation.maxOptionsNumber}个`
         });
       } else {
-        that.$store.commit("submit", {
-          questionId: that.question.id,
-          value: val
+        this.$store.commit("submit", {
+          questionId: this.question.id,
+          result: val
         });
       }
     },
