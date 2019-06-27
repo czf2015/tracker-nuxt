@@ -1,0 +1,62 @@
+{
+    "status": "sucess",
+    "result": {
+        "message": "查询成功！",
+        "data": {
+            "_id": "5c3f24b1a930d51e6ff388b5",
+            "id": "1234",
+            "origin_orders": [
+                {
+                    "order_item_id": "0",
+                    "required": [
+                        {
+                            "id": 6,
+                            "dose": {},
+                            "sku_price": 20
+                        }
+                    ],
+                    "options": [
+                        {
+                            "id": 9,
+                            "dose": {},
+                            "sku_price": 20
+                        },
+                        {
+                            "id": 11,
+                            "dose": {},
+                            "sku_price": 20
+                        }
+                    ],
+                    "specify": "1",
+                    "num": 3,
+                    "name": "ted",
+                    "remark": "赠品要手袋，周末配送"
+                },
+                {
+                    "order_item_id": "1",
+                    "required": [
+                        {
+                            "id": 8,
+                            "dose": {},
+                            "sku_price": 20
+                        }
+                    ],
+                    "options": [
+                        {
+                            "id": 9,
+                            "dose": {},
+                            "sku_price": 20
+                        }
+                    ],
+                    "specify": "3",
+                    "num": 1,
+                    "name": "infi",
+                    "remark": "赠品要手袋，周末配送"
+                }
+            ],
+            "session_id": "lSn7kWMRi47mlf_9txE9JTIfXY4t_2gH",
+            "update_time": "2019-01-16T12:39:04.418Z"
+        }
+    },
+    "request": {}
+}

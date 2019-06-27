@@ -1,0 +1,319 @@
+{
+    "1": {
+        "value": "c",
+        "question_text": "服务对象称呼"
+    },
+    "3": {
+        "value": 18,
+        "question_text": "年龄"
+    },
+    "4": {
+        "id": 2,
+        "value": "2",
+        "text": "女",
+        "option_id": 2,
+        "option_text": "女",
+        "checked": false,
+        "question_id": 3,
+        "question_text": "性别"
+    },
+    "5": {
+        "value": 180,
+        "question_text": "身高"
+    },
+    "6": {
+        "value": 80,
+        "question_text": "体重"
+    },
+    "7": {
+        "id": 8,
+        "value": "8",
+        "text": "运动恢复",
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/exercise.png",
+        "option_id": 15,
+        "option_text": "运动恢复",
+        "checked": false,
+        "question_id": 5,
+        "question_text": "当前主要营养目标"
+    },
+    "10": {
+        "id": 3,
+        "value": "3",
+        "text": "哺乳期",
+        "option_id": 5,
+        "option_text": "哺乳期",
+        "checked": false,
+        "question_id": 4,
+        "question_text": "正处于"
+    },
+    "13": {
+        "id": 3,
+        "value": "3",
+        "text": "总是提前",
+        "option_id": 23,
+        "option_text": "总是提前",
+        "checked": false,
+        "question_id": 6,
+        "question_text": "经期"
+    },
+    "14": {
+        "id": 3,
+        "value": "3",
+        "text": "偏肉食",
+        "option_id": 145,
+        "option_text": "偏肉食",
+        "checked": false,
+        "question_id": 36,
+        "question_text": "饮食特点"
+    },
+    "15": {
+        "id": 2,
+        "value": "2",
+        "text": "2-4 份",
+        "option_text": "2~4 份",
+        "option_id": 148,
+        "checked": false,
+        "question_id": 37,
+        "question_text": "平均每天食用几次蔬菜水果"
+    },
+    "17": {
+        "id": 2,
+        "value": "2",
+        "text": "2 杯",
+        "option_id": 154,
+        "option_text": "2 杯",
+        "checked": false,
+        "question_id": 39,
+        "question_text": "平均每天饮用或食用几次牛奶或奶制品（如酸奶、奶酪）"
+    },
+    "18": {
+        "id": 2,
+        "value": "2",
+        "text": "1-3 个",
+        "option_id": 157,
+        "option_text": "1~3 个",
+        "checked": false,
+        "question_id": 40,
+        "question_text": "平均每星期食用几个鸡蛋（或其他禽蛋）"
+    },
+    "19": {
+        "id": 2,
+        "value": "2",
+        "text": "1-2 次",
+        "option_id": 161,
+        "option_text": "1~2 次",
+        "checked": false,
+        "question_id": 41,
+        "question_text": "平均每星期食用几次海鱼"
+    },
+    "20": {
+        "id": 2,
+        "value": "2",
+        "text": "2-3 份",
+        "option_id": 164,
+        "option_text": "2~3 份",
+        "checked": false,
+        "question_id": 42,
+        "question_text": "平均每天食用其他肉类及虾蟹的份数"
+    },
+    "21": {
+        "id": 2,
+        "value": "2",
+        "text": "咖啡",
+        "option_text": "咖啡",
+        "option_id": 223,
+        "checked": false,
+        "question_id": 60,
+        "question_text": "以下饮料中，平时饮用最多的是哪一种？"
+    },
+    "22": {
+        "id": 5,
+        "value": "5",
+        "text": "其他碳酸饮料（雪碧、苏打水）",
+        "checked": false,
+        "question_text": "除前述饮料外，其他几乎每天都会喝的饮料还有哪些（多选）"
+    },
+    "23": {
+        "id": 8,
+        "value": "8",
+        "text": "小麦制品（如面食）",
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/wheat.png",
+        "option_id": 176,
+        "option_text": "小麦制品（如面食）",
+        "checked": false,
+        "question_id": 44,
+        "question_text": "是否有食物过敏症？"
+    },
+    "24": {
+        "id": 1,
+        "value": "1",
+        "text": "是",
+        "option_text": "是",
+        "option_id": "205",
+        "checked": false,
+        "question_id": 56,
+        "question_text": "是否正在节食"
+    },
+    "33": {
+        "id": 1,
+        "value": "1",
+        "text": "3 个小时以下",
+        "option_text": "3 小时以下",
+        "option_id": 192,
+        "question_id": 48,
+        "question_text": "每天注视电脑屏幕的时长"
+    },
+    "35": {
+        "id": 1,
+        "value": "1",
+        "text": "20 分钟以下",
+        "option_text": "20分钟以下",
+        "option_id": 188,
+        "question_id": 47,
+        "question_text": "平均每天直接日晒时长"
+    },
+    "36": {
+        "id": 1,
+        "value": "1",
+        "text": "1 次或没有",
+        "option_text": "1 次或没有",
+        "option_id": 166,
+        "question_id": 43,
+        "question_text": "平均每星期运动频率"
+    },
+    "37": {
+        "id": 1,
+        "value": "1",
+        "text": "基本没有",
+        "option_text": "基本没有",
+        "option_id": 86,
+        "question_id": 24,
+        "question_text": "力量训练频率"
+    },
+    "38": {
+        "id": 1,
+        "value": "1",
+        "text": "经常",
+        "option_text": "经常",
+        "option_id": "87",
+        "question_id": 25,
+        "question_text": "是否有高强度训练（力量训练、马拉松等）而导致的肌肉酸痛？"
+    },
+    "39": {
+        "id": 2,
+        "value": "2",
+        "text": "偶尔小酌",
+        "option_text": "偶尔小酌",
+        "option_id": 118,
+        "question_id": 33,
+        "question_text": "近半年饮酒频率"
+    },
+    "40": {
+        "id": 2,
+        "value": "2",
+        "text": "偶尔",
+        "option_text": "偶尔吸烟",
+        "option_id": 114,
+        "question_id": 32,
+        "question_text": "近半年吸烟频率"
+    },
+    "41": {
+        "id": 2,
+        "value": "2",
+        "text": "每两天至少一次，偶尔便秘",
+        "option_text": "每两天至少一次，偶尔便秘",
+        "option_id": 59,
+        "question_id": 17,
+        "question_text": "排便频率"
+    },
+    "44": {
+        "id": 2,
+        "value": "2",
+        "text": "骨性关节炎",
+        "option_text": "骨性关节炎",
+        "option_id": 72,
+        "checked": false,
+        "order": 2,
+        "question_id": 21,
+        "question_text": "你现在有以下关节相关病症吗？"
+    },
+    "45": {
+        "id": 3,
+        "value": "3",
+        "text": "高血脂",
+        "option_text": "高血脂",
+        "option_id": 125,
+        "checked": false,
+        "order": 3,
+        "question_id": 34,
+        "question_text": "现在有以下情况吗？ "
+    },
+    "47": {
+        "id": 3,
+        "value": "3",
+        "text": "肝癌",
+        "option_text": "肝癌",
+        "option_id": 134,
+        "question_id": 35,
+        "question_text": "肝脏有以下情况吗？"
+    },
+    "51": {
+        "id": 2,
+        "value": "2",
+        "text": "否",
+        "option_text": "无",
+        "option_id": 91,
+        "question_id": 26,
+        "question_text": "有诊断出抑郁症吗？"
+    },
+    "52": {
+        "id": 2,
+        "value": "2",
+        "text": "低落",
+        "option_text": "低落",
+        "option_id": 93,
+        "question_id": 27,
+        "question_text": "近期情绪如何？"
+    },
+    "53": {
+        "id": 2,
+        "value": "2",
+        "text": "感到疲累",
+        "option_text": "感到疲累（截止日期让你不得不晚上熬夜）",
+        "option_id": 95,
+        "question_id": 28,
+        "question_text": "近期的压力程度如何？"
+    },
+    "54": {
+        "id": 3,
+        "value": "3",
+        "text": "维生素B族",
+        "option_text": "维生素 B 族",
+        "option_id": 218,
+        "checked": false,
+        "order": 3,
+        "question_id": 59,
+        "question_text": "半年内是否曾被诊断缺乏以下营养素？"
+    },
+    "55": {
+        "id": 1,
+        "value": "1",
+        "text": "是",
+        "option_text": "是",
+        "option_id": 185,
+        "question_id": 45,
+        "question_text": "是否长期服用抗生素？ "
+    },
+    "56": {
+        "value": "v",
+        "question_text": "请写出抗生素名称"
+    },
+    "57": {
+        "id": 2,
+        "value": "2",
+        "text": "Podcast",
+        "question_id": 58,
+        "question_text": "你是从哪里听说LemonBox的？"
+    },
+    "openid": "okhMG0cb-prOSD2NTnAYBmHb4aw4"
+}

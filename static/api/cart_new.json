@@ -1,0 +1,67 @@
+{
+    "status": "sucess",
+    "result": {
+        "message": "新订单创建成功！"
+    },
+    "request": {
+        "goodsInfo": {
+            "orders": [
+                {
+                    "order_item_id": 0,
+                    "product_list": [
+                        {
+                            "id": 8,
+                            "dose": {},
+                            "sku_price": 20,
+                            "type": "required"
+                        },
+                        {
+                            "id": 10,
+                            "dose": {},
+                            "sku_price": 20,
+                            "type": "required"
+                        },
+                        {
+                            "id": 11,
+                            "dose": {},
+                            "sku_price": 20,
+                            "type": "option"
+                        }
+                    ],
+                    "specify": 1,
+                    "num": 3,
+                    "name": "ted",
+                    "remark": "赠品要手袋，周末配送"
+                },
+                {
+                    "order_item_id": 1,
+                    "product_list": [
+                        {
+                            "id": 8,
+                            "dose": {},
+                            "sku_price": 20,
+                            "type": "required"
+                        },
+                        {
+                            "id": 10,
+                            "dose": {},
+                            "sku_price": 20,
+                            "type": "required"
+                        },
+                        {
+                            "id": 12,
+                            "dose": {},
+                            "sku_price": 20,
+                            "type": "option"
+                        }
+                    ],
+                    "specify": 3,
+                    "num": 3,
+                    "name": "infi",
+                    "remark": "赠品要手袋，周末配送"
+                }
+            ],
+            "session_id": "s9naKYoggjOVKZhuoaNbFU2qCoD2pOrc"
+        }
+    }
+}

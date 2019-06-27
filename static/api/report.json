@@ -1,0 +1,410 @@
+{
+    "AllQuantNutrition": [
+        {
+            "index": 2,
+            "Weight": 10,
+            "Percent": 0.8461538461538461,
+            "NutriName": "Ca",
+            "Dose": {
+                "unit": "day",
+                "dose": "2"
+            },
+            "type": "nutrition",
+            "ProductID": "8.0"
+        },
+        {
+            "index": 3,
+            "Weight": 7,
+            "Percent": 0.7878787878787878,
+            "NutriName": "Vit C",
+            "Dose": {
+                "unit": "day",
+                "dose": "1"
+            },
+            "type": "nutrition",
+            "ProductID": "3.0"
+        },
+        {
+            "index": 4,
+            "Weight": 6,
+            "Percent": 0.8064516129032258,
+            "NutriName": "Vit D",
+            "Dose": {
+                "unit": "day",
+                "dose": "1"
+            },
+            "type": "nutrition",
+            "ProductID": "4.0"
+        },
+        {
+            "index": 1,
+            "Weight": 5,
+            "Percent": 0.8780487804878049,
+            "NutriName": "Omega 3",
+            "Dose": {
+                "unit": "day",
+                "dose": "1"
+            },
+            "type": "nutrition",
+            "ProductID": "22.0"
+        }
+    ],
+    "OutSuggestion": [
+        {
+            "category": "饮食",
+            "index": 2,
+            "Suggestion": "在经常喝茶或咖啡的情况下，请注意避免在下午或晚上饮用，以免影响睡眠。",
+            "link": ""
+        },
+        {
+            "category": "饮食",
+            "index": 3,
+            "Suggestion": "请增加膳食纤维的摄入，主要来源于蔬菜、水果和全麦等粗粮。",
+            "link": ""
+        },
+        {
+            "category": "饮食",
+            "index": 4,
+            "Suggestion": "请增加蔬菜和水果的摄入以补充维生素C和膳食纤维。菜椒、番茄、橙子等都是是很好的维生素C来源。",
+            "link": ""
+        },
+        {
+            "category": "饮食",
+            "index": 5,
+            "Suggestion": "每天保证充足的奶制品（牛奶、酸奶、奶酪等）摄入。如果是纯牛奶，每天应至少喝 2 杯（约 500ml）。",
+            "link": ""
+        },
+        {
+            "category": "饮食",
+            "index": 6,
+            "Suggestion": "多吃富含Omega 3的海鱼（如三文鱼、沙丁鱼），建议每周至少食用 3 次。",
+            "link": ""
+        },
+        {
+            "category": "饮食",
+            "index": 7,
+            "Suggestion": "尽量增加蛋白质的摄入，主要来源：各种肉类、鸡蛋、豆腐等豆制品、其他干豆如红豆和绿豆、坚果等。",
+            "link": ""
+        },
+        {
+            "category": "运动及作息",
+            "index": 8,
+            "Suggestion": "请增加有氧运动频率，短期目标2-3次/周，长期目标增至5次/周，每次至少30分钟，例如健身操、游泳、慢跑等；无氧训练2-3次/周，例如举哑铃等力量训练。",
+            "link": ""
+        },
+        {
+            "category": "运动及作息",
+            "index": 9,
+            "Suggestion": "暴露在阳光下的裸露皮肤可以合成维生素D，请适当增加日晒时长，可以分三次，每次至少15-20分钟。",
+            "link": ""
+        },
+        {
+            "category": "身体检查",
+            "index": 10,
+            "Suggestion": "请在下次体检时，跟医生确认是否缺铁。",
+            "link": ""
+        },
+        {
+            "category": "",
+            "index": 11,
+            "Suggestion": "请努力根据以上建议改善饮食和生活习惯。我们推荐在 3 个月后（或已经明显改善生活习惯或有新的体检结果后）重新填写个人营养问卷，以便根据你的情况降低补剂种类和剂量。",
+            "link": ""
+        }
+    ],
+    "OptionalList": [
+        {
+            "index": 5,
+            "ProductID": 14,
+            "type": "nutrition_no_dose",
+            "NutriName": "CoQ10",
+            "Dose": {
+                "unit": "day",
+                "dose": 0
+            },
+            "product": {
+                "_id": "5bf78d0838c418fee23a4b4f",
+                "alergicWarning": "",
+                "cnproductName": "假马齿苋",
+                "description": "*改善疲劳；*增强脑力、缓解压力。 ",
+                "elementNum": "E013",
+                "functionIco": [
+                    "http://image.lemonbox.net/img/elements/icon/Stress.png",
+                    "http://image.lemonbox.net/img/elements/icon/Brain.png"
+                ],
+                "id": 13,
+                "image": "http://image.lemonbox.net/img/elements/element_13.png",
+                "ingredients": "假马齿苋（Bacopa Monniera）。",
+                "mainElementId": 13,
+                "otherElementIds": [
+                    "假马齿苋"
+                ],
+                "otherIngredients": " 米粉（Rice Flour）、明胶（Gelatin）、棕榈酸钙（Calcium Palmitate）、硬脂酸（Stearic Acid）。",
+                "productName": "Bacopa",
+                "productNameForAlgo": "Bacopa",
+                "productNum": "P0131",
+                "provider": "Swanson Health Products. ",
+                "providerAdress": "PO Box 2803, Frgo, ND 58108, USA",
+                "ranks": [
+                    {
+                        "provider": "Labdoor",
+                        "rank": "4/8"
+                    }
+                ],
+                "recommendReason": ""
+            }
+        },
+        {
+            "index": 6,
+            "ProductID": 13,
+            "type": "herb",
+            "NutriName": "Bacopa",
+            "Dose": {
+                "unit": "day",
+                "dose": 0
+            },
+            "product": {
+                "_id": "5bf78d0838c418fee23a4b50",
+                "alergicWarning": "对「大豆、黄豆」过敏者请勿服用。",
+                "cnproductName": "辅酶 Q10",
+                "description": "保护心血管、*老年人体内合成降低，需要补充。 ",
+                "elementNum": "E014",
+                "functionIco": [
+                    "http://image.lemonbox.net/img/elements/icon/Heart.png"
+                ],
+                "id": 14,
+                "image": "http://image.lemonbox.net/img/elements/element_14.png",
+                "ingredients": "ω-3脂肪酸（Omega-3s）、ω-6脂肪酸（Omega-6s）、ω-9脂肪酸（Omega-9s）、辅酶 Q10（CoQ10）、有机水果植物提取物混合配方：苹果+甜菜+西兰花+胡萝卜+菠菜+西红柿+ 草莓+酸樱桃+青椒+黑莓+球芽甘蓝+生姜+ 大蒜+葱+蓝莓+香芹+花菜+树莓+红卷心菜+ 甘蓝菜+黄瓜+芹菜+芦笋、益生菌混合配方。\n",
+                "mainElementId": 14,
+                "otherElementIds": [
+                    "Omega-3 脂肪酸",
+                    "Omega-6 脂肪酸",
+                    "Omega-9 脂肪酸",
+                    "辅酶 Q10",
+                    "有机水果植物提取物混合配方（苹果+甜菜 + 西兰花 + 胡萝卜 + 菠菜 + 西红柿 + 草莓 + 酸樱桃 + 青椒 + 黑莓 + 球芽甘蓝 + 生姜 + 大蒜 + 葱 + 蓝莓 + 香芹 + 花菜 + 树莓 + 红卷心菜 + 甘蓝菜 + 黄瓜 + 芹菜 + 芦笋）"
+                ],
+                "otherIngredients": " 蔬菜纤维素（Vegetable Cellulose）、绿叶素胶囊（Chlorophyll Capsule）、小烛树蜡（Candelilla Wax）、虾红素（Astaxanthin）、大豆生育酚（Soy Tocopherol）。",
+                "productName": "CoQ10",
+                "productNameForAlgo": "CoQ10",
+                "productNum": "P0141",
+                "provider": "Garden of Life LLC. ",
+                "providerAdress": "4200 Northcorp Parkway, Palm Beach Gardens, FL 33410, USA",
+                "ranks": [
+                    {
+                        "provider": "Labdoor",
+                        "rank": "2/22"
+                    }
+                ],
+                "recommendReason": ""
+            }
+        }
+    ],
+    "性别": "男",
+    "QuantNutrition": [
+        {
+            "index": 3,
+            "Weight": 7,
+            "NutriName": "Vit C",
+            "Dose": {
+                "unit": "day",
+                "dose": "1"
+            },
+            "type": "nutrition",
+            "ProductID": 3,
+            "selected": true,
+            "product": {
+                "_id": "5bf78d0838c418fee23a4b45",
+                "alergicWarning": "",
+                "cnproductName": "维生素 C",
+                "description": "抗氧化剂； 提高免疫力，降低感冒和感染的风险； 参与胶原蛋白合成、帮助皮肤抗衰老； 抗疲劳； 促进铁的吸收。 ",
+                "elementNum": "E003",
+                "functionIco": [
+                    "http://image.lemonbox.net/img/elements/icon/Immunity.png"
+                ],
+                "id": 3,
+                "image": "http://image.lemonbox.net/img/elements/element_3.png",
+                "ingredients": "维生素C（Vitamin C）、玫瑰果（Rose Hips）。",
+                "mainElementId": 3,
+                "otherElementIds": [
+                    "维生素 C",
+                    "玫瑰果"
+                ],
+                "otherIngredients": "明胶（Gelatin）、硬脂酸镁（Magnesium Stearate）、米粉（Rice Flour）。",
+                "productName": "Vitamin C",
+                "productNameForAlgo": "Vit C",
+                "productNum": "P0031",
+                "provider": "Swanson Health Products.",
+                "providerAdress": "Fargo, ND 58104 USA",
+                "ranks": [
+                    {
+                        "provider": "Labdoor",
+                        "rank": "2/29"
+                    }
+                ],
+                "recommendReason": "易吞服，剂量适中适合每天服用"
+            }
+        },
+        {
+            "index": 4,
+            "Weight": 6,
+            "NutriName": "Vit D",
+            "Dose": {
+                "unit": "day",
+                "dose": "1"
+            },
+            "type": "nutrition",
+            "ProductID": 4,
+            "selected": true,
+            "product": {
+                "_id": "5bf78d0838c418fee23a4b46",
+                "alergicWarning": "",
+                "cnproductName": "维生素 D3",
+                "description": "促进钙吸收； 维护骨骼健康，预防并改善骨质疏松， 减少骨折风险。 ",
+                "elementNum": "E004",
+                "functionIco": [
+                    "http://image.lemonbox.net/img/elements/icon/Bones.png"
+                ],
+                "id": 4,
+                "image": "http://image.lemonbox.net/img/elements/element_4.png",
+                "ingredients": "维生素D（Vitamin D3）。",
+                "mainElementId": 4,
+                "otherElementIds": [
+                    "维生素 D3"
+                ],
+                "otherIngredients": "红花油（Safflower Oil）、甘油（Glycerin）、牛肉胶（Beef Gelatin）、水（Water）。",
+                "productName": "Vitamin D3",
+                "productNameForAlgo": "Vit D",
+                "productNum": "P0041",
+                "provider": "J.R. Carlson Laboratories, Inc.",
+                "providerAdress": " Arlington Heights, IL 60004, USA",
+                "ranks": [
+                    {
+                        "provider": "Labdoor",
+                        "rank": "1/19"
+                    }
+                ],
+                "recommendReason": "易吞服，剂量适中适合每天服用，不易造成过量风险"
+            }
+        },
+        {
+            "index": 2,
+            "Weight": 10,
+            "NutriName": "Ca",
+            "Dose": {
+                "unit": "day",
+                "dose": "2"
+            },
+            "type": "nutrition",
+            "ProductID": 8,
+            "selected": true,
+            "product": {
+                "_id": "5bf78d0838c418fee23a4b4a",
+                "alergicWarning": "",
+                "cnproductName": "钙剂",
+                "description": "组成骨骼的必需元素； 改善并预防骨质疏松，减少骨折风险。 ",
+                "elementNum": "E008",
+                "functionIco": [
+                    "http://image.lemonbox.net/img/elements/icon/Bones.png"
+                ],
+                "id": 8,
+                "image": "http://image.lemonbox.net/img/elements/element_8.png",
+                "ingredients": "钙（Calcium）。",
+                "mainElementId": 8,
+                "otherElementIds": [
+                    "钙"
+                ],
+                "otherIngredients": "明胶（Gelatin）、硬脂酸镁（Magnesium Stearate）。",
+                "productName": "Calcium",
+                "productNameForAlgo": "Ca",
+                "productNum": "P0081",
+                "provider": "Swanson Health Products. ",
+                "providerAdress": "Fargo, ND 58104 USA",
+                "ranks": [
+                    {
+                        "provider": "Labdoor",
+                        "rank": "7/30"
+                    }
+                ],
+                "recommendReason": "营养素形态易吸收，颗粒较小易吞服"
+            }
+        },
+        {
+            "index": 1,
+            "Weight": 5,
+            "NutriName": "Omega 3",
+            "Dose": {
+                "unit": "day",
+                "dose": "1"
+            },
+            "type": "nutrition",
+            "ProductID": 22,
+            "selected": true,
+            "product": {
+                "_id": "5bf78d0838c418fee23a4b58",
+                "alergicWarning": "对「鱼肉」过敏者请勿服用该产品。",
+                "cnproductName": "Omega-3",
+                "description": "降血脂，降低心脏病风险； 保护大脑、眼睛和关节健康。 ",
+                "elementNum": "E021",
+                "functionIco": [
+                    "http://image.lemonbox.net/img/elements/icon/Heart.png",
+                    "http://image.lemonbox.net/img/elements/icon/Prenatal.png",
+                    "http://image.lemonbox.net/img/elements/icon/Joint.png",
+                    "http://image.lemonbox.net/img/elements/icon/Brain.png",
+                    "http://image.lemonbox.net/img/elements/icon/Vision.png"
+                ],
+                "id": 22,
+                "image": "http://image.lemonbox.net/img/elements/element_22.png",
+                "ingredients": "三倍强效鱼油（Triple Strength Fish Oil）、ω-3脂肪酸总计（Total Omega-3）：ω-3脂肪酸（EPA Omega-3）、ω-3脂肪酸（DHA Omega-3）、其它ω-3脂肪酸（DPA, SDA, ETA, ETE, ALA）。",
+                "mainElementId": 21,
+                "otherElementIds": [
+                    "三倍强效鱼油",
+                    "EPA Omega-3",
+                    "DHA Omega-3",
+                    "其他 Omega-3 脂肪酸"
+                ],
+                "otherIngredients": " 明胶胶囊（Gelatin Capsule）、甘油（Glycerin）、纯净水（Puriﬁed Water）、天然肠溶衣（Natural Enteric Coating）、混合天然生育酚（Mixed Natural Tocopherols）。 ",
+                "productName": "Fish Oil",
+                "productNameForAlgo": "Omega 3 regular",
+                "productNum": "P0221",
+                "provider": "Innovix Pharma Inc. ",
+                "providerAdress": "Calabasas, CA 91302, USA",
+                "ranks": [
+                    {
+                        "provider": "Labdoor",
+                        "rank": "10/54"
+                    }
+                ],
+                "recommendReason": "肠溶处理降低腥味，经过处理去掉重金属汞去掉胆固醇，易吞服"
+            }
+        }
+    ],
+    "随机码": "gOdAG",
+    "id": 63,
+    "姓名": "czf",
+    "rankMap": {
+        "1": 0.15,
+        "2": 0.3,
+        "3": 0.45,
+        "4": 0.55,
+        "5": 0.65,
+        "6": 0.75,
+        "7": 0.9
+    },
+    "userInfo": {
+        "gender": "男",
+        "name": "czf",
+        "age": 32
+    },
+    "targetsIcons": [
+        "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/immunity.png",
+        "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/heart.png",
+        "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/brain.png",
+        "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/tired.png"
+    ],
+    "targets": "提高免疫力; 保护心脏健康; 提高脑力; 改善易疲劳、乏力或睡眠质量",
+    "outSuggestionSummary": "首先，你的身体质量指数BMI=24.5 kg/m2，属于超重，增加了患脂肪肝、糖尿病及其他慢性病的风险。均衡饮食＋合理运动是控制体重的唯一健康有效的方式。",
+    "submitDate": "2019-01-28",
+    "timeStamp": 1548661275941,
+    "openid": "okhMG0cb-prOSD2NTnAYBmHb4aw4",
+    "totalPillCount": 5,
+    "purchaseLink": "pages/goods/detail/index?alias=36483ijyu5m71"
+}

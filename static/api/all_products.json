@@ -1,0 +1,891 @@
+[
+    {
+        "_id": "5bf78d0838c418fee23a4b43",
+        "alergicWarning": "",
+        "cnproductName": "维生素 B 族",
+        "description": "维护正常视神经功能； 维护身体新陈代谢，提供能量，抗疲劳； 滋养头发。 ",
+        "elementNum": "E001",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Energy.png",
+            "http://image.lemonbox.net/img/elements/icon/Stress.png",
+            "http://image.lemonbox.net/img/elements/icon/Hair.png"
+        ],
+        "id": "1",
+        "image": "http://image.lemonbox.net/img/elements/element_1.png",
+        "ingredients": "维生素B1（硫胺素 Thiamin）、维生素B2（核黄素 Riboflavin）、维生素B3 （烟酸 Niacin）、维生素B5（泛酸 Pantothenic Acid）、维生素B6（吡哆醇 Vitamin B6）、维生素B7（生物素 Biotin）、维生素B9（叶酸 Folate）、维生素B12（钴胺素 Vitamin B12）、肌醇（Inositol）、对氨基苯甲酸 （PABA）、胆碱（Choline）。",
+        "mainElementId": "1",
+        "otherElementIds": [
+            "维生素 B1",
+            "维生素 B2",
+            "维生素 B3",
+            "维生素 B6",
+            "维生素 B1",
+            "维生素 B9",
+            "维生素 B12",
+            "维生素 B7",
+            "维生素 B5",
+            "肌醇",
+            "磷脂洗胆碱",
+            "对氨基苯甲酸",
+            "α硫辛酸"
+        ],
+        "otherIngredients": "纤维素（Cellulose）、硅（Silica）、硬脂酸镁（Magnesium Stearate）。",
+        "productName": "Vitamin B Complex",
+        "productNameForAlgo": "B comp",
+        "productNum": "P0011",
+        "provider": "Country Life.",
+        "providerAdress": "LLC. 180 Vanderbilt Motor Parkway, Hauppauge, NY 11788, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "1/10"
+            }
+        ],
+        "recommendReason": "LB排名高，易吞服、剂量不会太高",
+        "priceInfo": {
+            "required": 1,
+            "option": 1
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b44",
+        "alergicWarning": "",
+        "cnproductName": "维生素 B12",
+        "description": "维护正常视神经供能和血细胞发育； 在脂类和蛋白质代谢及供能中非常重要； 抗疲劳。 ",
+        "elementNum": "E002",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Energy.png"
+        ],
+        "id": "2",
+        "image": "http://image.lemonbox.net/img/elements/element_2.png",
+        "ingredients": "维生素B12（钴胺素Vitamin B12）、钙（Calcium）。",
+        "mainElementId": "2",
+        "otherElementIds": [
+            "维生素 B12",
+            "钙"
+        ],
+        "otherIngredients": "纤维素凝胶（Cellulose Gel）、麦芽糖糊精（Maltodetrin）、交联羧甲基纤维素钠（Croscarmellose Sodium）、硬脂酸镁（Magnesium Stearate）。",
+        "productName": "Vitamin B12",
+        "productNameForAlgo": "B12",
+        "productNum": "P0021",
+        "provider": "Nature Made Nutritional Products.",
+        "providerAdress": " Mission Hills, CA 91346, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "5/13"
+            }
+        ],
+        "recommendReason": "易吞服",
+        "priceInfo": {
+            "required": 2,
+            "option": 2
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b45",
+        "alergicWarning": "",
+        "cnproductName": "维生素 C",
+        "description": "抗氧化剂； 提高免疫力，降低感冒和感染的风险； 参与胶原蛋白合成、帮助皮肤抗衰老； 抗疲劳； 促进铁的吸收。 ",
+        "elementNum": "E003",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Immunity.png"
+        ],
+        "id": "3",
+        "image": "http://image.lemonbox.net/img/elements/element_3.png",
+        "ingredients": "维生素C（Vitamin C）、玫瑰果（Rose Hips）。",
+        "mainElementId": "3",
+        "otherElementIds": [
+            "维生素 C",
+            "玫瑰果"
+        ],
+        "otherIngredients": "明胶（Gelatin）、硬脂酸镁（Magnesium Stearate）、米粉（Rice Flour）。",
+        "productName": "Vitamin C",
+        "productNameForAlgo": "Vit C",
+        "productNum": "P0031",
+        "provider": "Swanson Health Products.",
+        "providerAdress": "Fargo, ND 58104 USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "2/29"
+            }
+        ],
+        "recommendReason": "易吞服，剂量适中适合每天服用",
+        "priceInfo": {
+            "required": 3,
+            "option": 3
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b46",
+        "alergicWarning": "",
+        "cnproductName": "维生素 D3",
+        "description": "促进钙吸收； 维护骨骼健康，预防并改善骨质疏松， 减少骨折风险。 ",
+        "elementNum": "E004",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Bones.png"
+        ],
+        "id": "4",
+        "image": "http://image.lemonbox.net/img/elements/element_4.png",
+        "ingredients": "维生素D（Vitamin D3）。",
+        "mainElementId": "4",
+        "otherElementIds": [
+            "维生素 D3"
+        ],
+        "otherIngredients": "红花油（Safflower Oil）、甘油（Glycerin）、牛肉胶（Beef Gelatin）、水（Water）。",
+        "productName": "Vitamin D3",
+        "productNameForAlgo": "Vit D",
+        "productNum": "P0041",
+        "provider": "J.R. Carlson Laboratories, Inc.",
+        "providerAdress": " Arlington Heights, IL 60004, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "1/19"
+            }
+        ],
+        "recommendReason": "易吞服，剂量适中适合每天服用，不易造成过量风险",
+        "priceInfo": {
+            "required": 4,
+            "option": 4
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b47",
+        "alergicWarning": "",
+        "cnproductName": "维生素 E",
+        "description": "抗氧化剂，抵抗自由基。 ",
+        "elementNum": "E005",
+        "functionIco": [],
+        "id": "5",
+        "image": "http://image.lemonbox.net/img/elements/element_5.png",
+        "ingredients": "维生素E（Vitamin E）。",
+        "mainElementId": "5",
+        "otherElementIds": [
+            "维生素 E"
+        ],
+        "otherIngredients": "明胶（Gelatin）、蔬菜甘油（Vegetable Glycerin）、大豆油（Soybean Oil）。",
+        "productName": "Vitamin E",
+        "productNameForAlgo": "Vit E",
+        "productNum": "P0051",
+        "provider": "Puritan's Pride, Inc. ",
+        "providerAdress": "Ronkonkoma, NY 11779, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "",
+        "priceInfo": {
+            "required": 5,
+            "option": 5
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b48",
+        "alergicWarning": "",
+        "cnproductName": "维生素 K",
+        "description": "参与凝血因子合成，帮助凝血； 降低钙流失及骨折发生率。 ",
+        "elementNum": "E006",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Bones.png",
+            "http://image.lemonbox.net/img/elements/icon/Heart.png"
+        ],
+        "id": "6",
+        "image": "http://image.lemonbox.net/img/elements/element_6.png",
+        "ingredients": "维生素K（Vitamin K2）、苜蓿叶粉（Alfalfa Podwer）。",
+        "mainElementId": "6",
+        "otherElementIds": [
+            "维生素 K",
+            "苜蓿叶粉"
+        ],
+        "otherIngredients": "纤维素（Cellulose）、抗坏血酸棕榈酸酯（Ascorbyl Palmitate）、米粉（Rice Flour）、硅（Silica）。",
+        "productName": "Vitamin K",
+        "productNameForAlgo": "Vit K",
+        "productNum": "P0061",
+        "provider": "NOW FOODS. ",
+        "providerAdress": "395 S Glen Ellyn Rd Bloomingdale, IL 60108, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "是比较好的维生素K形式，剂量合适",
+        "priceInfo": {
+            "required": 6,
+            "option": 6
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b49",
+        "alergicWarning": "",
+        "cnproductName": "叶黄素+玉米黄质",
+        "description": "缓解叶黄素缺乏症； *改善老年性黄斑退化症状； * 预防并改善白内障症状。 ",
+        "elementNum": "E007",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Vision.png"
+        ],
+        "id": "7",
+        "image": "http://image.lemonbox.net/img/elements/element_7.png",
+        "ingredients": "叶黄素（Lutein）、玉米黄质（Zeaxanthin）。",
+        "mainElementId": "7",
+        "otherElementIds": [
+            "叶黄素",
+            "玉米黄质"
+        ],
+        "otherIngredients": "红花油（Safflower Oil）、蔬菜甘油（Vegetable Glycerin）、明胶（Gelatin）、黄蜂蜡（Yellow Beewax）。",
+        "productName": "Lutein",
+        "productNameForAlgo": "Lutein",
+        "productNum": "P0071",
+        "provider": "Puritan's Pride, Inc.",
+        "providerAdress": " Ronkonkoma, NY 11779, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "性价比高",
+        "priceInfo": {
+            "required": 7,
+            "option": 7
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b4a",
+        "alergicWarning": "",
+        "cnproductName": "钙剂",
+        "description": "组成骨骼的必需元素； 改善并预防骨质疏松，减少骨折风险。 ",
+        "elementNum": "E008",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Bones.png"
+        ],
+        "id": "8",
+        "image": "http://image.lemonbox.net/img/elements/element_8.png",
+        "ingredients": "钙（Calcium）。",
+        "mainElementId": "8",
+        "otherElementIds": [
+            "钙"
+        ],
+        "otherIngredients": "明胶（Gelatin）、硬脂酸镁（Magnesium Stearate）。",
+        "productName": "Calcium",
+        "productNameForAlgo": "Ca",
+        "productNum": "P0081",
+        "provider": "Swanson Health Products. ",
+        "providerAdress": "Fargo, ND 58104 USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "7/30"
+            }
+        ],
+        "recommendReason": "营养素形态易吸收，颗粒较小易吞服",
+        "priceInfo": {
+            "required": 8,
+            "option": 8
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b4b",
+        "alergicWarning": "",
+        "cnproductName": "复合钙剂",
+        "description": "促进骨骼健康， 添加镁和维生素 D、K，更利于钙的吸收。 ",
+        "elementNum": "E009",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Bones.png"
+        ],
+        "id": "9",
+        "image": "http://image.lemonbox.net/img/elements/element_9.png",
+        "ingredients": "维生素D（Vitamin D3）、维生素K（Vitamin K2）、柠檬酸钙（Calcium Citrate）、镁（Magnesium）。",
+        "mainElementId": "9",
+        "otherElementIds": [
+            "维生素 D",
+            "维生素 K",
+            "柠檬酸钙",
+            "镁"
+        ],
+        "otherIngredients": "明胶（Gelatin）、硬脂酸（Stearic Acid）、蔬菜硬脂酸镁（Vegetable Magnesium Stearate）。",
+        "productName": "Calcium Plus",
+        "productNameForAlgo": "Ca Plus",
+        "productNum": "P0091",
+        "provider": "NOW FOODS. ",
+        "providerAdress": "395 S Glen Ellyn Rd Bloomingdale, IL60108, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "剂量合适，比其他药丸产品易吞服",
+        "priceInfo": {
+            "required": 9,
+            "option": 9
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b4c",
+        "alergicWarning": "",
+        "cnproductName": "铁",
+        "description": "对于血红细胞合成至关重要，改善缺铁性贫血症状； 改善身体疲乏、虚弱，增强力量和免疫力。 ",
+        "elementNum": "E010",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Energy.png",
+            "http://image.lemonbox.net/img/elements/icon/Prenatal.png"
+        ],
+        "id": "10",
+        "image": "http://image.lemonbox.net/img/elements/element_10.png",
+        "ingredients": "铁（Iron）。",
+        "mainElementId": "10",
+        "otherElementIds": [
+            "钙",
+            "铁"
+        ],
+        "otherIngredients": "蔬菜纤维素（Vegetable Cellulose）、磷酸二钙（Dicalcium Phosphate）、蔬菜硬脂酸镁（Vegetable Magnesium Stearate）。",
+        "productName": "Iron",
+        "productNameForAlgo": "Iron",
+        "productNum": "P0101",
+        "provider": "Puritan's Pride, Inc.",
+        "providerAdress": " Ronkonkoma, NY 11779, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "比市面上大多铁剂产品剂量低，更合适每天服用，不易造成过量毒性",
+        "priceInfo": {
+            "required": 10,
+            "option": 10
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b4d",
+        "alergicWarning": "",
+        "cnproductName": "南非醉茄",
+        "description": "*抗疲劳；*舒缓短期紧张情绪和压力；*增强耐力。",
+        "elementNum": "E011",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Energy.png",
+            "http://image.lemonbox.net/img/elements/icon/Stress.png"
+        ],
+        "id": "11",
+        "image": "http://image.lemonbox.net/img/elements/element_11.png",
+        "ingredients": "南非醉茄（Ashwagandha Root Powder）。",
+        "mainElementId": "11",
+        "otherElementIds": [
+            "南非醉茄"
+        ],
+        "otherIngredients": "蔬菜纤维素（Vegetable Cellulose）、蔬菜硬脂酸镁（Vegetable Magnesium Stearate）。",
+        "productName": "Ashwagandha",
+        "productNameForAlgo": "Ashwagandha",
+        "productNum": "P0111",
+        "provider": "BR International, LLC. ",
+        "providerAdress": "16192 Coastal Hwy, Lewes, DE 19958, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "",
+        "priceInfo": {
+            "required": 11,
+            "option": 11
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b4e",
+        "alergicWarning": "",
+        "cnproductName": "月见草",
+        "description": "*对男女性均可改善皮肤状况；*针对女性用户缓解月经前期综合征。",
+        "elementNum": "E012",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Skin.png"
+        ],
+        "id": "12",
+        "image": "http://image.lemonbox.net/img/elements/element_12.png",
+        "ingredients": "月见草油（Evening Primrose Oil）、亚油酸（Cis-Linoleic Acid）、亚麻酸（Gamma-Linolenic Acid）。",
+        "mainElementId": "12",
+        "otherElementIds": [
+            "月见草油",
+            "正式-亚油酸",
+            "Gamma-亚麻酸"
+        ],
+        "otherIngredients": " 明胶（Gelatin）、蔬菜甘油（Vegetable Glycerin）。",
+        "productName": "Evening Primrose",
+        "productNameForAlgo": "Evening Primrose",
+        "productNum": "P0121",
+        "provider": "Puritan's Pride Inc. ",
+        "providerAdress": "Holbrook, NY 11741, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "性价比高",
+        "priceInfo": {
+            "required": 12,
+            "option": 12
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b4f",
+        "alergicWarning": "",
+        "cnproductName": "假马齿苋",
+        "description": "*改善疲劳；*增强脑力、缓解压力。 ",
+        "elementNum": "E013",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Stress.png",
+            "http://image.lemonbox.net/img/elements/icon/Brain.png"
+        ],
+        "id": "13",
+        "image": "http://image.lemonbox.net/img/elements/element_13.png",
+        "ingredients": "假马齿苋（Bacopa Monniera）。",
+        "mainElementId": "13",
+        "otherElementIds": [
+            "假马齿苋"
+        ],
+        "otherIngredients": " 米粉（Rice Flour）、明胶（Gelatin）、棕榈酸钙（Calcium Palmitate）、硬脂酸（Stearic Acid）。",
+        "productName": "Bacopa",
+        "productNameForAlgo": "Bacopa",
+        "productNum": "P0131",
+        "provider": "Swanson Health Products. ",
+        "providerAdress": "PO Box 2803, Frgo, ND 58108, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "4/8"
+            }
+        ],
+        "recommendReason": "",
+        "priceInfo": {
+            "required": 13,
+            "option": 13
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b50",
+        "alergicWarning": "对「大豆、黄豆」过敏者请勿服用。",
+        "cnproductName": "辅酶 Q10",
+        "description": "保护心血管、*老年人体内合成降低，需要补充。 ",
+        "elementNum": "E014",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Heart.png"
+        ],
+        "id": "14",
+        "image": "http://image.lemonbox.net/img/elements/element_14.png",
+        "ingredients": "ω-3脂肪酸（Omega-3s）、ω-6脂肪酸（Omega-6s）、ω-9脂肪酸（Omega-9s）、辅酶 Q10（CoQ10）、有机水果植物提取物混合配方：苹果+甜菜+西兰花+胡萝卜+菠菜+西红柿+ 草莓+酸樱桃+青椒+黑莓+球芽甘蓝+生姜+ 大蒜+葱+蓝莓+香芹+花菜+树莓+红卷心菜+ 甘蓝菜+黄瓜+芹菜+芦笋、益生菌混合配方。\n",
+        "mainElementId": "14",
+        "otherElementIds": [
+            "Omega-3 脂肪酸",
+            "Omega-6 脂肪酸",
+            "Omega-9 脂肪酸",
+            "辅酶 Q10",
+            "有机水果植物提取物混合配方（苹果+甜菜 + 西兰花 + 胡萝卜 + 菠菜 + 西红柿 + 草莓 + 酸樱桃 + 青椒 + 黑莓 + 球芽甘蓝 + 生姜 + 大蒜 + 葱 + 蓝莓 + 香芹 + 花菜 + 树莓 + 红卷心菜 + 甘蓝菜 + 黄瓜 + 芹菜 + 芦笋）"
+        ],
+        "otherIngredients": " 蔬菜纤维素（Vegetable Cellulose）、绿叶素胶囊（Chlorophyll Capsule）、小烛树蜡（Candelilla Wax）、虾红素（Astaxanthin）、大豆生育酚（Soy Tocopherol）。",
+        "productName": "CoQ10",
+        "productNameForAlgo": "CoQ10",
+        "productNum": "P0141",
+        "provider": "Garden of Life LLC. ",
+        "providerAdress": "4200 Northcorp Parkway, Palm Beach Gardens, FL 33410, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "2/22"
+            }
+        ],
+        "recommendReason": "",
+        "priceInfo": {
+            "required": 14,
+            "option": 14
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b51",
+        "alergicWarning": "",
+        "cnproductName": "葡萄籽提取物",
+        "description": "抗氧化剂，抵抗自由基；*保护心脏、眼睛、免疫系统、延缓衰老，预防过敏。 ",
+        "elementNum": "E015",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Heart.png",
+            "http://image.lemonbox.net/img/elements/icon/Vision.png",
+            "http://image.lemonbox.net/img/elements/icon/Immunity.png"
+        ],
+        "id": "15",
+        "image": "http://image.lemonbox.net/img/elements/element_15.png",
+        "ingredients": "葡萄籽提取物（Grape Seed Extract）、印度醋粟提取物（Amla Extract）、芦丁粉（Rutin Powder）。",
+        "mainElementId": "15",
+        "otherElementIds": [
+            "葡萄籽提取物",
+            "印度醋栗提取物",
+            "芦丁粉"
+        ],
+        "otherIngredients": "纤维素（Cellulose）、 硬脂酸镁（Magnesium Stearate）。",
+        "productName": "Grape Seed",
+        "productNameForAlgo": "grape seeds",
+        "productNum": "P0151",
+        "provider": "Now Foods. ",
+        "providerAdress": "395 S Glen Ellyn Rd Bloomingdale, IL 60108, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "",
+        "priceInfo": {
+            "required": 15,
+            "option": 15
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b52",
+        "alergicWarning": "对「贝类」过敏者请勿服用。",
+        "cnproductName": "葡糖胺",
+        "description": "缓解骨性关节炎和类风湿关节炎症状； *延缓关节结构改变；保护关节健康。 ",
+        "elementNum": "E016",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Joint.png"
+        ],
+        "id": "16",
+        "image": "http://image.lemonbox.net/img/elements/element_16.png",
+        "ingredients": "硫酸盐葡萄糖胺（Glucosamin Sulfate）、硫酸软骨素（Chondroitin Sulfate）、二甲基砜（MSM）。",
+        "mainElementId": "16",
+        "otherElementIds": [
+            "硫酸盐葡萄糖胺",
+            "硫酸软骨素",
+            "二甲基砜"
+        ],
+        "otherIngredients": " 明胶（Gelatin）、微晶纤维素（Microcrystalline cellulose）、植物硬脂酸镁（magnesium stearate from vegetable source）。 ",
+        "productName": "Glucosamine",
+        "productNameForAlgo": "Glucosamine",
+        "productNum": "P0161",
+        "provider": "Doctor's Best, Inc. ",
+        "providerAdress": "California, 92612, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "18/24"
+            }
+        ],
+        "recommendReason": "复方成分（比Move Free 的单一成分更加容易形成协同效应），效果更好",
+        "priceInfo": {
+            "required": 16,
+            "option": 16
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b53",
+        "alergicWarning": "对「鱼肉」、「大豆」过敏者请勿服用。",
+        "cnproductName": "孕产期复合维生素+DHA",
+        "description": "促进胎儿正常发育，预防新生儿神经管畸形； 促进婴儿大脑发育。",
+        "elementNum": "E017",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Prenatal.png"
+        ],
+        "id": "17",
+        "image": "http://image.lemonbox.net/img/elements/element_17.png",
+        "ingredients": "维生素A（Vitamin A）、维生素C（Vitamin C）、维生素D（Vitamin D）、维生素E（Vitamin E）、维生素K（Vitamin K）、维生素B1（硫胺素 Thiamin）、维生素B2（核黄素 Riboﬂavin）、维生素B3（烟酸 Niacin）、维生素B6（吡哆醇 Vitamin B6）、维生素B9（叶酸 Folate）、维生素B12（钴胺素 Vitamin B12）、维生素B7（生物素 Biotin）、维生素B5（泛酸 Pantothenic Acid）、钙（Calcium）、铁（Iron）、碘（Iodine）、镁（Magnesium）、锌（Zinc）、铜（Selenium）、硒（Selenium）、锰（Manganese）、铬（Chromium）、DHA（Docosahexaenoic Acid）、叶黄素+玉米黄质（Lutein+Zeaxanthin）、胆碱（Choline）。",
+        "mainElementId": "17",
+        "otherElementIds": [
+            "维生素 A",
+            "维生素 C",
+            "维生素 D",
+            "维生素 E",
+            "维生素 K",
+            "维生素 B1",
+            "维生素 B2",
+            "维生素 B3",
+            "维生素 B6",
+            "维生素 B9",
+            "维生素 B12",
+            "维生素 B7",
+            "维生素 B5",
+            "钙",
+            "镁",
+            "碘铁",
+            "锌",
+            "铜",
+            "硒",
+            "锰",
+            "铬",
+            "DHA",
+            "叶黄素+玉米黄质",
+            "胆碱"
+        ],
+        "otherIngredients": " 鱼胶（Fish Gelatin）、甘油（Glycerin）、黄蜂蜡（Yellow Beeswax）、中链甘油三酯（Medium Chain Triglycerides）、 纯净水（Puriﬁed Water）、大豆卵磷脂（Soy Lecithin）、有机椰子油（Organic Coconut Oil）、胭脂树橙（Annatto）。 ",
+        "productName": "Prenatal+DHA",
+        "productNameForAlgo": "Prenatal",
+        "productNum": "P0171",
+        "provider": "Zahler Advanced Nutrition. ",
+        "providerAdress": "Brookly, NY 11230, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "2/22"
+            }
+        ],
+        "recommendReason": "LB排名高，含有DHA",
+        "priceInfo": {
+            "required": 17,
+            "option": 17
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b54",
+        "alergicWarning": "",
+        "cnproductName": "酸樱桃姜黄复合补剂",
+        "description": "缓解高强度耐力训练导致的肌肉酸痛； 减轻炎症，缓解痛风和关节炎疼痛。 ",
+        "elementNum": "E018",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Joint.png",
+            "http://image.lemonbox.net/img/elements/icon/Exercise.png"
+        ],
+        "id": "18",
+        "image": "http://image.lemonbox.net/img/elements/element_18.png",
+        "ingredients": "姜黄提取物（Turmeric Extract）、酸樱桃提取物（Omega-6 Fatty Acids）、生姜提取物（Ginger Extract）、槲皮素（Quercetin）、辣椒提取物（Cayenne Pepper）、黑胡椒提取物（Black Pepper Extract）。",
+        "mainElementId": "18",
+        "otherElementIds": [
+            "维生素 A",
+            "维生素 C",
+            "维生素 D",
+            "维生素 E",
+            "维生素 K",
+            "维生素 B1",
+            "维生素 B2",
+            "维生素 B3",
+            "维生素 B6",
+            "维生素 B9",
+            "维生素 B12",
+            "维生素 B7",
+            "维生素 B5",
+            "钙",
+            "镁",
+            "碘铁",
+            "锌",
+            "铜",
+            "硒",
+            "锰",
+            "铬",
+            "DHA",
+            "叶黄素+玉米黄质",
+            "胆碱"
+        ],
+        "otherIngredients": " 蔬菜纤维素（Vegetable Cellulose）、硅（Silica）、蔬菜硬脂酸镁（Vegetable Magnesium Stearate）。",
+        "productName": "Tart Cherry Turmeric Complex",
+        "productNameForAlgo": "Turmeric",
+        "productNum": "P0181",
+        "provider": "Puritan's Pride, Inc.",
+        "providerAdress": "Ronkonkoma, NY 11779, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "复合配方效果更好，性价比高",
+        "priceInfo": {
+            "required": 18,
+            "option": 18
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b55",
+        "alergicWarning": "",
+        "cnproductName": "益生菌",
+        "description": "改善肠道菌群，调节胃肠道功能。 ",
+        "elementNum": "E019",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Digestion.png",
+            "http://image.lemonbox.net/img/elements/icon/Immunity.png"
+        ],
+        "id": "19",
+        "image": "http://image.lemonbox.net/img/elements/element_19.png",
+        "ingredients": "乳酸双歧杆菌（Biﬁdobacterium Lactis）、短双歧杆菌（Biﬁdobacterium Breve）、长双歧杆菌（Biﬁdobacterium Longum）、嗜酸乳杆菌（Lactobacillus Acidophilus）、干酪乳杆菌（Lactobacillus Casei）、植物乳杆菌（Lactobacillus Plantarum）、副干酪乳杆菌（Lactobacillus Paracasei）、唾液乳杆菌（Lactobacillus Salivarius）、鼠李糖乳杆菌（Lactobacillus Rhamnosus）、嗜热链球菌（Streptococcus Thermophilus）。 ",
+        "mainElementId": "19",
+        "otherElementIds": [
+            "乳酸双歧杆菌",
+            "短双歧杆菌",
+            "长双歧杆菌",
+            "嗜酸乳杆菌",
+            "干酪乳杆菌",
+            "植物乳杆菌",
+            "副干酪乳杆菌",
+            "唾液乳杆菌",
+            "鼠李糖乳杆菌",
+            "嗜热链球菌"
+        ],
+        "otherIngredients": " 胶囊（Capsule）、纤维素（Cellulose Powder）、低聚果糖（Fructooligosaccharides）、硅（Silica）、抗坏 血酸棕榈酸酯（Ascorbyl Palmitate）。",
+        "productName": "Probiotic",
+        "productNameForAlgo": "Probiotics",
+        "productNum": "P0191",
+        "provider": "NOW FOODS. ",
+        "providerAdress": "395 S Glen Ellyn Rd, Bloomingdale, IL60108, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "16/37"
+            }
+        ],
+        "recommendReason": "易吞服，菌群种类和数量合适",
+        "priceInfo": {
+            "required": 19,
+            "option": 19
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b56",
+        "alergicWarning": "对「大豆、黄豆」过敏者请勿服用。",
+        "cnproductName": "乳蓟提取物",
+        "description": "抗氧化剂；*保护肝脏。 ",
+        "elementNum": "E020",
+        "functionIco": [],
+        "id": "20",
+        "image": "http://image.lemonbox.net/img/elements/element_20.png",
+        "ingredients": "乳蓟提取物（Milk Thistle Extract）。",
+        "mainElementId": "20",
+        "otherElementIds": [
+            "乳蓟提取物"
+        ],
+        "otherIngredients": " 豆油（Soybean Oil）、明胶（Gelatin）、蔬菜甘油（Vegetable Glycerin）、天然焦糖色素（Natural Caramel Color）、二氧化钛色素（Titanium Dioxide Color）。",
+        "productName": "Milk Thistle",
+        "productNameForAlgo": "milk thistle",
+        "productNum": "P0201",
+        "provider": "Puritan's Pride, Inc. Ronkonkoma, NY 11779, USA",
+        "providerAdress": "Ronkonkoma, NY 11779, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "",
+        "priceInfo": {
+            "required": 20,
+            "option": 20
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b57",
+        "alergicWarning": "",
+        "cnproductName": "蓝莓浓缩精华",
+        "description": "抗氧化剂；*对大脑、心血管、眼睛有益。 ",
+        "elementNum": "E021",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Vision.png",
+            "http://image.lemonbox.net/img/elements/icon/Heart.png"
+        ],
+        "id": "21",
+        "image": "http://image.lemonbox.net/img/elements/element_21.png",
+        "ingredients": "有机蓝莓全果（Organic Blueberry Whole Fruit）、总碳水化合物（Total Carbohydrates）。",
+        "mainElementId": "21",
+        "otherElementIds": [
+            "有机蓝莓全果",
+            "总碳水化合物"
+        ],
+        "otherIngredients": " 有机特级初榨橄榄油（Organic Extra Virgin Olive Oil)，有机蜂蜡（ Organic Beeswax），软胶囊 [洁净 明胶、犹太洁食甘油、纯净水（]Softgel Capsule [kosher gelatin, kosher vegetable glycerin, puriﬁed water]）。",
+        "productName": "Blueberry",
+        "productNameForAlgo": "Blueberry",
+        "productNum": "P0211",
+        "provider": "Sports Research. ",
+        "providerAdress": "784 Channel St. San Pedro, CA 90731",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "",
+        "priceInfo": {
+            "required": 21,
+            "option": 21
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b58",
+        "alergicWarning": "对「鱼肉」过敏者请勿服用该产品。",
+        "cnproductName": "Omega-3",
+        "description": "降血脂，降低心脏病风险； 保护大脑、眼睛和关节健康。 ",
+        "elementNum": "E021",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Heart.png",
+            "http://image.lemonbox.net/img/elements/icon/Prenatal.png",
+            "http://image.lemonbox.net/img/elements/icon/Joint.png",
+            "http://image.lemonbox.net/img/elements/icon/Brain.png",
+            "http://image.lemonbox.net/img/elements/icon/Vision.png"
+        ],
+        "id": "22",
+        "image": "http://image.lemonbox.net/img/elements/element_22.png",
+        "ingredients": "三倍强效鱼油（Triple Strength Fish Oil）、ω-3脂肪酸总计（Total Omega-3）：ω-3脂肪酸（EPA Omega-3）、ω-3脂肪酸（DHA Omega-3）、其它ω-3脂肪酸（DPA, SDA, ETA, ETE, ALA）。",
+        "mainElementId": "21",
+        "otherElementIds": [
+            "三倍强效鱼油",
+            "EPA Omega-3",
+            "DHA Omega-3",
+            "其他 Omega-3 脂肪酸"
+        ],
+        "otherIngredients": " 明胶胶囊（Gelatin Capsule）、甘油（Glycerin）、纯净水（Puriﬁed Water）、天然肠溶衣（Natural Enteric Coating）、混合天然生育酚（Mixed Natural Tocopherols）。 ",
+        "productName": "Fish Oil",
+        "productNameForAlgo": "Omega 3 regular",
+        "productNum": "P0221",
+        "provider": "Innovix Pharma Inc. ",
+        "providerAdress": "Calabasas, CA 91302, USA",
+        "ranks": [
+            {
+                "provider": "Labdoor",
+                "rank": "10/54"
+            }
+        ],
+        "recommendReason": "肠溶处理降低腥味，经过处理去掉重金属汞去掉胆固醇，易吞服",
+        "priceInfo": {
+            "required": 22,
+            "option": 22
+        }
+    },
+    {
+        "_id": "5bf78d0838c418fee23a4b59",
+        "alergicWarning": "对「鱼肉」过敏者请勿服用该产品。",
+        "cnproductName": "Omega-3（小)",
+        "description": "降血脂，降低心脏病风险； 保护大脑、眼睛和关节健康。 ",
+        "elementNum": "E021",
+        "functionIco": [
+            "http://image.lemonbox.net/img/elements/icon/Heart.png",
+            "http://image.lemonbox.net/img/elements/icon/Prenatal.png",
+            "http://image.lemonbox.net/img/elements/icon/Joint.png",
+            "http://image.lemonbox.net/img/elements/icon/Brain.png",
+            "http://image.lemonbox.net/img/elements/icon/Vision.png"
+        ],
+        "id": "23",
+        "image": "http://image.lemonbox.net/img/elements/element_23.png",
+        "ingredients": "药品级鱼油（Pharma grade ﬁsh oil）、ω-3脂肪酸总计（Total Omega-3）：ω-3脂肪酸（EPA Omega-3）、ω-3脂肪酸（DHA Omega-3）、其它ω-3脂肪酸（DPA, SDA, ETA, ETE, ALA）。",
+        "mainElementId": "21",
+        "otherElementIds": [
+            "三倍强效鱼油",
+            "EPA Omega-3",
+            "DHA Omega-3",
+            "其他 Omega-3 脂肪酸"
+        ],
+        "otherIngredients": " 明胶胶囊（Gelatin Capsule）、甘油（Glycerin）、 纯净水（Puriﬁed Water）、天然肠溶衣（Natural Enteric Coating）、混合天然生育酚（Mixed Natural Tocopherols）。 ",
+        "productName": "Fish Oil",
+        "productNameForAlgo": "Omega 3 mini",
+        "productNum": "P0231",
+        "provider": "Innovix Pharma Inc. ",
+        "providerAdress": "Calabasas, CA 91302, USA",
+        "ranks": [
+            {
+                "provider": 0,
+                "rank": 0
+            }
+        ],
+        "recommendReason": "肠溶处理降低腥味，经过处理去掉重金属汞去掉胆固醇，易吞服",
+        "priceInfo": {
+            "required": 23,
+            "option": 23
+        }
+    }
+]

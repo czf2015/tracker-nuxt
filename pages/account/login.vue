@@ -19,12 +19,12 @@
         <input type="password" v-model="password" placeholder="密码">
       </label>
       <p class="flex">
-        <lable id="auto">
-          <input type="checkbox" v-model="auto">7天内自动登录
-        </lable>
+        <label id="auto">
+          <input type="radio" v-model="auto">7天内自动登录
+        </label>
         <a href="/account/forget">忘记密码？</a>
       </p>
-      <button @click="login">登录</button>
+      <button @click.prevent="login">登录</button>
     </form>
   </article>
 </template>
@@ -55,6 +55,7 @@ export default {
         .then(({ status, data }) => {
           if (status === 200) {
             if (data && data.code === 0) {
+              sessionStorage.setItem('auto', this.auto)
               location.href = "/";
             } else {
               this.error = data.msg;
@@ -62,6 +63,9 @@ export default {
           } else {
             this.error = "服务器出错";
           }
+        })
+        .catch(e => {
+          console.log('login error')
         });
     }
   }

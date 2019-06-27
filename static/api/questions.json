@@ -1,0 +1,2946 @@
+[
+    {
+        "errorStyle": "hide",
+        "id": 1,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_base/user.png",
+        "options": [],
+        "placeholder": "点击输入",
+        "question_text": "服务对象称呼",
+        "remark": "该称呼会出现在营养建议和产品包装上",
+        "subRemark": "推荐您使用真实姓名",
+        "text": "您的姓名",
+        "title": "基本信息",
+        "type": "TEXT",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": 1,
+            "maxLength": 30,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 3,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_base/age.png",
+        "options": [
+            {
+                "id": 1,
+                "text": "50-64",
+                "value": "50-64",
+                "option_id": 1,
+                "option_text": "A 50-64",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "65-69",
+                "text": "65-69",
+                "option_id": 2,
+                "option_text": "B 65-69",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": ">=70",
+                "text": ">=70",
+                "option_id": 2,
+                "option_text": "C >=70",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "30-49",
+                "text": "30-49",
+                "option_id": 2,
+                "option_text": "D 30-49",
+                "checked": false
+            }
+        ],
+        "placeholder": "请输入年龄",
+        "question_text": "年龄",
+        "remark": "*暂不对 18 周岁以下的未成年人提供营养服务",
+        "text": "您的年龄",
+        "title": "基本信息",
+        "type": "POSITIVE_INTEGER",
+        "validation": {
+            "required": true,
+            "min": 18,
+            "max": 200,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 4,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_base/gender.png",
+        "options": [
+            {
+                "id": 1,
+                "text": "男",
+                "value": "1",
+                "option_id": 1,
+                "option_text": "男",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "女",
+                "option_id": 2,
+                "option_text": "女",
+                "checked": false
+            }
+        ],
+        "placeholder": "",
+        "question_id": 3,
+        "question_text": "性别",
+        "remakr2": "",
+        "remark": "",
+        "text": "您的性别",
+        "title": "基本信息",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 5,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_base/stature.png",
+        "options": [],
+        "placeholder": "请输入身高",
+        "question_text": "身高",
+        "remakr2": "",
+        "remark": "厘米",
+        "text": "身高",
+        "title": "基本信息",
+        "type": "POSITIVE_INTEGER",
+        "validation": {
+            "required": true,
+            "min": 1,
+            "max": 300,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 6,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_base/weight.png",
+        "options": [],
+        "placeholder": "请输入体重",
+        "question_text": "体重",
+        "remakr2": "",
+        "remark": "千克（1 千克 = 2 市斤）",
+        "text": "体重",
+        "title": "基本信息",
+        "type": "POSITIVE_INTEGER",
+        "validation": {
+            "required": true,
+            "min": 1,
+            "max": 500,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 7,
+        "image": "",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "改善易疲劳、乏力或睡眠质量",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/tired.png",
+                "option_id": 8,
+                "option_text": "改善易疲劳、乏力或睡眠质量",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "提高免疫力",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/immunity.png",
+                "option_id": 9,
+                "option_text": "免疫力",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "改善胃肠道功能",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/stomach.png",
+                "option_id": 10,
+                "option_text": "胃肠道功能",
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "保护骨骼健康",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/bone.png",
+                "option_id": 11,
+                "option_text": "骨骼健康",
+                "checked": false
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "保护心脏健康",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/heart.png",
+                "option_id": 12,
+                "option_text": "心脏健康",
+                "checked": false
+            },
+            {
+                "id": 6,
+                "value": "6",
+                "text": "保护关节",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/joint.png",
+                "option_id": 13,
+                "option_text": "保护关节",
+                "checked": false
+            },
+            {
+                "id": 7,
+                "value": "7",
+                "text": "提高脑力",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/brain.png",
+                "option_id": 14,
+                "option_text": "提高脑力",
+                "checked": false
+            },
+            {
+                "id": 8,
+                "value": "8",
+                "text": "运动恢复",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/exercise.png",
+                "option_id": 15,
+                "option_text": "运动恢复",
+                "checked": false
+            },
+            {
+                "id": 9,
+                "value": "9",
+                "text": "改善紧张情绪、压力或抑郁",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/emotion.png",
+                "option_id": 16,
+                "option_text": "改善紧张情绪、压力或抑郁",
+                "checked": false
+            },
+            {
+                "id": 10,
+                "value": "10",
+                "text": "保养皮肤",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/skin.png",
+                "option_id": 17,
+                "option_text": "保养皮肤",
+                "checked": false
+            },
+            {
+                "id": 11,
+                "value": "11",
+                "text": "缓解脱发",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/target_option/hair.png",
+                "option_id": 18,
+                "option_text": "缓解脱发",
+                "checked": false
+            }
+        ],
+        "placeholder": "",
+        "question_id": 5,
+        "question_text": "当前主要营养目标",
+        "remark": "你可以选 1-4 个",
+        "subRemark": "",
+        "text": "当前主要营养目标",
+        "title": "营养目标",
+        "type": "IMG_CHK",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 4
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 8,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/stomach.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "胃部",
+                "option_id": 56,
+                "option_text": "胃部",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "肠道",
+                "option_id": 57,
+                "option_text": "肠道",
+                "checked": false
+            }
+        ],
+        "question_id": 16,
+        "question_text": "你想改善消化系统中的",
+        "remark": "",
+        "subRemark": "",
+        "text": "你想改善消化系统中的",
+        "title": "营养目标",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 9,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/pregnancy.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 207,
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "否",
+                "option_text": "否",
+                "option_id": 208,
+                "checked": false
+            }
+        ],
+        "question_id": 57,
+        "question_text": "是否正在备孕？",
+        "remark": "",
+        "subRemark": "",
+        "text": "是否正在备孕",
+        "title": "营养目标",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 10,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/feeding_bottle.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "备孕期",
+                "option_id": 3,
+                "option_text": "备孕期",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "怀孕期",
+                "option_id": 4,
+                "option_text": "怀孕期",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "哺乳期",
+                "option_id": 5,
+                "option_text": "哺乳期",
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "都不是",
+                "option_id": 6,
+                "option_text": "都不是",
+                "checked": false
+            }
+        ],
+        "question_id": 4,
+        "question_text": "正处于",
+        "remark": "",
+        "subRemark": "",
+        "text": "您是否处于以下阶段？",
+        "title": "营养目标",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 11,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/pregnancy.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "还没开始",
+                "option_id": 30,
+                "option_text": "还没开始",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "不到 3 个月",
+                "option_id": 31,
+                "option_text": "不到 3 个月",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "3-6 个月",
+                "option_id": 32,
+                "option_text": "3~6 个月",
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "6-12 个月",
+                "option_id": 33,
+                "option_text": "6~12 个月",
+                "checked": false
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "12 个月以上",
+                "option_id": 34,
+                "option_text": "12 个月以上",
+                "checked": false
+            }
+        ],
+        "question_id": 8,
+        "question_text": "已经尝试怀孕了多久？",
+        "remark": "",
+        "subRemark": "",
+        "text": "已经尝试怀孕多久？",
+        "title": "营养目标",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 12,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/pregnancy.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "3 个月内",
+                "option_id": 35,
+                "option_text": "3 个月内",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "3 个月后",
+                "option_id": 36,
+                "option_text": "3 个月以后",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "其他",
+                "checked": false
+            }
+        ],
+        "question_id": 9,
+        "question_text": "预备在未来多久开始尝试怀孕？",
+        "remark": "",
+        "subRemark": "",
+        "text": "在多久后会开始尝试怀孕?",
+        "title": "营养目标",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 13,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_target/period.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "正常",
+                "option_id": 21,
+                "option_text": "正常",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "总是推迟",
+                "option_id": 22,
+                "option_text": "总是推迟",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "总是提前",
+                "option_id": 23,
+                "option_text": "总是提前",
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "不规律",
+                "option_id": 24,
+                "option_text": "不规律",
+                "checked": false
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "已绝经",
+                "option_id": 25,
+                "option_text": "已绝经",
+                "checked": false
+            }
+        ],
+        "question_id": 6,
+        "question_text": "经期",
+        "remark": "",
+        "subRemark": "",
+        "text": "经期是否正常?",
+        "title": "营养目标",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 14,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/dinner.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "纯素食",
+                "option_id": 143,
+                "option_text": "纯素食",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偏素食",
+                "option_id": 144,
+                "option_text": "偏素食",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "偏肉食",
+                "option_id": 145,
+                "option_text": "偏肉食",
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "荤素均衡",
+                "option_id": 146,
+                "option_text": "荤素均衡",
+                "checked": false
+            }
+        ],
+        "question_id": 36,
+        "question_text": "饮食特点",
+        "remark": "",
+        "subRemark": "",
+        "text": "饮食特点",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 15,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/shrimp.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "0-1 份",
+                "option_text": "0～1 份",
+                "option_id": 147,
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "2-4 份",
+                "option_text": "2~4 份",
+                "option_id": 148,
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "5 份及以上",
+                "option_text": "5 份及以上",
+                "option_id": 149,
+                "checked": false
+            }
+        ],
+        "question_id": 37,
+        "question_text": "平均每天食用几次蔬菜水果",
+        "remark": "一份蔬菜约为半碗煮熟的蔬菜或一碗未经烹调的叶菜，不包含淀粉类蔬菜，如土豆、玉米",
+        "subRemark": "",
+        "text": "平均每天食用几份蔬菜水果",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 16,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/bean.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "几乎不",
+                "option_id": 150,
+                "option_text": "几乎不",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "1-2 次",
+                "option_id": 151,
+                "option_text": "1~2 次",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "3 次或以上",
+                "option_id": 152,
+                "option_text": "3 次或以上",
+                "checked": false
+            }
+        ],
+        "question_id": 38,
+        "question_text": "平均每天食用几次豆类或豆制品（如红豆、豆腐等）",
+        "remark": "红豆、豆腐等",
+        "subRemark": "",
+        "text": "平均每天食用几次豆类及豆制品",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 17,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/milk.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "0-1 杯",
+                "option_id": 153,
+                "option_text": "0~1 杯",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "2 杯",
+                "option_id": 154,
+                "option_text": "2 杯",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "3 杯及以上",
+                "option_id": 155,
+                "option_text": "3 次或以上",
+                "checked": false
+            }
+        ],
+        "question_id": 39,
+        "question_text": "平均每天饮用或食用几次牛奶或奶制品（如酸奶、奶酪）",
+        "remark": "",
+        "subRemark": "",
+        "text": "平均每天饮用几杯牛奶或酸奶",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 18,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/egg.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "几乎不",
+                "option_id": 156,
+                "option_text": "几乎不",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "1-3 个",
+                "option_id": 157,
+                "option_text": "1~3 个",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "4-7 个",
+                "option_id": 158,
+                "option_text": "4~7 个",
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "8 个或以上",
+                "option_id": 159,
+                "option_text": "8 个或以上",
+                "checked": false
+            }
+        ],
+        "question_id": 40,
+        "question_text": "平均每星期食用几个鸡蛋（或其他禽蛋）",
+        "remark": "鸡蛋或其他禽蛋",
+        "subRemark": "",
+        "text": "平均每星期食用几个蛋类",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 19,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/fish.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "几乎不",
+                "option_id": 160,
+                "option_text": "几乎不",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "1-2 次",
+                "option_id": 161,
+                "option_text": "1~2 次",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "3 次或以上",
+                "option_id": 162,
+                "option_text": "3 次或以上",
+                "checked": false
+            }
+        ],
+        "question_id": 41,
+        "question_text": "平均每星期食用几次海鱼",
+        "remark": "淡水鱼以及虾蟹不算在内，将被算做其他肉类在下一题问及",
+        "subRemark": "",
+        "text": "平均每星期食用几次海鱼",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 20,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/vegetable.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "0-1 份",
+                "option_id": 163,
+                "option_text": "0~1 份",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "2-3 份",
+                "option_id": 164,
+                "option_text": "2~3 份",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "4 份及以上",
+                "option_id": 165,
+                "option_text": "4 份及以上",
+                "checked": false
+            }
+        ],
+        "question_id": 42,
+        "question_text": "平均每天食用其他肉类及虾蟹的份数",
+        "remark": "一份约为二两",
+        "subRemark": "",
+        "text": "平均每天食用几份肉类及虾蟹",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 21,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/drink.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "白水",
+                "option_text": "白水",
+                "option_id": 222,
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "咖啡",
+                "option_text": "咖啡",
+                "option_id": 223,
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "茶",
+                "option_text": "茶",
+                "option_id": 224,
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "可乐",
+                "option_text": "可乐",
+                "option_id": 225,
+                "checked": false
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "其他碳酸饮料（雪碧、苏打水）",
+                "option_text": "其他碳酸饮料（雪碧、苏打水）",
+                "option_id": 226,
+                "checked": false
+            },
+            {
+                "id": 6,
+                "value": "6",
+                "text": "果汁",
+                "option_text": "果汁",
+                "option_id": 227,
+                "checked": false
+            },
+            {
+                "id": 7,
+                "value": "7",
+                "text": "运动饮料",
+                "option_text": "运动饮料",
+                "option_id": 228,
+                "checked": false
+            },
+            {
+                "id": 8,
+                "value": "8",
+                "text": "其他含糖饮料",
+                "option_text": "其他含糖饮料",
+                "option_id": 229,
+                "checked": false
+            }
+        ],
+        "placeholder": "",
+        "question_id": 60,
+        "question_text": "以下饮料中，平时饮用最多的是哪一种？",
+        "remark": "",
+        "subRemark": "",
+        "text": "以下饮料中，平时饮用最多的是哪一种？",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 2,
+            "maxOptionsNumber": 3
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 22,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/drink.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "白水",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "咖啡",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "茶",
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "可乐",
+                "checked": false
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "其他碳酸饮料（雪碧、苏打水）",
+                "checked": false
+            },
+            {
+                "id": 6,
+                "value": "6",
+                "text": "果汁",
+                "checked": false
+            },
+            {
+                "id": 7,
+                "value": "7",
+                "text": "运动饮料",
+                "checked": false
+            },
+            {
+                "id": 8,
+                "value": "8",
+                "text": "其他含糖饮料",
+                "checked": false
+            },
+            {
+                "id": 9,
+                "value": "9",
+                "text": "无",
+                "checked": false
+            }
+        ],
+        "placeholder": "",
+        "question_text": "除前述饮料外，其他几乎每天都会喝的饮料还有哪些（多选）",
+        "remark": "",
+        "subRemark": "",
+        "text": "除前述饮料外，其他几乎每天都会喝的饮料还有哪些",
+        "title": "饮食特点",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 4
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 23,
+        "image": "",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "牛奶",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/milk.png",
+                "option_id": 169,
+                "option_text": "牛奶",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "鸡蛋",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/egg.png",
+                "option_id": 170,
+                "option_text": "鸡蛋",
+                "checked": false
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "鱼肉",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/fish.png",
+                "option_id": 171,
+                "option_text": "鱼肉",
+                "checked": false
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "虾蟹类",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/shrimp.png",
+                "option_id": 172,
+                "option_text": "虾蟹类",
+                "checked": false
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "坚果",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/nut.png",
+                "option_id": 173,
+                "option_text": "坚果",
+                "checked": false
+            },
+            {
+                "id": 6,
+                "value": "6",
+                "text": "花生",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/peanut.png",
+                "option_id": 174,
+                "option_text": "花生",
+                "checked": false
+            },
+            {
+                "id": 7,
+                "value": "7",
+                "text": "大豆",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/bean.png",
+                "option_id": 175,
+                "option_text": "大豆",
+                "checked": false
+            },
+            {
+                "id": 8,
+                "value": "8",
+                "text": "小麦制品（如面食）",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/wheat.png",
+                "option_id": 176,
+                "option_text": "小麦制品（如面食）",
+                "checked": false
+            },
+            {
+                "id": 9,
+                "value": "9",
+                "text": "紫外线",
+                "option_id": 179,
+                "option_text": "紫外线",
+                "checked": false,
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/uv.png"
+            },
+            {
+                "id": 10,
+                "value": "10",
+                "text": "无",
+                "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/allergy_option/none.png",
+                "option_id": 177,
+                "option_text": "无",
+                "checked": false
+            }
+        ],
+        "placeholder": "",
+        "question_id": 44,
+        "question_text": "是否有食物过敏症？",
+        "remark": "",
+        "subRemark": "",
+        "text": "是否对以下类别过敏",
+        "title": "饮食特点",
+        "type": "IMG_CHK",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 8
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 24,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_diet/diet.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": "205",
+                "checked": false
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "否",
+                "option_text": "否",
+                "option_id": "206",
+                "checked": false
+            }
+        ],
+        "question_id": 56,
+        "question_text": "是否正在节食",
+        "remark": "",
+        "subRemark": "",
+        "text": "是否正在节食",
+        "title": "饮食特点",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "min": -1,
+            "max": -1,
+            "minLength": -1,
+            "maxLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 25,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/sleep.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "3 个小时以下",
+                "option_text": "3 小时以下",
+                "option_id": 37
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "3-6 个小时",
+                "option_text": "3~6 小时",
+                "option_id": 38
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "6-8 个小时",
+                "option_text": "6~8 小时",
+                "option_id": 39
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "8 个小时以上",
+                "option_text": "8 小时以上",
+                "option_id": 40
+            }
+        ],
+        "placeholder": "",
+        "question_id": 10,
+        "question_text": "平均每天睡眠",
+        "remark": "",
+        "subRemark": "",
+        "text": "平均每天睡眠",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        },
+        "value": ""
+    },
+    {
+        "errorStyle": "hide",
+        "id": 26,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/insomnia.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 41
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "质量一般",
+                "option_text": "质量一般",
+                "option_id": 42
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "睡眠正常",
+                "option_text": "睡眠正常",
+                "option_id": 43
+            }
+        ],
+        "placeholder": "",
+        "question_id": 11,
+        "question_text": "是否睡眠质量差或失眠？",
+        "remark": "",
+        "subRemark": "",
+        "text": "是否睡眠质量差或失眠？",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 27,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/tired.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 44
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偶尔",
+                "option_text": "偶尔",
+                "option_id": 45
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "否",
+                "option_text": "否",
+                "option_id": 46
+            }
+        ],
+        "placeholder": "",
+        "question_id": 12,
+        "question_text": "经常感到乏力、疲劳或者没劲吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "经常感到乏力、疲劳或全身没劲吗？",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 28,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/night.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 47
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偶尔",
+                "option_text": "偶尔",
+                "option_id": 48
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "否",
+                "option_text": "否",
+                "option_id": 49
+            }
+        ],
+        "placeholder": "",
+        "question_id": 13,
+        "question_text": "经常加班熬夜吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "经常熬夜吗？",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 29,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/trip.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 50
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偶尔",
+                "option_text": "偶尔",
+                "option_id": 51
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "否",
+                "option_text": "否",
+                "option_id": 52
+            }
+        ],
+        "placeholder": "",
+        "question_id": 14,
+        "question_text": "经常长途出差吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "经常需要长途出行或出差吗？",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 30,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/cold.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 53
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偶尔",
+                "option_text": "偶尔",
+                "option_id": 54
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "否",
+                "option_text": "否",
+                "option_id": 55
+            }
+        ],
+        "placeholder": "",
+        "question_id": 15,
+        "question_text": "经常生病感冒吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "经常生病感冒吗？",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 31,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/focus.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 79
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "否",
+                "option_text": "否",
+                "option_id": 80
+            }
+        ],
+        "placeholder": "",
+        "question_id": 22,
+        "question_text": "很难集中注意力吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "很难集中注意力吗？",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 32,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/memory.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 81
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "否",
+                "option_text": "否",
+                "option_id": 82
+            }
+        ],
+        "placeholder": "",
+        "question_id": 23,
+        "question_text": "短期记忆能力减弱、记性差吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "短期记忆能力减弱，记性变差了吗？",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 33,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/tv.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "3 个小时以下",
+                "option_text": "3 小时以下",
+                "option_id": 192
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "3 个小时以上",
+                "option_text": "3 小时以上",
+                "option_id": 193
+            }
+        ],
+        "placeholder": "",
+        "question_id": 48,
+        "question_text": "每天注视电脑屏幕的时长",
+        "remark": "",
+        "subRemark": "",
+        "text": "每天注视电脑、电视或手机等电子屏幕的时长",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 34,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/eye.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "经常",
+                "option_text": "经常",
+                "option_id": 194
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偶尔",
+                "option_text": "偶尔",
+                "option_id": 195
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "极少",
+                "option_text": "极少",
+                "option_id": 196
+            }
+        ],
+        "placeholder": "",
+        "question_id": 49,
+        "question_text": "是否眼睛干涩、发红并伴有炎症？",
+        "remark": "",
+        "subRemark": "",
+        "text": "是否有眼睛干涩、发红并伴有炎症",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 35,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/sunlight.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "20 分钟以下",
+                "option_text": "20分钟以下",
+                "option_id": 188
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "20-40 分钟",
+                "option_text": "20~40分钟",
+                "option_id": 189
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "40-60 分钟",
+                "option_text": "40~60分钟",
+                "option_id": 190
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "60 分钟以上",
+                "option_text": "60分钟以上",
+                "option_id": 191
+            }
+        ],
+        "placeholder": "",
+        "question_id": 47,
+        "question_text": "平均每天直接日晒时长",
+        "remark": "",
+        "subRemark": "",
+        "text": "平均每日直接日晒时长",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 36,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/exercise.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "1 次或没有",
+                "option_text": "1 次或没有",
+                "option_id": 166
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "2-3 次",
+                "option_text": "2~3 次",
+                "option_id": 167
+            },
+            {
+                "value": "3",
+                "text": "4 次或更多",
+                "option_text": "4 次或更多",
+                "option_id": 168
+            }
+        ],
+        "placeholder": "",
+        "question_id": 43,
+        "question_text": "平均每星期运动频率",
+        "remark": "",
+        "subRemark": "",
+        "text": "平均每星期运动频率",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 37,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/power.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "基本没有",
+                "option_text": "基本没有",
+                "option_id": 86
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "每周 1-2 次",
+                "option_text": "每周 1~2 次",
+                "option_id": 85
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "每周 3 次",
+                "option_text": "每周 3 次",
+                "option_id": 84
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "每周 4 次及以上",
+                "option_text": "每周 4 次及以上",
+                "option_id": 83
+            }
+        ],
+        "placeholder": "",
+        "question_id": 24,
+        "question_text": "力量训练频率",
+        "remark": "",
+        "subRemark": "",
+        "text": "力量训练频率",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 38,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/train.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "经常",
+                "option_text": "经常",
+                "option_id": "87"
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偶尔",
+                "option_text": "偶尔",
+                "option_id": 88
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "极少",
+                "option_text": "极少",
+                "option_id": 89
+            }
+        ],
+        "placeholder": "",
+        "question_id": 25,
+        "question_text": "是否有高强度训练（力量训练、马拉松等）而导致的肌肉酸痛？",
+        "remark": "力量训练、马拉松等",
+        "subRemark": "",
+        "text": "是否有高强度训练而导致的肌肉酸痛",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 39,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/wine.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "从不饮酒",
+                "option_text": "从不饮酒",
+                "option_id": 117
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偶尔小酌",
+                "option_text": "偶尔小酌",
+                "option_id": 118
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "经常饮酒",
+                "option_text": "经常饮酒",
+                "option_id": 119
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "酗酒",
+                "option_text": "酗酒",
+                "option_id": 120
+            }
+        ],
+        "placeholder": "",
+        "question_id": 33,
+        "question_text": "近半年饮酒频率",
+        "remark": "",
+        "subRemark": "",
+        "text": "近半年饮酒频率",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 40,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/cigerate.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "从不吸烟",
+                "option_text": "从不吸烟",
+                "option_id": 113
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "偶尔",
+                "option_text": "偶尔吸烟",
+                "option_id": 114
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "轻度烟瘾",
+                "option_text": "轻度烟瘾",
+                "option_id": 115
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "重度烟瘾",
+                "option_text": "重度烟瘾",
+                "option_id": 116
+            }
+        ],
+        "placeholder": "",
+        "question_id": 32,
+        "question_text": "近半年吸烟频率",
+        "remark": "",
+        "subRemark": "",
+        "text": "近半年吸烟频率",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 41,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_habit/bumf.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "频率低，经常便秘",
+                "option_text": "频率低，经常便秘",
+                "option_id": 58
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "每两天至少一次，偶尔便秘",
+                "option_text": "每两天至少一次，偶尔便秘",
+                "option_id": 59
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "每天至少一次，基本规律",
+                "option_text": "每天至少一次，基本规律",
+                "option_id": 60
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "较频繁，经常腹泻",
+                "option_text": "较频繁，经常腹泻",
+                "option_id": 61
+            }
+        ],
+        "placeholder": "",
+        "question_id": 17,
+        "question_text": "排便频率",
+        "remark": "",
+        "subRemark": "",
+        "text": "排便频率",
+        "title": "其他生活习惯",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 42,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/bone.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "骨质疏松",
+                "option_text": "骨质疏松",
+                "option_id": 62,
+                "checked": false,
+                "order": 1
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "软骨症",
+                "option_text": "软骨症",
+                "option_id": 63,
+                "checked": false,
+                "order": 2
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "佝偻病",
+                "option_text": "佝偻病",
+                "option_id": 64,
+                "checked": false,
+                "order": 3
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "低钙血症",
+                "option_text": "低钙血症",
+                "option_id": 65,
+                "checked": false,
+                "order": 4
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 66,
+                "checked": false,
+                "order": 5
+            }
+        ],
+        "placeholder": "",
+        "question_id": 18,
+        "question_text": "你有以下骨骼问题吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "你现在有以下骨骼问题吗？",
+        "title": "健康状况",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 4
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 43,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/bone.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "有",
+                "option_text": "有",
+                "option_id": 67
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 68
+            }
+        ],
+        "placeholder": "",
+        "question_id": 19,
+        "question_text": "家族成员有骨骼问题吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "家族其他成员有骨骼问题吗？",
+        "title": "健康状况",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 44,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/joint.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "关节炎",
+                "option_text": "关节炎",
+                "option_id": 71,
+                "checked": false,
+                "order": 1
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "骨性关节炎",
+                "option_text": "骨性关节炎",
+                "option_id": 72,
+                "checked": false,
+                "order": 2
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "类风湿性关节炎",
+                "option_text": "类风湿性关节炎",
+                "option_id": 73,
+                "checked": false,
+                "order": 3
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 74,
+                "checked": false,
+                "order": 4
+            }
+        ],
+        "placeholder": "",
+        "question_id": 21,
+        "question_text": "你现在有以下关节相关病症吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "你现在有以下关节相关病症吗？",
+        "title": "健康状况",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 3
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 45,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/man.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "高血糖",
+                "option_text": "高血糖",
+                "option_id": 121,
+                "checked": false,
+                "order": 1
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "高血压",
+                "option_text": "高血压",
+                "option_id": 123,
+                "checked": false,
+                "order": 2
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "高血脂",
+                "option_text": "高血脂",
+                "option_id": 125,
+                "checked": false,
+                "order": 3
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "高胆固醇",
+                "option_text": "高胆固醇",
+                "option_id": 127,
+                "checked": false,
+                "order": 4
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "心脏病",
+                "option_text": "心脏病",
+                "option_id": 129,
+                "checked": false,
+                "order": 5
+            },
+            {
+                "id": 6,
+                "value": "6",
+                "text": "痛风",
+                "option_text": "痛风",
+                "option_id": 128,
+                "checked": false,
+                "order": 6
+            },
+            {
+                "id": 7,
+                "value": "7",
+                "text": "肾结石",
+                "option_text": "肾结石",
+                "option_id": 130,
+                "checked": false,
+                "order": 7
+            },
+            {
+                "id": 8,
+                "value": "8",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 131,
+                "checked": false,
+                "order": 8
+            }
+        ],
+        "placeholder": "",
+        "question_id": 34,
+        "question_text": "现在有以下情况吗？ ",
+        "remark": "",
+        "subRemark": "",
+        "text": "你现在有以下身体问题吗？",
+        "title": "健康状况",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 5
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 46,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/heart.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "有",
+                "option_text": "有",
+                "option_id": 69
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 70
+            }
+        ],
+        "placeholder": "",
+        "question_id": 20,
+        "question_text": "家族成员有患心脏病、中风、脑梗吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "家族成员有患心脏病、中风、脑梗吗？",
+        "title": "健康状况",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 47,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/liver.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "脂肪肝",
+                "option_text": "脂肪肝",
+                "option_id": 132
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "肝硬化",
+                "option_text": "肝硬化",
+                "option_id": 133
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "肝癌",
+                "option_text": "肝癌",
+                "option_id": 134
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 135
+            }
+        ],
+        "placeholder": "",
+        "question_id": 35,
+        "question_text": "肝脏有以下情况吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "肝脏现在有以下情况吗？",
+        "title": "健康状况",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 48,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/sick.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "甲状腺相关疾病",
+                "option_text": "甲状腺相关疾病",
+                "option_id": 106,
+                "checked": false,
+                "order": 1
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "糖尿病",
+                "option_text": "糖尿病",
+                "option_id": 107,
+                "checked": false,
+                "order": 2
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "缺铁性贫血",
+                "option_text": "缺铁性贫血",
+                "option_id": 108,
+                "checked": false,
+                "order": 3
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "厌食症",
+                "option_text": "厌食症",
+                "option_id": 109,
+                "checked": false,
+                "order": 4
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 111,
+                "checked": false,
+                "order": 5
+            }
+        ],
+        "placeholder": "",
+        "question_id": 31,
+        "question_text": "是否有如下病症？",
+        "remark": "",
+        "subRemark": "",
+        "text": "现在是否有如下病症",
+        "title": "健康状况",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 4
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 49,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/hair.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "有",
+                "option_text": "有",
+                "option_id": 104
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 105
+            }
+        ],
+        "placeholder": "",
+        "question_id": 30,
+        "question_text": "家族成员有脱发情况吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "家族成员有脱发情况吗？",
+        "title": "健康状况",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 50,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/skin.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "皮肤干燥",
+                "option_text": "皮肤干燥",
+                "option_id": 98,
+                "checked": false,
+                "order": 1
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "皱纹过多，缺乏弹性",
+                "option_text": "皱纹过多",
+                "option_id": 99,
+                "checked": false,
+                "order": 2
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "肤色差",
+                "option_text": "肤色差",
+                "option_id": 100,
+                "checked": false,
+                "order": 3
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "易过敏",
+                "option_text": "易过敏",
+                "option_id": 101,
+                "checked": false,
+                "order": 4
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "长痘痘、出油",
+                "option_text": "长痘痘、出油",
+                "option_id": 102,
+                "checked": false,
+                "order": 5
+            },
+            {
+                "id": 6,
+                "value": "6",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 103,
+                "checked": false,
+                "order": 6
+            }
+        ],
+        "placeholder": "",
+        "question_id": 29,
+        "question_text": "有以下皮肤困扰吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "是否有以下皮肤困扰",
+        "title": "健康状况",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 5
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 51,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/depression.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "有",
+                "option_id": 90
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "否",
+                "option_text": "无",
+                "option_id": 91
+            }
+        ],
+        "placeholder": "",
+        "question_id": 26,
+        "question_text": "有诊断出抑郁症吗？",
+        "remark": "",
+        "subRemark": "",
+        "text": "是否被诊断出抑郁症？",
+        "title": "健康状况",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 52,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/emotion.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "暴躁",
+                "option_text": "暴躁",
+                "option_id": 92
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "低落",
+                "option_text": "低落",
+                "option_id": 93
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "时好时坏",
+                "option_text": "时好时坏",
+                "option_id": 94
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "正常",
+                "option_text": "正常",
+                "option_id": 180
+            }
+        ],
+        "placeholder": "",
+        "question_id": 27,
+        "question_text": "近期情绪如何？",
+        "remark": "",
+        "subRemark": "",
+        "text": "近期情绪如何",
+        "title": "健康状况",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 53,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/pressure.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "无明显感觉",
+                "option_text": "无明显压力",
+                "option_id": 97
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "感到疲累",
+                "option_text": "感到疲累（截止日期让你不得不晚上熬夜）",
+                "option_id": 95
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "感到情绪崩溃",
+                "option_text": "觉得情绪快要崩溃（长时间的压力积累）",
+                "option_id": 96
+            }
+        ],
+        "placeholder": "",
+        "question_id": 28,
+        "question_text": "近期的压力程度如何？",
+        "remark": "",
+        "subRemark": "",
+        "text": "近期是否感到压力",
+        "title": "健康状况",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 54,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/nutrient.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "铁",
+                "option_text": "铁",
+                "option_id": 216,
+                "checked": false,
+                "order": 1
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "钙",
+                "option_text": "钙",
+                "option_id": 217,
+                "checked": false,
+                "order": 2
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "维生素B族",
+                "option_text": "维生素 B 族",
+                "option_id": 218,
+                "checked": false,
+                "order": 3
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "维生素D",
+                "option_text": "维生素 D",
+                "option_id": 219,
+                "checked": false,
+                "order": 4
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "维生素C",
+                "option_text": "维生素 C",
+                "option_id": 220,
+                "checked": false,
+                "order": 5
+            },
+            {
+                "id": 6,
+                "value": "6",
+                "text": "无",
+                "option_text": "无",
+                "option_id": 221,
+                "checked": false,
+                "order": 6
+            }
+        ],
+        "placeholder": "",
+        "question_id": 59,
+        "question_text": "半年内是否曾被诊断缺乏以下营养素？",
+        "remark": "",
+        "subRemark": "",
+        "text": "半年内是否曾被诊断缺乏以下营养素？",
+        "title": "健康状况",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": 1,
+            "maxOptionsNumber": 5
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 55,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/antibiotic.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "是",
+                "option_text": "是",
+                "option_id": 185
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "否",
+                "option_text": "否",
+                "option_id": 186
+            }
+        ],
+        "placeholder": "",
+        "question_id": 45,
+        "question_text": "是否长期服用抗生素？ ",
+        "remark": "",
+        "subRemark": "",
+        "text": "是否长期服用抗生素？",
+        "title": "健康状况",
+        "type": "RADIO",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 56,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/antibiotic.png",
+        "options": [],
+        "placeholder": "",
+        "question_text": "请写出抗生素名称",
+        "remark": "",
+        "subRemark": "",
+        "text": "请写出正在服用的抗生素名称",
+        "title": "健康状况",
+        "type": "TEXT",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": 10,
+            "minLength": 0,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    },
+    {
+        "errorStyle": "hide",
+        "id": 57,
+        "image": "http://lemonbox.oss-cn-beijing.aliyuncs.com/img/qu_health/wheretoknow.png",
+        "options": [
+            {
+                "id": 1,
+                "value": "1",
+                "text": "微博"
+            },
+            {
+                "id": 2,
+                "value": "2",
+                "text": "Podcast"
+            },
+            {
+                "id": 3,
+                "value": "3",
+                "text": "小红书"
+            },
+            {
+                "id": 4,
+                "value": "4",
+                "text": "BiliBili"
+            },
+            {
+                "id": 5,
+                "value": "5",
+                "text": "公众号推荐"
+            },
+            {
+                "id": 9,
+                "value": "9",
+                "text": "朋友圈"
+            },
+            {
+                "id": 6,
+                "value": "6",
+                "text": "家人、朋友直接推荐"
+            },
+            {
+                "id": 7,
+                "value": "7",
+                "text": "媒体报道"
+            },
+            {
+                "id": 8,
+                "value": "8",
+                "text": "我是LemonBox 的老用户"
+            },
+            {
+                "id": -99,
+                "value": "9",
+                "text": "其他"
+            }
+        ],
+        "placeholder": "",
+        "question_id": 58,
+        "question_text": "你是从哪里听说LemonBox的？",
+        "remark": "",
+        "subRemark": "",
+        "text": "你是从哪里听说 LemonBox 的?",
+        "title": "",
+        "type": "CHECKBOX",
+        "validation": {
+            "required": true,
+            "max": -1,
+            "min": -1,
+            "maxLength": -1,
+            "minLength": -1,
+            "minOptionsNumber": -1,
+            "maxOptionsNumber": -1
+        }
+    }
+]

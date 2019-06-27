@@ -1,21 +1,3 @@
-// 
-import { compareTime } from './Compare.js'
-
-
-export function parseCookie(cookie) {
-  const cookies = {}
-  if (cookie) {
-    cookie.split(';').forEach(item => {
-      const pair = item.split('=')
-      cookies[pair[0].trim()] = pair[1]
-    })
-    cookies.name = 'connect.sid'
-    cookies.value = cookies[cookies.name]
-  }
-  return cookies
-}
-
-
 export function format(raw, fields, convert) {
   const list = {}
 
@@ -112,7 +94,8 @@ export function extract(raw, separate) {
   }(raw, separate)
 }
 
-
+// 
+import { compareTime } from './Compare.js'
 export function extractTimes(obj) {
   const _obj = extract(obj, 'time')
 

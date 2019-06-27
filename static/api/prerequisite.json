@@ -1,0 +1,818 @@
+[
+    {
+        "questionId": 8,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            3
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 9,
+        "prerequisites": [
+            {
+                "questionId": 4,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            1
+                        ],
+                        "matchType": "all"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 10,
+        "prerequisites": [
+            {
+                "questionId": 4,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            2
+                        ],
+                        "matchType": "all"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 11,
+        "prerequisites": [
+            {
+                "questionId": 10,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            1
+                        ],
+                        "matchType": "all"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 12,
+        "prerequisites": [
+            {
+                "questionId": 11,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            1
+                        ],
+                        "matchType": "all"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 13,
+        "prerequisites": [
+            {
+                "questionId": 10,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            2
+                        ],
+                        "matchType": "exclude"
+                    }
+                ]
+            }
+        ],
+        "options": [
+            {
+                "optionId": 5,
+                "prerequisites": [
+                    {
+                        "questionId": 3,
+                        "range": {
+                            "max": 200,
+                            "min": 35
+                        },
+                        "requiredOptions": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "questionId": 16,
+        "prerequisites": [
+            {
+                "questionId": 14,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            1
+                        ],
+                        "matchType": "include"
+                    },
+                    {
+                        "optionId": [
+                            2
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 22,
+        "prerequisites": [],
+        "options": [
+            {
+                "optionId": 1,
+                "prerequisites": [
+                    {
+                        "questionId": 21,
+                        "range": {
+                            "max": -1,
+                            "min": -1
+                        },
+                        "requiredOptions": [
+                            {
+                                "optionId": [
+                                    1
+                                ],
+                                "matchType": "exclude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "optionId": 2,
+                "prerequisites": [
+                    {
+                        "questionId": 21,
+                        "range": {
+                            "max": -1,
+                            "min": -1
+                        },
+                        "requiredOptions": [
+                            {
+                                "optionId": [
+                                    2
+                                ],
+                                "matchType": "exclude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "optionId": 3,
+                "prerequisites": [
+                    {
+                        "questionId": 21,
+                        "range": {
+                            "max": -1,
+                            "min": -1
+                        },
+                        "requiredOptions": [
+                            {
+                                "optionId": [
+                                    3
+                                ],
+                                "matchType": "exclude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "optionId": 4,
+                "prerequisites": [
+                    {
+                        "questionId": 21,
+                        "range": {
+                            "max": -1,
+                            "min": -1
+                        },
+                        "requiredOptions": [
+                            {
+                                "optionId": [
+                                    4
+                                ],
+                                "matchType": "exclude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "optionId": 5,
+                "prerequisites": [
+                    {
+                        "questionId": 21,
+                        "range": {
+                            "max": -1,
+                            "min": -1
+                        },
+                        "requiredOptions": [
+                            {
+                                "optionId": [
+                                    5
+                                ],
+                                "matchType": "exclude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "optionId": 6,
+                "prerequisites": [
+                    {
+                        "questionId": 21,
+                        "range": {
+                            "max": -1,
+                            "min": -1
+                        },
+                        "requiredOptions": [
+                            {
+                                "optionId": [
+                                    6
+                                ],
+                                "matchType": "exclude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "optionId": 7,
+                "prerequisites": [
+                    {
+                        "questionId": 21,
+                        "range": {
+                            "max": -1,
+                            "min": -1
+                        },
+                        "requiredOptions": [
+                            {
+                                "optionId": [
+                                    7
+                                ],
+                                "matchType": "exclude"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "optionId": 8,
+                "prerequisites": [
+                    {
+                        "questionId": 21,
+                        "range": {
+                            "max": -1,
+                            "min": -1
+                        },
+                        "requiredOptions": [
+                            {
+                                "optionId": [
+                                    8
+                                ],
+                                "matchType": "exclude"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "questionId": 25,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            1
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 26,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            1
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 27,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            1
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 28,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            2
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 29,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            2
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 30,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            2
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 31,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            7
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 32,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            7
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 34,
+        "prerequisites": [
+            {
+                "questionId": 33,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            2
+                        ],
+                        "matchType": "all"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 37,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            8
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 38,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            8
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 42,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            4
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 43,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            4
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 43,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            4
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 44,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            6
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 46,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            5
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 48,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            11
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 49,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            11
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 50,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            10
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 51,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            9
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 52,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            9
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 53,
+        "prerequisites": [
+            {
+                "questionId": 7,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            9
+                        ],
+                        "matchType": "include"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    },
+    {
+        "questionId": 56,
+        "prerequisites": [
+            {
+                "questionId": 55,
+                "range": {
+                    "max": -1,
+                    "min": -1
+                },
+                "requiredOptions": [
+                    {
+                        "optionId": [
+                            1
+                        ],
+                        "matchType": "all"
+                    }
+                ]
+            }
+        ],
+        "options": []
+    }
+]
