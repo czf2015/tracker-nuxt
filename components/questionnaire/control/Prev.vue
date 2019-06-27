@@ -6,21 +6,10 @@
 </template>
 
 <script>
-import { prerequisite } from "@/services/Questionnaire.js";
-
 export default {
-  props: {
-    r: Object
-  },
-
   methods: {
     prev() {
-      const that = this;
-      let id = that.$store.state.questionId;
-      do {
-        id -= id === 3 ? 2 : 1;
-      } while (!prerequisite(id, that.r, that.$store.state.answers));
-      that.$store.commit("set", id);
+      this.$emit('step', {msg: 'prev'})
     }
   }
 };

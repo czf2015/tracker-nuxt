@@ -1,6 +1,6 @@
 <template>
   <section class="page">
-    <Prev class="prev" v-show="questionId !== 1" :r="r"/>
+    <Prev class="prev" v-show="questionId !== 1" @step="handleStep"/>
     <Question :question="q[questionId]" :r="r" :key="questionId"/>
   </section>
 </template>
@@ -16,8 +16,8 @@ export default {
     const q = {};
     const r = {};
     const [{ data: questions }, { data: relations }] = await Promise.all([
-      api.get('questionnaire/questions'),
-      api.get('questionnaire/relations')
+      api.get("questionnaire/questions"),
+      api.get("questionnaire/relations")
     ]);
     questions.forEach(item => (q[item.id] = item));
     relations.forEach(item => (r[item.questionId] = item));
@@ -30,6 +30,20 @@ export default {
   components: {
     Prev,
     Question
+  },
+
+  methods: {
+    handleStep({ msg }) {
+      let id = this.$store.state.questionId;
+
+      if (msg === "prev") {
+        do {
+          id -= id === 3 ? 2 : 1;
+        } while (!prerequisite(id, this.r, this.$store.state.answers));
+        this.$store.commit("set", id);
+      } else {
+      }
+    }
   },
 
   computed: {
@@ -53,7 +67,7 @@ export default {
         // console.log(output);
         const openid = "okhMG0cb-prOSD2NTnAYBmHb4aw4";
         axios
-          .post('questionnaire/answer', Object.assign(output, { openid }))
+          .post("questionnaire/answer", Object.assign(output, { openid }))
           .then(function(res) {
             // debugger;
             window.sessionStorage.setItem(openid, JSON.stringify(res.data));
