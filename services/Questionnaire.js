@@ -37,7 +37,7 @@ export function prov(condition, answers) {
 }
 
 // 
-export default function prerequisite(questionId, r, answers) {
+export function prerequisite(questionId, r, answers) {
     const relation = r[questionId]
     return prov(relation, answers)
 }
