@@ -1,4 +1,0 @@
-radio,
-checkbox {
-    display: none;
-}

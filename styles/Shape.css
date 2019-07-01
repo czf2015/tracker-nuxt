@@ -1,0 +1,36 @@
+.circle {
+
+}
+
+.over {
+
+}
+
+.triangle {
+
+}
+
+/* Constant width to height ratio
+
+ > Explanation
+
+   padding-top on the ::before pseudo-element causes the height of the element to equal a percentage of its width. 100% therefore means the element's height will always be 100% of the width, creating a responsive square.
+*/
+.square {
+    padding-top: 100%;
+}
+
+.rectangle {
+
+}
+
+.diamond {
+
+}
+
+
+
+
+
+
+

@@ -11,6 +11,25 @@
 
 .img-xs {}
 
+/** Fit image in container
+ * Changes the fit and position of an image within its container while preserving its aspect ratio. Previously only possible using a background image and the background-size property.
+ 
+ > Explanation
+
+ 1. object-fit: contain fits the entire image within the container while preserving its aspect ratio.
+
+ 2. object-fit: cover fills the container with the image while preserving its aspect ratio.
+  
+ 3. object-position: [x] [y] positions the image within the container.
+*/
+.image-contain {
+    object-fit: contain;
+    object-position: center;
+  }
+  .image-cover {
+    object-fit: cover;
+    object-position: right top;
+  }
 
 /* 图标大小 */
 
