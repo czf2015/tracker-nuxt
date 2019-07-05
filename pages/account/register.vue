@@ -34,8 +34,8 @@
 
 <script>
 import md5 from "js-md5";
-import api from '../../utils/api.js'
-import { interval } from "../../mocks/TIME.js";
+import api from '~/utils/api.js'
+import { interval } from "~/mock/TIME.js";
 
 export default {
   layout: "blank",
@@ -90,7 +90,6 @@ export default {
         })
         .then(({ status, data }) => {
           if (status === 200) {
-            debugger;
             if (data && data.code === 0) {
               location.href = "/account/login";
             } else {

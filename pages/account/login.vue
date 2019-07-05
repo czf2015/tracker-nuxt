@@ -1,37 +1,44 @@
 <template>
   <article id="login">
-    <header id="login-header">
+    <header>
       <a href="/">首页</a>
       <a href="/account/register">注册</a>
     </header>
-    <form>
+    <form class="center">
       <legend>用户登录</legend>
-      <h4 v-if="error" class="tips">
-        <i class="fa fa-exclamation-circle"/>
+      <span v-if="error" class="danger">
+        <i class="fa fa-exclamation-circle" />
         {{ error }}
-      </h4>
-      <label id="username">
-        用户名：
-        <input type="text" v-model="username" placeholder="用户名">
-      </label>
-      <label id="password">
-        密码：
-        <input type="password" v-model="password" placeholder="密码">
-      </label>
-      <p class="flex">
-        <label id="auto">
-          <input type="radio" v-model="auto">7天内自动登录
+      </span>
+      <p class>
+        <label class="title">
+          用户名：
+          <input type="text" v-model="username" placeholder="用户名" />
+        </label>
+      </p>
+      <p class>
+        <label class="title">
+          密码：
+          <input type="password" v-model="password" placeholder="密码" />
+        </label>
+      </p>
+      <p class>
+        <label>
+          <input type="radio" v-model="auto" />7天内自动登录
         </label>
         <a href="/account/forget">忘记密码？</a>
       </p>
-      <button @click.prevent="login">登录</button>
+      <p>
+        <button @click.prevent="login">登录</button>
+      </p>
     </form>
   </article>
 </template>
 
+
 <script>
 import md5 from "js-md5";
-import api from '../../utils/api.js'
+import api from "~/utils/api.js";
 
 export default {
   layout: "blank",
@@ -50,12 +57,12 @@ export default {
       api
         .post("account/login", {
           username: encodeURIComponent(this.username),
-          password: md5(this.password).toString()
+          password: md5(this.password)
         })
         .then(({ status, data }) => {
           if (status === 200) {
             if (data && data.code === 0) {
-              sessionStorage.setItem('auto', this.auto)
+              sessionStorage.setItem("auto", this.auto);
               location.href = "/";
             } else {
               this.error = data.msg;
@@ -65,7 +72,7 @@ export default {
           }
         })
         .catch(e => {
-          console.log('login error')
+          console.log(e)
         });
     }
   }
@@ -78,14 +85,18 @@ export default {
   text-align: center;
 }
 
-#login-header {
+#login > header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
-form > * {
-  margin: 10px 0;
+.center {
+  /* margin: 10px 0; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 
 .flex {

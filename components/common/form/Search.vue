@@ -13,6 +13,12 @@
 import axios from 'axios'
 
 export default {
+	  asyncData() {
+	  return axios.get('http://localhost:3000/api/search.json')
+	    .then(res => ({
+	      suggests: res.data.suggests
+	    }))
+	},
   data() {
     return {
       icon: {
@@ -20,12 +26,6 @@ export default {
         voice: 'img/icons/voice.png'
       }
     }
-  },
-  asyncData() {
-    return axios.get('http://localhost:3000/api/search.json')
-      .then(res => ({
-        suggests: res.data.suggests
-      }))
   },
   methods: {
     speech() {
