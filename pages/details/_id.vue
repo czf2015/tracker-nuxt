@@ -12,11 +12,12 @@
   </div>
 </template>
 
+
 <script>
 import Appear from "~/components/common/navigation/Appear.vue"
 import Banner from "~/components/details_id/Banner.vue"
 import List from "~/components/details_id/List.vue"
-import axios from "axios"
+import api from "~/utils/api.js"
 
 export default {
   layout: 'blank',
@@ -25,24 +26,18 @@ export default {
     Banner,
     List
   },
+  transition: "test",
   validate({ params }) {
     // 必须是number类型
     return /^\d+$/.test(params.id);// 或 return !isNaN(+params.id)
   },
   // https://nuxtjs.org/guide/async-data#handling-errors
   asyncData({params, error}) {
-    // return axios.get(`http://localhost:3000/details/${params.id}`)
-                // .then(res => ({
-                //   title: res.data.title,
-                //   bannerImg: res.data.bannerImg,
-                //   galleryImgs: res.data.galleryImgs,
-                //   list: res.data.categoryList
-                // }))
-    return axios.get('http://localhost:3000/api/details.json')
-                .then(res => res.data.details.find(value => value.id === params.id))
-                .catch((e) => {
-                  error({ statusCode: 404, message: 'Post not found' })
-                })
+    return api.get(`details/${params.id}`)
+        .then(res => res.data.result)
+        .catch(e => {
+          error({ statusCode: 404, message: 'Post not found' })
+        })
   },
   data() {
     return {
@@ -71,9 +66,9 @@ export default {
   unmounted() {
     window.removeEventListener("scroll", this.handleScroll);
   },
-  transition: "test"
 };
 </script>
+
 
 <style scoped>
 .header-abs {
