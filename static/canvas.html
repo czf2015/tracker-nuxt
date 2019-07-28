@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="drawing">drawing</canvas>
+    <script>
+        const drawing = document.getElementById('drawing'),
+              context = drawing.getContext('2d')
+
+        context.fillStyle = '#ff0000'
+        context.save()
+
+        context.fillStyle = '#00ff00'
+        context.translate(100, 100)
+        context.save()
+
+        context.fillStyle = '#0000ff'
+        context.fillRect(0, 0, 100, 200)
+        context.save()
+
+        context.restore()
+        context.fillRect(10, 10, 100, 200)
+
+        context.restore()
+        context.fillRect(0, 0, 100, 200)       
+    </script>
+</body>
+</html>

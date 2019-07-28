@@ -16,11 +16,14 @@
    The psuedo class :focus-within applies styles to a parent element if any child element gets focused. For example, an input element inside a form element.
  */
 form:focus-within {
-    background: #f7b731;
     color: #000000;
+    background: #f7b731;
 }
 
-:invalid {}
+:invalid {
+  color: #ccc;
+  background: white;
+}
 
 .disabled {
     disabled: disabled;
@@ -35,7 +38,7 @@ form:focus-within {
    fullscreen CSS pseudo-class selector is used to select and style an element that is being displayed in fullscreen mode.
  */
 :fullscreen {
-    background-color: #e4708a;
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e4708a;
   }
