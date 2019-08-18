@@ -17,6 +17,7 @@ class Validator {
     }
     start() {
         for ( var i = 0, validatorFunc; validatorFunc = this.cache[ i  ]; ){                
-            var
+            // var
+        }
     }
 }

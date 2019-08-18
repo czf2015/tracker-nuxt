@@ -7,23 +7,20 @@ export function hasChinese(str) {
 }
 
 export function getRealLength(str) {
-    let result = 0
+    let result = str.length
 
-    if (str) {
-        for (let i = 0; i < str.length; i++) {
-            if (str.charCodeAt(i) >= 0 && str.charCodeAt(i) <= 128) {
-                result++
-            } else {
-                result += 2
-            }
+    for (let i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i) > 128) {
+            result++
         }
     }
+
     return result
 }
 
 export function cutStr(str, max) {
     if (getRealLength(str) > max) {
-        return cutStr(str.slice(0, str.length - 1), max)
+        return cutStr(str.slice(0, -1), max)
     } else {
         return str
     }

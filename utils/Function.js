@@ -5,4 +5,8 @@ export function bind(fn, context) {
 } 
 
 
-export const pipe = (...fns) => x => fns.reduce((v, fn) => fn(v), x)
+export function pipe(...fns) {
+    return function (x) {
+        fns.reduce((v, fn) => fn(v), x)
+    } 
+}

@@ -107,6 +107,7 @@
         "text": "您的性别",
         "title": "基本信息",
         "type": "RADIO",
+        "value": "",
         "validation": {
             "required": true,
             "min": -1,
@@ -116,7 +117,6 @@
             "minOptionsNumber": -1,
             "maxOptionsNumber": -1
         },
-        "value": ""
     },
     {
         "errorStyle": "hide",
